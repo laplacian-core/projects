@@ -1,0 +1,13 @@
+project:
+  subprojects:
+  - group: laplacian
+    name: template.entity.kotlin
+    namespace: laplacian
+    version: '1.0.0'
+    template_files:
+    - ./laplacian.template.template.base/template
+    target_dir: ./generated-projects/laplacian.template.entity.kotlin
+    templates:
+    - group: laplacian
+      name: template.project.base
+      version: '1.0.0'

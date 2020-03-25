@@ -1,0 +1,4 @@
+project:
+  name: laplacian.projects
+  description: |
+    The core modules of the Laplacian generator.
