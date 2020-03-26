@@ -42,5 +42,9 @@ END_FILE
 chmod 755 $TARGET_PROJECT_GENERATOR_SCRIPT
 
 (cd $TARGET_PROJECT_DIR
+  if [[ ! -f ./script/laplacian-generator.sh ]]
+  then
+    curl -Ls https://git.io/fhxcl | bash
+  fi
   ./scripts/$GENERATOR_SCRIPT_FILE_NAME
 )
