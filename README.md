@@ -1,4 +1,4 @@
-# laplacian.projects
+# projects
 
 The core modules of the Laplacian generator.
 
