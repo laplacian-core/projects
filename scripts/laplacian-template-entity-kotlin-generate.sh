@@ -31,7 +31,7 @@ project:
     version: '1.0.0'
   model_files: []
   template_files:
-  - $(normalize_path './laplacian.template.template.base/template')
+  - $(normalize_path './laplacian.template.project.gradle/template')
 END_FILE
 
 GENERATOR_SCRIPT_FILE_NAME=laplacian-template-entity-kotlin-generate.sh
