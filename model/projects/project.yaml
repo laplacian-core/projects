@@ -2,4 +2,7 @@ project:
   group: laplacian
   name: projects
   description: |
-    The core modules of the Laplacian generator.
+    The core modules for the Laplacian generator.
+  maven_repository:
+    url: https://github.com/nabla-squared/mvn-repo
+
