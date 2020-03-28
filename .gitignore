@@ -31,5 +31,6 @@ build/
 out/
 
 # Laplacian projects
-generated-*/
-mvn-repo/
+subprojects/laplacian.template.entity.kotlin/
+subprojects/laplacian.template.project.base/
+subprojects/mvn-repo/
