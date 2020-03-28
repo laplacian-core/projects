@@ -11,5 +11,5 @@ TARGET_PROJECT_DIR="${PROJECT_BASE_DIR}/subprojects/laplacian.template.entity.ko
   then
     ./scripts/laplacian-project-generate.sh
   fi
-  ./scripts/laplacian-project-publish.sh
+  ./scripts/laplacian-template-entity-kotlin-publish.sh
 )

@@ -11,5 +11,5 @@ TARGET_PROJECT_DIR="${PROJECT_BASE_DIR}/subprojects/laplacian.template.project.b
   then
     ./scripts/laplacian-project-generate.sh
   fi
-  ./scripts/laplacian-project-publish.sh
+  ./scripts/laplacian-template-project-base-publish.sh
 )
