@@ -1,6 +1,6 @@
 # projects
 
-The core modules of the Laplacian generator.
+The core modules for the Laplacian generator.
 
 
 <!-- @content@ -->

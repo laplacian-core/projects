@@ -10,9 +10,7 @@ project:
     source_repository:
       url: https://github.com/nabla-squared/laplacian.template.entity.kotlin.git
       branch: master
-    template_files:
-    - ./laplacian.template.project.gradle/template
-    target_dir: ./generated-projects/laplacian.template.entity.kotlin
+    base_dir: subprojects/laplacian.template.entity.kotlin
     templates:
     - group: laplacian
       name: template.project.base

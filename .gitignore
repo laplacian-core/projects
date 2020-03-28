@@ -8,6 +8,7 @@ Thumbs.db
 *.lnk
 ~$*
 
+
 # General - MacOS
 .DS_Store
 
@@ -31,6 +32,6 @@ build/
 out/
 
 # Laplacian projects
-subprojects/laplacian.template.entity.kotlin/
-subprojects/laplacian.template.project.base/
 subprojects/mvn-repo/
+subprojects/laplacian.template.project.base/
+subprojects/laplacian.template.entity.kotlin/
