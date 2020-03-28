@@ -44,19 +44,16 @@ END_FILE
 checkout_from_code_repository() {
   if [[ ! -d $TARGET_PROJECT_DIR/.git ]]
   then
-    if ! (git remote | grep -Fx 'template-entity-kotlin')
-    then
-      git remote add \
-        -f template-entity-kotlin \
-        https://github.com/nabla-squared/laplacian.template.entity.kotlin.git
-    fi
-
-    git subtree add \
-      --prefix ./generated-projects/laplacian.template.entity.kotlin \
-      template-entity-kotlin \
-      master \
-      --squash
+    mkdir -p $TARGET_PROJECT_DIR
+    rm -rf $TARGET_PROJECT_DIR
+    git clone \
+        https://github.com/nabla-squared/laplacian.template.entity.kotlin.git \
+        $TARGET_PROJECT_DIR
   fi
+  (cd $TARGET_PROJECT_DIR
+    git checkout master
+    git pull
+  )
 }
 
 run_generator() {
