@@ -3,6 +3,12 @@ project:
   name: projects
   description: |
     The core modules for the Laplacian generator.
-  maven_repository:
-    url: https://github.com/nabla-squared/mvn-repo
+  module_repositories:
+    local:
+      path: ./subprojects/mvn-repo
+      url: https://github.com/nabla-squared/mvn-repo
+      branch: master
+    remote:
+    - https://github.com/nabla-squared/mvn-repo
+
 

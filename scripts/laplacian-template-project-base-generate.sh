@@ -3,6 +3,10 @@ set -e
 SCRIPT_BASE_DIR=$(cd $"${BASH_SOURCE%/*}" && pwd)
 PROJECT_BASE_DIR=$(cd $SCRIPT_BASE_DIR && cd .. && pwd)
 
+LOCAL_MODULE_REPOSITORY_PATH='./subprojects/mvn-repo'
+LOCAL_MODULE_REPOSITORY_URL='https://github.com/nabla-squared/mvn-repo'
+LOCAL_MODULE_REPOSITORY_BRANCH='master'
+
 TARGET_PROJECT_DIR=subprojects/laplacian.template.project.base
 TARGET_MODEL_DIR="$TARGET_PROJECT_DIR/model"
 TARGET_PROJECT_MODEL_FILE="$TARGET_MODEL_DIR/project.yaml"
@@ -12,9 +16,25 @@ TARGET_SCRIPT_DIR="$TARGET_PROJECT_DIR/scripts"
 TARGET_PROJECT_GENERATOR_SCRIPT="$TARGET_SCRIPT_DIR/$GENERATOR_SCRIPT_FILE_NAME"
 
 main() {
+  setup_local_module_repository
   checkout_from_code_repository
   create_project_model_file
   run_generator
+}
+
+setup_local_module_repository() {
+  local local_repo="$(normalize_path $LOCAL_MODULE_REPOSITORY_PATH)"
+  if [[ ! -d "$local_repo/.git" ]]
+  then
+    mkdir -p $local_repo
+    rm -rf $local_repo
+    git clone \
+        $LOCAL_MODULE_REPOSITORY_URL \
+        $local_repo
+    git checkout $LOCAL_MODULE_REPOSITORY_BRANCH
+  fi
+  git pull
+
 }
 
 create_project_model_file() {
