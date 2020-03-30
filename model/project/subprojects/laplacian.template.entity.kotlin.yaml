@@ -1,6 +1,7 @@
 project:
   subprojects:
   - group: laplacian
+    type: template
     name: template.entity.kotlin
     namespace: laplacian
     description: |

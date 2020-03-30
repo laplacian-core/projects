@@ -43,6 +43,7 @@ create_project_model_file() {
 project:
   group: laplacian
   name: template.project.base
+  type: template
   namespace: laplacian
   version: '1.0.0'
   source_repository:

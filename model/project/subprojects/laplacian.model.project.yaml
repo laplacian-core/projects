@@ -1,0 +1,17 @@
+project:
+  subprojects:
+  - group: laplacian
+    type: model
+    name: model.project
+    namespace: laplacian
+    description: |
+      A model which expresses the logical structure of laplacian-based projects and modules. 
+    version: '1.0.0'
+    source_repository:
+      url: https://github.com/nabla-squared/laplacian.model.project.git
+      branch: master
+    base_dir: subprojects/laplacian.model.project
+    templates:
+    - group: laplacian
+      name: template.project.base
+      version: '1.0.0'

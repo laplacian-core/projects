@@ -1,6 +1,7 @@
 project:
   subprojects:
   - group: laplacian
+    type: template
     name: template.project.base
     namespace: laplacian
     description: |

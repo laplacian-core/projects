@@ -33,5 +33,7 @@ out/
 
 # Laplacian projects
 subprojects/mvn-repo/
-subprojects/laplacian.template.project.base/
+subprojects/laplacian.model.metamodel/
+subprojects/laplacian.model.project/
 subprojects/laplacian.template.entity.kotlin/
+subprojects/laplacian.template.project.base/

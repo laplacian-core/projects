@@ -7,11 +7,11 @@ LOCAL_MODULE_REPOSITORY_PATH='./subprojects/mvn-repo'
 LOCAL_MODULE_REPOSITORY_URL='https://github.com/nabla-squared/mvn-repo'
 LOCAL_MODULE_REPOSITORY_BRANCH='master'
 
-TARGET_PROJECT_DIR=subprojects/laplacian.template.entity.kotlin
+TARGET_PROJECT_DIR=subprojects/laplacian.model.project
 TARGET_MODEL_DIR="$TARGET_PROJECT_DIR/model"
 TARGET_PROJECT_MODEL_FILE="$TARGET_MODEL_DIR/project.yaml"
 
-GENERATOR_SCRIPT_FILE_NAME=laplacian-template-entity-kotlin-generate.sh
+GENERATOR_SCRIPT_FILE_NAME=laplacian-model-project-generate.sh
 TARGET_SCRIPT_DIR="$TARGET_PROJECT_DIR/scripts"
 TARGET_PROJECT_GENERATOR_SCRIPT="$TARGET_SCRIPT_DIR/$GENERATOR_SCRIPT_FILE_NAME"
 
@@ -42,12 +42,12 @@ create_project_model_file() {
   cat <<END_FILE > $TARGET_PROJECT_MODEL_FILE
 project:
   group: laplacian
-  name: template.entity.kotlin
-  type: template
+  name: model.project
+  type: model
   namespace: laplacian
   version: '1.0.0'
   source_repository:
-    url: https://github.com/nabla-squared/laplacian.template.entity.kotlin.git
+    url: https://github.com/nabla-squared/laplacian.model.project.git
     branch: master
   subprojects: []
   schemas: []
@@ -63,7 +63,7 @@ checkout_from_code_repository() {
     mkdir -p $TARGET_PROJECT_DIR
     rm -rf $TARGET_PROJECT_DIR
     git clone \
-        https://github.com/nabla-squared/laplacian.template.entity.kotlin.git \
+        https://github.com/nabla-squared/laplacian.model.project.git \
         $TARGET_PROJECT_DIR
   fi
   (cd $TARGET_PROJECT_DIR
