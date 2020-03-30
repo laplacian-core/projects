@@ -1,0 +1,14 @@
+project:
+  subprojects:
+  - group: laplacian
+    type: schema
+    name: schema.project
+    namespace: laplacian
+    description: |
+      A model which expresses the logical structure of laplacian-based projects and modules. 
+    version: '1.0.0'
+    base_dir: subprojects/laplacian.schema.project
+    templates:
+    - group: laplacian
+      name: template.project.base
+      version: '1.0.0'
