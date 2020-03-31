@@ -46,10 +46,20 @@ project:
   namespace: laplacian
   version: '1.0.0'
   subprojects: []
-  schemas: []
+  schemas:
+  - group: laplacian
+    name: model.metamodel
+    version: '1.0.0'
   templates:
   - group: laplacian
     name: template.project.base
+    version: '1.0.0'
+  - group: laplacian
+    name: template.entity.kotlin
+    version: '1.0.0'
+  models:
+  - group: laplacian
+    name: model.project
     version: '1.0.0'
   model_files: []
   template_files: []

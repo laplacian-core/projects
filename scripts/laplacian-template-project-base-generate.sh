@@ -55,6 +55,7 @@ project:
   - group: laplacian
     name: template.project.base
     version: '1.0.0'
+  models: []
   model_files: []
   template_files: []
 END_FILE
