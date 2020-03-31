@@ -51,7 +51,10 @@ project:
     branch: master
   subprojects: []
   schemas: []
-  templates: []
+  templates:
+  - group: laplacian
+    name: template.project.base
+    version: '1.0.0'
   model_files: []
   template_files: []
 END_FILE
