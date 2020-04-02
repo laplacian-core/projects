@@ -12,7 +12,3 @@ project:
       url: https://github.com/nabla-squared/laplacian.model.metamodel.git
       branch: master
     base_dir: subprojects/laplacian.model.metamodel
-    templates:
-    - group: laplacian
-      name: template.project.base
-      version: '1.0.0'

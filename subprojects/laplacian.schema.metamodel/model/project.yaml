@@ -1,8 +1,8 @@
 project:
   group: laplacian
-  name: schema.project
+  name: schema.metamodel
   type: schema
-  namespace: laplacian.project
+  namespace: laplacian.metamodel
   version: '1.0.0'
   subprojects: []
   schemas:
@@ -13,9 +13,7 @@ project:
   - group: laplacian
     name: template.entity.kotlin
     version: '1.0.0'
-  models:
-  - group: laplacian
-    name: model.project
-    version: '1.0.0'
-  model_files: []
+  models: []
+  model_files:
+  - /home/iwauo/workspace/laplacian.projects/./subprojects/laplacian.model.metamodel/model/entities
   template_files: []

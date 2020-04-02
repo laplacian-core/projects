@@ -29,8 +29,8 @@ dependencies {
 gradlePlugin {
     plugins {
         schemaPlugin {
-            id = 'laplacian.schema.project'
-            implementationClass = 'laplacian.project.gradle.SchemaProjectPlugin'
+            id = 'laplacian.schema.metamodel'
+            implementationClass = 'laplacian.metamodel.gradle.SchemaMetamodelPlugin'
         }
     }
 }
@@ -56,7 +56,7 @@ publishing {
     }
     publications {
         mavenJava(MavenPublication) {
-            artifactId = 'schema.project'
+            artifactId = 'schema.metamodel'
             artifact sourcesJar
         }
     }

@@ -11,7 +11,3 @@ project:
       url: https://github.com/nabla-squared/laplacian.template.project.base.git
       branch: master
     base_dir: subprojects/laplacian.template.project.base
-    templates:
-    - group: laplacian
-      name: template.project.base
-      version: '1.0.0'

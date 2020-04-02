@@ -2,22 +2,21 @@ project:
   subprojects:
   - group: laplacian
     type: schema
-    name: schema.project
-    namespace: laplacian.project
+    name: schema.metamodel
+    namespace: laplacian.metamodel
     description: |
       A model which expresses the logical structure of laplacian-based projects and modules. 
     version: '1.0.0'
-    base_dir: subprojects/laplacian.schema.project
+    base_dir: subprojects/laplacian.schema.metamodel
     schemas:
     - group: laplacian
       name: schema.metamodel
       version: '1.0.0'
-    models:
-    - group: laplacian
-      name: model.project
-      version: '1.0.0'
+    model_files:
+    - ./subprojects/laplacian.model.metamodel/model/entities
     templates:
     - group: laplacian 
       name: template.entity.kotlin
       version: '1.0.0'
+
     

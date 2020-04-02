@@ -1,6 +1,7 @@
 package laplacian.project.record
 import com.github.jknack.handlebars.Context
 import laplacian.project.model.Project
+import laplacian.project.model.ProjectList
 import laplacian.project.model.SourceRepository
 import laplacian.project.model.Module
 import laplacian.util.*
@@ -101,6 +102,9 @@ data class ProjectRecord (
         /**
          * creates record list from list of map
          */
+        fun from(_context: Context): ProjectList {
+            return _context.get("projects") as ProjectList
+        }
         fun from(records: RecordList, _context: Context, parentProject: Project? = null) = records
             .mergeWithKeys("group", "name")
             .map {
