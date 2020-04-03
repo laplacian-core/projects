@@ -52,7 +52,7 @@ project:
     version: '1.0.0'
   templates:
   - group: laplacian
-    name: template.entity.kotlin
+    name: template.schema
     version: '1.0.0'
   models:
   - group: laplacian

@@ -4,7 +4,7 @@ set -e
 SCRIPT_BASE_DIR=$(cd $"${BASH_SOURCE%/*}" && pwd)
 PROJECT_BASE_DIR=$(cd $SCRIPT_BASE_DIR && cd ../.. && pwd)
 
-TARGET_PROJECT_DIR="${PROJECT_BASE_DIR}/subprojects/laplacian.template.entity.kotlin"
+TARGET_PROJECT_DIR="${PROJECT_BASE_DIR}/subprojects/laplacian-arch.model.datasource"
 
 (cd $TARGET_PROJECT_DIR
   if [[ ! -f ./scripts/laplacian-generate.sh ]]

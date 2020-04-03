@@ -2,13 +2,15 @@
 set -e
 SCRIPT_BASE_DIR=$(cd $"${BASH_SOURCE%/*}" && pwd)
 PROJECT_BASE_DIR=$(cd $SCRIPT_BASE_DIR && cd .. && pwd)
-LOG_FILE="./update-subprojects-$(date +%Y-%m-%dT%H:%M:%S).log"
-SUBPROJECTS='laplacian-model-metamodel
+LOG_FILE="./update-subprojects-$(date +%Y-%m-%dT%H%M%S).log"
+SUBPROJECTS='laplacian-arch-model-datasource
+laplacian-arch-template-datasource-flyway-migration
+laplacian-model-metamodel
 laplacian-model-project
 laplacian-schema-metamodel
 laplacian-schema-project
-laplacian-template-entity-kotlin
 laplacian-template-project-base
+laplacian-template-schema
 '
 
 for subproject in $SUBPROJECTS

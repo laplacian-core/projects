@@ -22,7 +22,7 @@ normalize_path () {
 #
 ${SCRIPT_BASE_DIR}/laplacian-generate.sh \
   --schema 'laplacian:laplacian.schema.metamodel:1.0.0' \
-  --template 'laplacian:laplacian.template.entity.kotlin:1.0.0' \
+  --template 'laplacian:laplacian.template.schema:1.0.0' \
   --model-files './model/project.yaml' \
   --model-files $(normalize_path '/home/iwauo/workspace/laplacian.projects/./subprojects/laplacian.model.metamodel/model/entities') \
   --target-dir ./

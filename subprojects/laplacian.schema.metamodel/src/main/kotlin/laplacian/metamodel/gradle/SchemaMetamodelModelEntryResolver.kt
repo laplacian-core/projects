@@ -9,14 +9,14 @@ import laplacian.util.*
 
 class SchemaMetamodelModelEntryResolver: ModelEntryResolver {
 
-    override fun resolves(key: String, model: Map<String, RecordList>): Boolean {
+    override fun resolves(key: String, model: Map<String, Any?>): Boolean {
         return arrayOf(
             "entities",
             "value_domain_types"
         ).any { it == key }
     }
 
-    override fun resolve(key: String, model: Map<String, RecordList>, context: ExecutionContext): Any? {
+    override fun resolve(key: String, model: Map<String, Any?>, context: ExecutionContext): Any? {
         return when (key) {
             "entities" -> EntityList(
                 model.getList<Record>("entities")

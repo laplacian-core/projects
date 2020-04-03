@@ -48,6 +48,15 @@ data class EntityRecord (
         }
 
     /**
+     * If this property is true, there is the "root" instance, which is accessible globally.
+
+     */
+    override val singlyRooted: Boolean
+        get() = getOrThrow("singlyRooted") {
+            false
+        }
+
+    /**
      * 詳細
      */
     override val description: String
@@ -182,6 +191,9 @@ which is used when implementing polymorphism. The name of entity is used by defa
          */
         fun from(_context: Context): EntityList {
             return _context.get("entities") as EntityList
+        }
+        fun from(records: RecordList, _context: Context) = records.map {
+            EntityRecord(it, _context)
         }
     }
     override fun equals(other: Any?): Boolean {

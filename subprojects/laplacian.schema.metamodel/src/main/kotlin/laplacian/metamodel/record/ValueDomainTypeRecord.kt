@@ -47,5 +47,8 @@ data class ValueDomainTypeRecord (
         fun from(_context: Context): ValueDomainTypeList {
             return _context.get("value_domain_types") as ValueDomainTypeList
         }
+        fun from(records: RecordList, _context: Context) = records.map {
+            ValueDomainTypeRecord(it, _context)
+        }
     }
 }

@@ -16,7 +16,7 @@ project:
     - ./subprojects/laplacian.model.metamodel/model/entities
     templates:
     - group: laplacian 
-      name: template.entity.kotlin
+      name: template.schema
       version: '1.0.0'
 
     

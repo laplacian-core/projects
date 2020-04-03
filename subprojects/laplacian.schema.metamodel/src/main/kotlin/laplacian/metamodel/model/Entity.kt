@@ -21,6 +21,11 @@ interface Entity {
      */
     val identifier: String
     /**
+     * If this property is true, there is the "root" instance, which is accessible globally.
+
+     */
+    val singlyRooted: Boolean
+    /**
      * 詳細
      */
     val description: String

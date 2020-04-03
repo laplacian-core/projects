@@ -7,7 +7,7 @@ LOCAL_MODULE_REPOSITORY_PATH='./subprojects/mvn-repo'
 LOCAL_MODULE_REPOSITORY_URL='https://github.com/nabla-squared/mvn-repo'
 LOCAL_MODULE_REPOSITORY_BRANCH='master'
 
-TARGET_PROJECT_DIR=subprojects/laplacian.template.entity.kotlin
+TARGET_PROJECT_DIR=subprojects/laplacian-arch.template.datasource.flyway-migration
 TARGET_MODEL_DIR="$TARGET_PROJECT_DIR/model"
 TARGET_PROJECT_MODEL_FILE="$TARGET_MODEL_DIR/project.yaml"
 
@@ -41,13 +41,13 @@ create_project_model_file() {
   mkdir -p $TARGET_MODEL_DIR
   cat <<END_FILE > $TARGET_PROJECT_MODEL_FILE
 project:
-  group: laplacian
-  name: template.entity.kotlin
+  group: laplacian-arch
+  name: template.datasource.flyway-migration
   type: template
-  namespace: laplacian
+  namespace: laplacian.arch
   version: '1.0.0'
   source_repository:
-    url: https://github.com/nabla-squared/laplacian.template.entity.kotlin.git
+    url: https://github.com/nabla-squared/laplacian-arch.template.datasource.flyway-migration.git
     branch: master
   subprojects: []
   schemas: []
@@ -64,7 +64,7 @@ checkout_from_code_repository() {
     mkdir -p $TARGET_PROJECT_DIR
     rm -rf $TARGET_PROJECT_DIR
     git clone \
-        https://github.com/nabla-squared/laplacian.template.entity.kotlin.git \
+        https://github.com/nabla-squared/laplacian-arch.template.datasource.flyway-migration.git \
         $TARGET_PROJECT_DIR
   fi
   (cd $TARGET_PROJECT_DIR

@@ -1,6 +1,7 @@
 project:
   group: laplacian
   name: projects
+  version: "1.0.0"
   description: |
     The core modules for the Laplacian generator.
   module_repositories:

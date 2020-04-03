@@ -7,7 +7,7 @@ LOCAL_MODULE_REPOSITORY_PATH='./subprojects/mvn-repo'
 LOCAL_MODULE_REPOSITORY_URL='https://github.com/nabla-squared/mvn-repo'
 LOCAL_MODULE_REPOSITORY_BRANCH='master'
 
-TARGET_PROJECT_DIR=subprojects/laplacian.schema.metamodel
+TARGET_PROJECT_DIR=subprojects/laplacian.template.schema
 TARGET_MODEL_DIR="$TARGET_PROJECT_DIR/model"
 TARGET_PROJECT_MODEL_FILE="$TARGET_MODEL_DIR/project.yaml"
 
@@ -17,6 +17,7 @@ TARGET_PROJECT_GENERATOR_SCRIPT="$TARGET_SCRIPT_DIR/$GENERATOR_SCRIPT_FILE_NAME"
 
 main() {
   setup_local_module_repository
+  checkout_from_code_repository
   create_project_model_file
   run_generator
 }
@@ -41,26 +42,36 @@ create_project_model_file() {
   cat <<END_FILE > $TARGET_PROJECT_MODEL_FILE
 project:
   group: laplacian
-  name: schema.metamodel
-  type: schema
-  namespace: laplacian.metamodel
+  name: template.schema
+  type: template
+  namespace: laplacian
   version: '1.0.0'
+  source_repository:
+    url: https://github.com/nabla-squared/laplacian.template.schema.git
+    branch: master
   subprojects: []
-  schemas:
-  - group: laplacian
-    name: schema.metamodel
-    version: '1.0.0'
-  templates:
-  - group: laplacian
-    name: template.schema
-    version: '1.0.0'
+  schemas: []
+  templates: []
   models: []
-  model_files:
-  - $(normalize_path './subprojects/laplacian.model.metamodel/model/entities')
+  model_files: []
   template_files: []
 END_FILE
 }
 
+checkout_from_code_repository() {
+  if [[ ! -d $TARGET_PROJECT_DIR/.git ]]
+  then
+    mkdir -p $TARGET_PROJECT_DIR
+    rm -rf $TARGET_PROJECT_DIR
+    git clone \
+        https://github.com/nabla-squared/laplacian.template.schema.git \
+        $TARGET_PROJECT_DIR
+  fi
+  (cd $TARGET_PROJECT_DIR
+    git checkout master
+    git pull
+  )
+}
 
 
 run_generator() {

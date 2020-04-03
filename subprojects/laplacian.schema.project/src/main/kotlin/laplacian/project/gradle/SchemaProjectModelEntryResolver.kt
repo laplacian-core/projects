@@ -7,20 +7,17 @@ import laplacian.util.*
 
 class SchemaProjectModelEntryResolver: ModelEntryResolver {
 
-    override fun resolves(key: String, model: Map<String, RecordList>): Boolean {
+    override fun resolves(key: String, model: Map<String, Any?>): Boolean {
         return arrayOf(
-            "projects"
+            "project"
         ).any { it == key }
     }
 
-    override fun resolve(key: String, model: Map<String, RecordList>, context: ExecutionContext): Any? {
+    override fun resolve(key: String, model: Map<String, Any?>, context: ExecutionContext): Any? {
         return when (key) {
-            "projects" -> ProjectList(
-                model.getList<Record>("projects")
-                     .mergeWithKeys("group", "name")
-                     .map{ ProjectRecord(it, context.currentModel) },
-                context.currentModel
-            )
+            "project" -> model.get("project").let {
+                ProjectRecord(it as Map<String, Any?>, context.currentModel)
+            }
             else -> throw IllegalArgumentException("Unknown key: $key")
         }
     }

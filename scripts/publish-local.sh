@@ -55,7 +55,7 @@ plugins {
 }
 
 group = 'laplacian'
-version = ''
+version = '1.0.0'
 
 repositories {
     maven {
