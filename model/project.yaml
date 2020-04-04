@@ -11,5 +11,3 @@ project:
       branch: master
     remote:
     - https://github.com/nabla-squared/mvn-repo
-
-

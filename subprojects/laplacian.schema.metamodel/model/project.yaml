@@ -13,7 +13,9 @@ project:
   - group: laplacian
     name: template.schema
     version: '1.0.0'
-  models: []
-  model_files:
-  - /home/iwauo/workspace/laplacian.projects/./subprojects/laplacian.model.metamodel/model/entities
+  models:
+  - group: laplacian
+    name: model.metamodel
+    version: '1.0.0'
+  model_files: []
   template_files: []
