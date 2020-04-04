@@ -1,9 +1,9 @@
 project:
   subprojects:
-  - group: laplacian
+  - group: laplacian-arch
     type: schema
-    name: schema.metamodel
-    namespace: laplacian.metamodel
+    name: schema.datasource
+    namespace: laplacian.arch.datasource
     description: |
       A model which expresses the logical structure of laplacian-based projects and modules. 
     version: '1.0.0'
@@ -11,13 +11,18 @@ project:
     - group: laplacian
       name: schema.metamodel
       version: '1.0.0'
+    - group: laplacian
+      name: schema.project
+      version: '1.0.0'
     models:
     - group: laplacian
       name: model.metamodel
+      version: '1.0.0'
+    - group: laplacian-arch
+      name: model.datasource
       version: '1.0.0'
     templates:
     - group: laplacian 
       name: template.schema
       version: '1.0.0'
-
     

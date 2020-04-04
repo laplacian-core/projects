@@ -1,0 +1,27 @@
+project:
+  group: laplacian-arch
+  name: schema.datasource
+  type: schema
+  namespace: laplacian.arch.datasource
+  version: '1.0.0'
+  subprojects: []
+  schemas:
+  - group: laplacian
+    name: schema.metamodel
+    version: '1.0.0'
+  - group: laplacian
+    name: schema.project
+    version: '1.0.0'
+  templates:
+  - group: laplacian
+    name: template.schema
+    version: '1.0.0'
+  models:
+  - group: laplacian
+    name: model.metamodel
+    version: '1.0.0'
+  - group: laplacian-arch
+    name: model.datasource
+    version: '1.0.0'
+  model_files: []
+  template_files: []
