@@ -45,6 +45,8 @@ project:
   type: schema
   namespace: laplacian.metamodel
   version: '1.0.0'
+  description: |
+    A model which expresses the logical structure of laplacian-based projects and modules.
   subprojects: []
   schemas:
   - group: laplacian

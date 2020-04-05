@@ -5,9 +5,19 @@ project:
     name: model.project
     namespace: laplacian
     description: |
-      A model which expresses the logical structure of laplacian-based projects and modules. 
+      A model which expresses the logical structure of laplacian-based projects and modules.
     version: '1.0.0'
     source_repository:
       url: https://github.com/nabla-squared/laplacian.model.project.git
-      branch: master
-    base_dir: subprojects/laplacian.model.project
+    schemas:
+    - group: laplacian
+      name: schema.metamodel
+      version: '1.0.0'
+    models:
+    - group: laplacian
+      name: model.project
+      version: '1.0.0'
+    templates:
+    - group: laplacian
+      name: template.metamodel.document
+      version: '1.0.0'

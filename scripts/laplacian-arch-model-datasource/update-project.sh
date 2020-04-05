@@ -46,13 +46,30 @@ project:
   type: model
   namespace: laplacian.arch
   version: '1.0.0'
+  description: |
+    This model expresses a view of a data-store (ex:RDBMS, KVS, etc..) from a certain client This model consists of the following entities:
+    - The information which is necessary to connect the data-store
+    - The entities allowed for clients to access
+    - The queries issued by the client
   source_repository:
     url: https://github.com/nabla-squared/laplacian-arch.model.datasource.git
     branch: master
   subprojects: []
-  schemas: []
-  templates: []
-  models: []
+  schemas:
+  - group: laplacian
+    name: schema.metamodel
+    version: '1.0.0'
+  templates:
+  - group: laplacian
+    name: template.metamodel.document
+    version: '1.0.0'
+  models:
+  - group: laplacian
+    name: model.metamodel
+    version: '1.0.0'
+  - group: laplacian-arch
+    name: model.datasource
+    version: '1.0.0'
   model_files: []
   template_files: []
 END_FILE

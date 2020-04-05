@@ -46,6 +46,9 @@ project:
   type: template
   namespace: laplacian
   version: '1.0.0'
+  description: |
+    This template generates a document describing a model defined with 'metamodel' model,
+    which includes a diagram that represents the structure of the model.
   source_repository:
     url: https://github.com/nabla-squared/laplacian.template.metamodel.document.git
     branch: master

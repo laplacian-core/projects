@@ -46,6 +46,8 @@ project:
   type: template
   namespace: laplacian.arch
   version: '1.0.0'
+  description: |
+    This template is generates a [flyway](https://flywaydb.org/) database schema migration task.
   source_repository:
     url: https://github.com/nabla-squared/laplacian-arch.template.datasource.flyway-migration.git
     branch: master

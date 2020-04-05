@@ -46,13 +46,24 @@ project:
   type: model
   namespace: laplacian
   version: '1.0.0'
+  description: |
+    A model which expresses the logical structure of laplacian-based projects and modules.
   source_repository:
     url: https://github.com/nabla-squared/laplacian.model.project.git
     branch: master
   subprojects: []
-  schemas: []
-  templates: []
-  models: []
+  schemas:
+  - group: laplacian
+    name: schema.metamodel
+    version: '1.0.0'
+  templates:
+  - group: laplacian
+    name: template.metamodel.document
+    version: '1.0.0'
+  models:
+  - group: laplacian
+    name: model.project
+    version: '1.0.0'
   model_files: []
   template_files: []
 END_FILE
