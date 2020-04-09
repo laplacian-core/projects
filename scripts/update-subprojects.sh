@@ -8,6 +8,7 @@ laplacian-arch-model-service-api
 laplacian-arch-schema-datasource
 laplacian-arch-schema-service-api
 laplacian-arch-template-datasource-flyway-migration
+laplacian-arch-template-service-api-springboot2
 laplacian-model-metamodel
 laplacian-model-project
 laplacian-schema-metamodel

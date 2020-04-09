@@ -8,6 +8,7 @@ subprojects/laplacian-arch.model.service-api
 subprojects/laplacian-arch.schema.datasource
 subprojects/laplacian-arch.schema.service-api
 subprojects/laplacian-arch.template.datasource.flyway-migration
+subprojects/laplacian-arch.template.service-api.springboot2
 subprojects/laplacian.model.metamodel
 subprojects/laplacian.model.project
 subprojects/laplacian.schema.metamodel
