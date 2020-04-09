@@ -7,7 +7,7 @@ LOCAL_MODULE_REPOSITORY_PATH='./subprojects/mvn-repo'
 LOCAL_MODULE_REPOSITORY_URL='https://github.com/nabla-squared/mvn-repo'
 LOCAL_MODULE_REPOSITORY_BRANCH='master'
 
-TARGET_PROJECT_DIR=subprojects/laplacian-arch.model.datasource
+TARGET_PROJECT_DIR=subprojects/laplacian-arch.model.service-api
 TARGET_MODEL_DIR="$TARGET_PROJECT_DIR/model"
 TARGET_PROJECT_MODEL_FILE="$TARGET_MODEL_DIR/project.yaml"
 
@@ -42,17 +42,15 @@ create_project_model_file() {
   cat <<END_FILE > $TARGET_PROJECT_MODEL_FILE
 project:
   group: laplacian-arch
-  name: model.datasource
+  name: model.service-api
   type: model
-  namespace: laplacian.arch.datasource
+  namespace: laplacian.arch.service.api
   version: '1.0.0'
   description: |
-    This model expresses a view of a data-store (ex:RDBMS, KVS, etc..) from a certain client This model consists of the following entities:
-    - The information which is necessary to connect the data-store
-    - The entities allowed for clients to access
-    - The queries issued by the client
+    A model that expresses the logical structure of a service API.
+    This model consists of REST api model, GraphQL interface model, and datasource usage model.
   source_repository:
-    url: https://github.com/nabla-squared/laplacian-arch.model.datasource.git
+    url: https://github.com/nabla-squared/laplacian-arch.model.service-api.git
     branch: master
   subprojects: []
   schemas:
@@ -70,6 +68,9 @@ project:
   - group: laplacian-arch
     name: model.datasource
     version: '1.0.0'
+  - group: laplacian-arch
+    name: model.service-api
+    version: '1.0.0'
   model_files: []
   template_files: []
 END_FILE
@@ -81,7 +82,7 @@ checkout_from_code_repository() {
     mkdir -p $TARGET_PROJECT_DIR
     rm -rf $TARGET_PROJECT_DIR
     git clone \
-        https://github.com/nabla-squared/laplacian-arch.model.datasource.git \
+        https://github.com/nabla-squared/laplacian-arch.model.service-api.git \
         $TARGET_PROJECT_DIR
   fi
   (cd $TARGET_PROJECT_DIR

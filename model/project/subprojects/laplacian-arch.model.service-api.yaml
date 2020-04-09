@@ -2,16 +2,14 @@ project:
   subprojects:
   - group: laplacian-arch
     type: model
-    name: model.datasource
-    namespace: laplacian.arch.datasource
+    name: model.service-api
+    namespace: laplacian.arch.service.api
     description: |
-      This model expresses a view of a data-store (ex:RDBMS, KVS, etc..) from a certain client This model consists of the following entities:
-      - The information which is necessary to connect the data-store
-      - The entities allowed for clients to access
-      - The queries issued by the client
+      A model that expresses the logical structure of a service API.
+      This model consists of REST api model, GraphQL interface model, and datasource usage model.
     version: '1.0.0'
     source_repository:
-      url: https://github.com/nabla-squared/laplacian-arch.model.datasource.git
+      url: https://github.com/nabla-squared/laplacian-arch.model.service-api.git
     schemas:
     - group: laplacian
       name: schema.metamodel
@@ -22,6 +20,9 @@ project:
       version: '1.0.0'
     - group: laplacian-arch
       name: model.datasource
+      version: '1.0.0'
+    - group: laplacian-arch
+      name: model.service-api
       version: '1.0.0'
     templates:
     - group: laplacian
