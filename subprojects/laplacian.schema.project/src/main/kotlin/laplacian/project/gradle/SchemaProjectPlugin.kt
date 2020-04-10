@@ -20,6 +20,7 @@ class SchemaProjectPlugin: Plugin<Project> {
         val dependentLibs = listOf(
             "laplacian:laplacian.schema.metamodel:1.0.0",
             "laplacian:laplacian.schema.project:1.0.0",
+            "laplacian:laplacian.schema.project:1.0.0",
             "laplacian:laplacian.generator:1.0.0"
         ).filter{ !isLoadedByItSelf(it) }
         val addToDependencies = { configName: String, dependencies :List<String> ->

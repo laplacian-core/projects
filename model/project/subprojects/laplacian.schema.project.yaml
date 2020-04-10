@@ -5,19 +5,21 @@ project:
     name: schema.project
     namespace: laplacian.project
     description: |
-      A model which expresses the logical structure of laplacian-based projects and modules. 
+      A model which expresses the logical structure of laplacian-based projects and modules.
     version: '1.0.0'
-    base_dir: subprojects/laplacian.schema.project
     schemas:
     - group: laplacian
       name: schema.metamodel
+      version: '1.0.0'
+    - group: laplacian
+      name: schema.project
       version: '1.0.0'
     models:
     - group: laplacian
       name: model.project
       version: '1.0.0'
     templates:
-    - group: laplacian 
+    - group: laplacian
       name: template.schema
       version: '1.0.0'
-    
+

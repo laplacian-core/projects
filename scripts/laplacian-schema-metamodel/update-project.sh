@@ -52,6 +52,9 @@ project:
   - group: laplacian
     name: schema.metamodel
     version: '1.0.0'
+  - group: laplacian
+    name: schema.project
+    version: '1.0.0'
   templates:
   - group: laplacian
     name: template.schema

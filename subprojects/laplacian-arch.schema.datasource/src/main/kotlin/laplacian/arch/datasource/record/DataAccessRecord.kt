@@ -6,7 +6,8 @@ import laplacian.metamodel.model.Entity
 import laplacian.metamodel.record.EntityRecord
 import laplacian.util.*
 /**
- * data_access
+ * A *DataAccess* represents an interface through which an client retrieve data from a *DataSource*.
+
  */
 data class DataAccessRecord (
     private val __record: Record,

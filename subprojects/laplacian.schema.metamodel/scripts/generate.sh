@@ -22,6 +22,7 @@ normalize_path () {
 #
 ${SCRIPT_BASE_DIR}/laplacian-generate.sh \
   --schema 'laplacian:laplacian.schema.metamodel:1.0.0' \
+  --schema 'laplacian:laplacian.schema.project:1.0.0' \
   --template 'laplacian:laplacian.template.schema:1.0.0' \
   --model 'laplacian:laplacian.model.metamodel:1.0.0' \
   --model-files './model/project.yaml' \

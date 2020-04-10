@@ -6,7 +6,8 @@ import laplacian.metamodel.model.Entity
 import laplacian.util.*
 
 /**
- * datasource
+ * A *DataSource* represents a connection to a data store, such as an RDBMS.
+
  */
 interface Datasource {
     /**

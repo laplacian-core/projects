@@ -7,7 +7,8 @@ import laplacian.metamodel.model.Entity
 import laplacian.metamodel.record.EntityRecord
 import laplacian.util.*
 /**
- * datasource
+ * A *DataSource* represents a connection to a data store, such as an RDBMS.
+
  */
 data class DatasourceRecord (
     private val __record: Record,
@@ -80,7 +81,7 @@ data class DatasourceRecord (
      */
     override val dbname: String
         get() = getOrThrow("dbname") {
-            user
+            name.lowerUnderscorize()
         }
 
     /**
