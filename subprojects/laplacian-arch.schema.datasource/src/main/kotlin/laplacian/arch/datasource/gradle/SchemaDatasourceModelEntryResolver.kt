@@ -19,13 +19,13 @@ class SchemaDatasourceModelEntryResolver: ModelEntryResolver {
     override fun resolve(key: String, model: Map<String, Any?>, context: ExecutionContext): Any? {
         return when (key) {
             "data_accesses" -> DataAccessList(
-                model.getList<Record>("data_accesses")
+                model.getList<Record>("data_accesses", emptyList())
                      .mergeWithKeys("entity_name", "name")
                      .map{ DataAccessRecord(it, context.currentModel) },
                 context.currentModel
             )
             "datasources" -> DatasourceList(
-                model.getList<Record>("datasources")
+                model.getList<Record>("datasources", emptyList())
                      .mergeWithKeys()
                      .map{ DatasourceRecord(it, context.currentModel) },
                 context.currentModel

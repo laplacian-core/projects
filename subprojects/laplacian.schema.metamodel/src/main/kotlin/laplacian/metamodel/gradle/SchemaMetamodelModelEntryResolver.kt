@@ -19,13 +19,13 @@ class SchemaMetamodelModelEntryResolver: ModelEntryResolver {
     override fun resolve(key: String, model: Map<String, Any?>, context: ExecutionContext): Any? {
         return when (key) {
             "entities" -> EntityList(
-                model.getList<Record>("entities")
+                model.getList<Record>("entities", emptyList())
                      .mergeWithKeys("name", "namespace")
                      .map{ EntityRecord(it, context.currentModel) },
                 context.currentModel
             )
             "value_domain_types" -> ValueDomainTypeList(
-                model.getList<Record>("value_domain_types")
+                model.getList<Record>("value_domain_types", emptyList())
                      .mergeWithKeys()
                      .map{ ValueDomainTypeRecord(it, context.currentModel) },
                 context.currentModel
