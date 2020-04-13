@@ -3,19 +3,7 @@ set -e
 SCRIPT_BASE_DIR=$(cd $"${BASH_SOURCE%/*}" && pwd)
 PROJECT_BASE_DIR=$(cd $SCRIPT_BASE_DIR && cd .. && pwd)
 
-GENERATOR_SCRIPT_FILE_NAME=laplacian-arch-schema-datasource-generate.sh
-TARGET_SCRIPT_DIR="$TARGET_PROJECT_DIR/scripts"
-TARGET_PROJECT_GENERATOR_SCRIPT="$TARGET_SCRIPT_DIR/$GENERATOR_SCRIPT_FILE_NAME"
-
-normalize_path () {
-  local path=$1
-  if [[ $path == /* ]]
-  then
-    echo $path
-  else
-    echo "${PROJECT_BASE_DIR}/$path"
-  fi
-}
+LOCAL_REPO_PATH="$PROJECT_BASE_DIR/../mvn-repo"
 
 #
 # Generate resources for schema.datasource project.
@@ -27,4 +15,5 @@ ${SCRIPT_BASE_DIR}/laplacian-generate.sh \
   --model 'laplacian:laplacian.model.metamodel:1.0.0' \
   --model 'laplacian-arch:laplacian-arch.model.datasource:1.0.0' \
   --model-files './model/project.yaml' \
-  --target-dir ./
+  --target-dir ./ \
+  --local-repo "$LOCAL_REPO_PATH"

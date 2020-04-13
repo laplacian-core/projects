@@ -3,11 +3,21 @@ set -e
 SCRIPT_BASE_DIR=$(cd $"${BASH_SOURCE%/*}" && pwd)
 PROJECT_BASE_DIR=$(cd $SCRIPT_BASE_DIR && cd ../.. && pwd)
 
-LOCAL_MODULE_REPOSITORY_PATH='./subprojects/mvn-repo'
+normalize_path () {
+  local path=$1
+  if [[ $path == /* ]]
+  then
+    echo $path
+  else
+    echo "${PROJECT_BASE_DIR}/$path"
+  fi
+}
+
+LOCAL_MODULE_REPOSITORY_PATH="$(normalize_path './subprojects/mvn-repo')"
 LOCAL_MODULE_REPOSITORY_URL='https://github.com/nabla-squared/mvn-repo'
 LOCAL_MODULE_REPOSITORY_BRANCH='master'
 
-TARGET_PROJECT_DIR=subprojects/laplacian.schema.metamodel
+TARGET_PROJECT_DIR="$(normalize_path 'subprojects/laplacian.schema.metamodel')"
 TARGET_MODEL_DIR="$TARGET_PROJECT_DIR/model"
 TARGET_PROJECT_MODEL_FILE="$TARGET_MODEL_DIR/project.yaml"
 
@@ -22,18 +32,18 @@ main() {
 }
 
 setup_local_module_repository() {
-  local local_repo="$(normalize_path $LOCAL_MODULE_REPOSITORY_PATH)"
-  if [[ ! -d "$local_repo/.git" ]]
+  mkdir -p $LOCAL_MODULE_REPOSITORY_PATH
+  if [[ ! -d "$LOCAL_MODULE_REPOSITORY_PATH/.git" ]]
   then
-    mkdir -p $local_repo
-    rm -rf $local_repo
+    rm -rf $LOCAL_MODULE_REPOSITORY_PATH
     git clone \
-        $LOCAL_MODULE_REPOSITORY_URL \
-        $local_repo
-    git checkout $LOCAL_MODULE_REPOSITORY_BRANCH
+      $LOCAL_MODULE_REPOSITORY_URL \
+      $LOCAL_MODULE_REPOSITORY_PATH
   fi
-  git pull
-
+  (cd $LOCAL_MODULE_REPOSITORY_PATH
+    git checkout $LOCAL_MODULE_REPOSITORY_BRANCH
+    git pull
+  )
 }
 
 create_project_model_file() {
@@ -79,16 +89,6 @@ run_generator() {
     fi
     ./scripts/update-project.sh
   )
-}
-
-normalize_path () {
-  local path=$1
-  if [[ $path == /* ]]
-  then
-    echo $path
-  else
-    echo "${PROJECT_BASE_DIR}/$path"
-  fi
 }
 
 main

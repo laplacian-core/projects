@@ -11,3 +11,13 @@ project:
       branch: master
     remote:
     - https://github.com/nabla-squared/mvn-repo
+  schemas:
+  - group: laplacian
+    name: schema.project
+    version: '1.0.0'
+  model_files:
+  - model/project.yaml
+  templates:
+  - group: laplacian
+    name: template.project.document
+    version: '1.0.0'
