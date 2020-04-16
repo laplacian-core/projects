@@ -11,13 +11,12 @@ subprojects/laplacian-arch.template.datasource.flyway-migration
 subprojects/laplacian-arch.template.service-api.springboot2
 subprojects/laplacian.model.metamodel
 subprojects/laplacian.model.project
+subprojects/laplacian.project-base.template
+subprojects/laplacian.project-doc.content
+subprojects/laplacian.schema-doc.template
 subprojects/laplacian.schema.metamodel
 subprojects/laplacian.schema.project
-subprojects/laplacian.template.metamodel.document
-subprojects/laplacian.template.project.base
-subprojects/laplacian.template.project.document
 subprojects/laplacian.template.schema
-subprojects/laplacian.template.template.document
 '
 
 for subproject in $SUBPROJECTS

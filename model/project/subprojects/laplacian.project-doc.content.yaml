@@ -1,0 +1,21 @@
+project:
+  subprojects:
+  - group: laplacian
+    type: model
+    name: project-doc.content
+    namespace: laplacian
+    description: |
+      The content of the project documentation
+    version: '1.0.0'
+    source_repository:
+      url: https://github.com/nabla-squared/laplacian.project-doc.content.git
+    templates:
+    - group: laplacian
+      type: template
+      name: project-base.template
+      version: '1.0.0'
+    models:
+    - group: laplacian
+      type: model
+      name: project-doc.content
+      version: '1.0.0'

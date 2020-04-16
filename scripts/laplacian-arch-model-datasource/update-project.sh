@@ -3,6 +3,8 @@ set -e
 SCRIPT_BASE_DIR=$(cd $"${BASH_SOURCE%/*}" && pwd)
 PROJECT_BASE_DIR=$(cd $SCRIPT_BASE_DIR && cd ../.. && pwd)
 
+FILE_INDEX_PATH="$PROJECT_BASE_DIR/model/project/files.yaml"
+
 normalize_path () {
   local path=$1
   if [[ $path == /* ]]
@@ -26,7 +28,6 @@ TARGET_SCRIPT_DIR="$TARGET_PROJECT_DIR/scripts"
 TARGET_PROJECT_GENERATOR_SCRIPT="$TARGET_SCRIPT_DIR/$GENERATOR_SCRIPT_FILE_NAME"
 
 main() {
-	set -x
   setup_local_module_repository
   checkout_from_code_repository
   create_project_model_file

@@ -19,7 +19,7 @@ LOCAL_MODULE_REPOSITORY_PATH="$(normalize_path './subprojects/mvn-repo')"
 LOCAL_MODULE_REPOSITORY_URL='https://github.com/nabla-squared/mvn-repo'
 LOCAL_MODULE_REPOSITORY_BRANCH='master'
 
-TARGET_PROJECT_DIR="$(normalize_path 'subprojects/laplacian-arch.schema.datasource')"
+TARGET_PROJECT_DIR="$(normalize_path 'subprojects/laplacian.schema-doc.template')"
 TARGET_MODEL_DIR="$TARGET_PROJECT_DIR/model"
 TARGET_PROJECT_MODEL_FILE="$TARGET_MODEL_DIR/project.yaml"
 
@@ -29,6 +29,7 @@ TARGET_PROJECT_GENERATOR_SCRIPT="$TARGET_SCRIPT_DIR/$GENERATOR_SCRIPT_FILE_NAME"
 
 main() {
   setup_local_module_repository
+  checkout_from_code_repository
   create_project_model_file
   run_generator
 }
@@ -52,37 +53,46 @@ create_project_model_file() {
   mkdir -p $TARGET_MODEL_DIR
   cat <<END_FILE > $TARGET_PROJECT_MODEL_FILE
 project:
-  group: laplacian-arch
-  name: schema.datasource
-  type: schema
-  namespace: laplacian.arch.datasource
+  group: laplacian
+  name: schema-doc.template
+  type: template
+  namespace: laplacian
   version: '1.0.0'
   description: |
-    A model which expresses the logical structure of laplacian-based projects and modules.
+    This template generates diagrams that represents the structure of schemas
+    defined by the [Metamodel](https://github.com/nabla-squared/laplacian.model.metamodel).
+  source_repository:
+    url: https://github.com/nabla-squared/laplacian.schema-doc.template.git
+    branch: master
   subprojects: []
-  schemas:
-  - group: laplacian
-    name: schema.metamodel
-    version: '1.0.0'
-  - group: laplacian
-    name: schema.project
-    version: '1.0.0'
+  schemas: []
   templates:
   - group: laplacian
-    name: template.schema
+    name: project-base.template
     version: '1.0.0'
   models:
   - group: laplacian
-    name: model.metamodel
-    version: '1.0.0'
-  - group: laplacian-arch
-    name: model.datasource
+    name: project-doc.content
     version: '1.0.0'
   model_files: []
   template_files: []
 END_FILE
 }
 
+checkout_from_code_repository() {
+  if [[ ! -d $TARGET_PROJECT_DIR/.git ]]
+  then
+    mkdir -p $TARGET_PROJECT_DIR
+    rm -rf $TARGET_PROJECT_DIR
+    git clone \
+        https://github.com/nabla-squared/laplacian.schema-doc.template.git \
+        $TARGET_PROJECT_DIR
+  fi
+  (cd $TARGET_PROJECT_DIR
+    git checkout master
+    git pull
+  )
+}
 
 
 run_generator() {

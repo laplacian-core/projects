@@ -3,6 +3,8 @@ set -e
 SCRIPT_BASE_DIR=$(cd $"${BASH_SOURCE%/*}" && pwd)
 PROJECT_BASE_DIR=$(cd $SCRIPT_BASE_DIR && cd ../.. && pwd)
 
+FILE_INDEX_PATH="$PROJECT_BASE_DIR/model/project/files.yaml"
+
 normalize_path () {
   local path=$1
   if [[ $path == /* ]]
@@ -17,7 +19,7 @@ LOCAL_MODULE_REPOSITORY_PATH="$(normalize_path './subprojects/mvn-repo')"
 LOCAL_MODULE_REPOSITORY_URL='https://github.com/nabla-squared/mvn-repo'
 LOCAL_MODULE_REPOSITORY_BRANCH='master'
 
-TARGET_PROJECT_DIR="$(normalize_path 'subprojects/laplacian.template.template.document')"
+TARGET_PROJECT_DIR="$(normalize_path 'subprojects/laplacian.template.schema-diagram')"
 TARGET_MODEL_DIR="$TARGET_PROJECT_DIR/model"
 TARGET_PROJECT_MODEL_FILE="$TARGET_MODEL_DIR/project.yaml"
 
@@ -52,18 +54,22 @@ create_project_model_file() {
   cat <<END_FILE > $TARGET_PROJECT_MODEL_FILE
 project:
   group: laplacian
-  name: template.template.document
+  name: template.schema-diagram
   type: template
   namespace: laplacian
   version: '1.0.0'
   description: |
-    This template generates the documents describing template files used in the project.
+    This template generates diagrams that represents the structure of schemas
+    defined by the [Metamodel](https://github.com/nabla-squared/laplacian.model.metamodel).
   source_repository:
-    url: https://github.com/nabla-squared/laplacian.template.template.document.git
+    url: https://github.com/nabla-squared/laplacian.template.schema-diagram.git
     branch: master
   subprojects: []
   schemas: []
-  templates: []
+  templates:
+  - group: laplacian
+    name: template.project.base
+    version: '1.0.0'
   models: []
   model_files: []
   template_files: []
@@ -76,7 +82,7 @@ checkout_from_code_repository() {
     mkdir -p $TARGET_PROJECT_DIR
     rm -rf $TARGET_PROJECT_DIR
     git clone \
-        https://github.com/nabla-squared/laplacian.template.template.document.git \
+        https://github.com/nabla-squared/laplacian.template.schema-diagram.git \
         $TARGET_PROJECT_DIR
   fi
   (cd $TARGET_PROJECT_DIR

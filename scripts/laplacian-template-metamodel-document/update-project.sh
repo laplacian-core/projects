@@ -3,6 +3,8 @@ set -e
 SCRIPT_BASE_DIR=$(cd $"${BASH_SOURCE%/*}" && pwd)
 PROJECT_BASE_DIR=$(cd $SCRIPT_BASE_DIR && cd ../.. && pwd)
 
+FILE_INDEX_PATH="$PROJECT_BASE_DIR/model/project/files.yaml"
+
 normalize_path () {
   local path=$1
   if [[ $path == /* ]]
@@ -64,7 +66,10 @@ project:
     branch: master
   subprojects: []
   schemas: []
-  templates: []
+  templates:
+  - group: laplacian
+    name: template.project.base
+    version: '1.0.0'
   models: []
   model_files: []
   template_files: []

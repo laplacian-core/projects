@@ -3,11 +3,23 @@ set -e
 SCRIPT_BASE_DIR=$(cd $"${BASH_SOURCE%/*}" && pwd)
 PROJECT_BASE_DIR=$(cd $SCRIPT_BASE_DIR && cd ../.. && pwd)
 
-LOCAL_MODULE_REPOSITORY_PATH='./subprojects/mvn-repo'
+FILE_INDEX_PATH="$PROJECT_BASE_DIR/model/project/files.yaml"
+
+normalize_path () {
+  local path=$1
+  if [[ $path == /* ]]
+  then
+    echo $path
+  else
+    echo "${PROJECT_BASE_DIR}/$path"
+  fi
+}
+
+LOCAL_MODULE_REPOSITORY_PATH="$(normalize_path './subprojects/mvn-repo')"
 LOCAL_MODULE_REPOSITORY_URL='https://github.com/nabla-squared/mvn-repo'
 LOCAL_MODULE_REPOSITORY_BRANCH='master'
 
-TARGET_PROJECT_DIR=subprojects/laplacian.template.document
+TARGET_PROJECT_DIR="$(normalize_path 'subprojects/laplacian.project-doc.content')"
 TARGET_MODEL_DIR="$TARGET_PROJECT_DIR/model"
 TARGET_PROJECT_MODEL_FILE="$TARGET_MODEL_DIR/project.yaml"
 
@@ -23,18 +35,18 @@ main() {
 }
 
 setup_local_module_repository() {
-  local local_repo="$(normalize_path $LOCAL_MODULE_REPOSITORY_PATH)"
-  if [[ ! -d "$local_repo/.git" ]]
+  mkdir -p $LOCAL_MODULE_REPOSITORY_PATH
+  if [[ ! -d "$LOCAL_MODULE_REPOSITORY_PATH/.git" ]]
   then
-    mkdir -p $local_repo
-    rm -rf $local_repo
+    rm -rf $LOCAL_MODULE_REPOSITORY_PATH
     git clone \
-        $LOCAL_MODULE_REPOSITORY_URL \
-        $local_repo
-    git checkout $LOCAL_MODULE_REPOSITORY_BRANCH
+      $LOCAL_MODULE_REPOSITORY_URL \
+      $LOCAL_MODULE_REPOSITORY_PATH
   fi
-  git pull
-
+  (cd $LOCAL_MODULE_REPOSITORY_PATH
+    git checkout $LOCAL_MODULE_REPOSITORY_BRANCH
+    git pull
+  )
 }
 
 create_project_model_file() {
@@ -42,19 +54,25 @@ create_project_model_file() {
   cat <<END_FILE > $TARGET_PROJECT_MODEL_FILE
 project:
   group: laplacian
-  name: template.document
-  type: template
+  name: project-doc.content
+  type: model
   namespace: laplacian
   version: '1.0.0'
   description: |
-    This template is generates a set of documents concerning the templates used in this project.
+    The content of the project documentation
   source_repository:
-    url: https://github.com/nabla-squared/laplacian.template.template.document.git
+    url: https://github.com/nabla-squared/laplacian.project-doc.content.git
     branch: master
   subprojects: []
   schemas: []
-  templates: []
-  models: []
+  templates:
+  - group: laplacian
+    name: project-base.template
+    version: '1.0.0'
+  models:
+  - group: laplacian
+    name: project-doc.content
+    version: '1.0.0'
   model_files: []
   template_files: []
 END_FILE
@@ -66,7 +84,7 @@ checkout_from_code_repository() {
     mkdir -p $TARGET_PROJECT_DIR
     rm -rf $TARGET_PROJECT_DIR
     git clone \
-        https://github.com/nabla-squared/laplacian.template.template.document.git \
+        https://github.com/nabla-squared/laplacian.project-doc.content.git \
         $TARGET_PROJECT_DIR
   fi
   (cd $TARGET_PROJECT_DIR
@@ -85,16 +103,6 @@ run_generator() {
     fi
     ./scripts/update-project.sh
   )
-}
-
-normalize_path () {
-  local path=$1
-  if [[ $path == /* ]]
-  then
-    echo $path
-  else
-    echo "${PROJECT_BASE_DIR}/$path"
-  fi
 }
 
 main

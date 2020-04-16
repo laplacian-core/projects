@@ -1,8 +1,14 @@
-# projects
+<!-- @head-content@ -->
+# laplacian/projects
 
 The core modules for the Laplacian generator.
 
+<!-- @head-content@ -->
 
-<!-- @content@ -->
+<!-- @toc -->
 
-<!-- @content@ -->
+<!-- @toc -->
+
+<!-- @main-content -->
+
+<!-- @main-content -->

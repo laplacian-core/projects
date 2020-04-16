@@ -11,13 +11,12 @@ laplacian-arch-template-datasource-flyway-migration
 laplacian-arch-template-service-api-springboot2
 laplacian-model-metamodel
 laplacian-model-project
+laplacian-project-base-template
+laplacian-project-doc-content
+laplacian-schema-doc-template
 laplacian-schema-metamodel
 laplacian-schema-project
-laplacian-template-metamodel-document
-laplacian-template-project-base
-laplacian-template-project-document
 laplacian-template-schema
-laplacian-template-template-document
 '
 
 for subproject in $SUBPROJECTS
