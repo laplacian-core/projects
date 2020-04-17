@@ -10,11 +10,11 @@ subprojects/laplacian-arch.schema.service-api
 subprojects/laplacian-arch.template.datasource.flyway-migration
 subprojects/laplacian-arch.template.service-api.springboot2
 subprojects/laplacian.model.metamodel
-subprojects/laplacian.project-base.template
-subprojects/laplacian.project-doc.content
+subprojects/laplacian.project.base-template
+subprojects/laplacian.project.document-content
 subprojects/laplacian.project.schema-model
 subprojects/laplacian.project.schema-plugin
-subprojects/laplacian.schema-doc.template
+subprojects/laplacian.schema.document-template
 subprojects/laplacian.schema.metamodel
 subprojects/laplacian.schema.plugin-template
 '

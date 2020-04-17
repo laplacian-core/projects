@@ -11,10 +11,10 @@ laplacian-arch-template-datasource-flyway-migration
 laplacian-arch-template-service-api-springboot2
 laplacian-model-metamodel
 laplacian-project-base-template
-laplacian-project-doc-content
+laplacian-project-document-content
 laplacian-project-schema-model
 laplacian-project-schema-plugin
-laplacian-schema-doc-template
+laplacian-schema-document-template
 laplacian-schema-metamodel
 laplacian-schema-plugin-template
 '
