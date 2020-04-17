@@ -1,0 +1,30 @@
+project:
+  group: laplacian
+  name: project.schema-plugin
+  type: plugin
+  namespace: laplacian.project
+  version: '1.0.0'
+  description: |
+    A schema-plugin for project models.
+  subprojects: []
+  schemas:
+  - group: laplacian
+    name: schema.metamodel
+    version: '1.0.0'
+  - group: laplacian
+    name: schema.project
+    version: '1.0.0'
+  plugins: []
+  templates:
+  - group: laplacian
+    name: project-base.template
+    version: '1.0.0'
+  - group: laplacian
+    name: schema.plugin-template
+    version: '1.0.0'
+  models:
+  - group: laplacian
+    name: project.schema-model
+    version: '1.0.0'
+  model_files: []
+  template_files: []

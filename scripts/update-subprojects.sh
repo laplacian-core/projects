@@ -13,10 +13,10 @@ laplacian-model-metamodel
 laplacian-project-base-template
 laplacian-project-doc-content
 laplacian-project-schema-model
+laplacian-project-schema-plugin
 laplacian-schema-doc-template
 laplacian-schema-metamodel
-laplacian-schema-project
-laplacian-template-schema
+laplacian-schema-plugin-template
 '
 
 for subproject in $SUBPROJECTS

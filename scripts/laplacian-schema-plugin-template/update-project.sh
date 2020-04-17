@@ -19,7 +19,7 @@ LOCAL_MODULE_REPOSITORY_PATH="$(normalize_path './subprojects/mvn-repo')"
 LOCAL_MODULE_REPOSITORY_URL='https://github.com/nabla-squared/mvn-repo'
 LOCAL_MODULE_REPOSITORY_BRANCH='master'
 
-TARGET_PROJECT_DIR="$(normalize_path 'subprojects/laplacian.schema.project')"
+TARGET_PROJECT_DIR="$(normalize_path 'subprojects/laplacian.schema.plugin-template')"
 TARGET_MODEL_DIR="$TARGET_PROJECT_DIR/model"
 TARGET_PROJECT_MODEL_FILE="$TARGET_MODEL_DIR/project.yaml"
 
@@ -29,6 +29,7 @@ TARGET_PROJECT_GENERATOR_SCRIPT="$TARGET_SCRIPT_DIR/$GENERATOR_SCRIPT_FILE_NAME"
 
 main() {
   setup_local_module_repository
+  checkout_from_code_repository
   create_project_model_file
   run_generator
 }
@@ -53,37 +54,45 @@ create_project_model_file() {
   cat <<END_FILE > $TARGET_PROJECT_MODEL_FILE
 project:
   group: laplacian
-  name: schema.project
-  type: schema
-  namespace: laplacian.project
+  name: schema.plugin-template
+  type: template
+  namespace: laplacian
   version: '1.0.0'
   description: |
-    A plugin module for project schema.
+    This template is generates a schema gradle plugin which defines the structure of models.
+  source_repository:
+    url: https://github.com/nabla-squared/laplacian.schema.plugin-template.git
+    branch: master
   subprojects: []
-  schemas:
-  - group: laplacian
-    name: schema.metamodel
-    version: '1.0.0'
-  - group: laplacian
-    name: schema.project
-    version: '1.0.0'
+  schemas: []
   plugins: []
   templates:
   - group: laplacian
     name: project-base.template
     version: '1.0.0'
-  - group: laplacian
-    name: schema.plugin-template
-    version: '1.0.0'
   models:
   - group: laplacian
-    name: project.schema-model
+    name: project-doc.content
     version: '1.0.0'
   model_files: []
   template_files: []
 END_FILE
 }
 
+checkout_from_code_repository() {
+  if [[ ! -d $TARGET_PROJECT_DIR/.git ]]
+  then
+    mkdir -p $TARGET_PROJECT_DIR
+    rm -rf $TARGET_PROJECT_DIR
+    git clone \
+        https://github.com/nabla-squared/laplacian.schema.plugin-template.git \
+        $TARGET_PROJECT_DIR
+  fi
+  (cd $TARGET_PROJECT_DIR
+    git checkout master
+    git pull
+  )
+}
 
 
 run_generator() {

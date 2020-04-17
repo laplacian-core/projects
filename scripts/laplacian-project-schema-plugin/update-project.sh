@@ -19,7 +19,7 @@ LOCAL_MODULE_REPOSITORY_PATH="$(normalize_path './subprojects/mvn-repo')"
 LOCAL_MODULE_REPOSITORY_URL='https://github.com/nabla-squared/mvn-repo'
 LOCAL_MODULE_REPOSITORY_BRANCH='master'
 
-TARGET_PROJECT_DIR="$(normalize_path 'subprojects/laplacian.schema.project')"
+TARGET_PROJECT_DIR="$(normalize_path 'subprojects/laplacian.project.schema-plugin')"
 TARGET_MODEL_DIR="$TARGET_PROJECT_DIR/model"
 TARGET_PROJECT_MODEL_FILE="$TARGET_MODEL_DIR/project.yaml"
 
@@ -53,12 +53,12 @@ create_project_model_file() {
   cat <<END_FILE > $TARGET_PROJECT_MODEL_FILE
 project:
   group: laplacian
-  name: schema.project
-  type: schema
+  name: project.schema-plugin
+  type: plugin
   namespace: laplacian.project
   version: '1.0.0'
   description: |
-    A plugin module for project schema.
+    A schema-plugin for project models.
   subprojects: []
   schemas:
   - group: laplacian

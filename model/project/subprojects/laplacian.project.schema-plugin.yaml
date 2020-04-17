@@ -1,11 +1,11 @@
 project:
   subprojects:
   - group: laplacian
-    type: schema
-    name: schema.project
+    type: plugin
+    name: project.schema-plugin
     namespace: laplacian.project
     description: |
-      A model which expresses the logical structure of laplacian-based projects and modules.
+      A schema-plugin for project models.
     version: '1.0.0'
     schemas:
     - group: laplacian
@@ -16,10 +16,12 @@ project:
       version: '1.0.0'
     models:
     - group: laplacian
-      name: model.project
+      name: project.schema-model
       version: '1.0.0'
     templates:
     - group: laplacian
-      name: template.schema
+      name: project-base.template
       version: '1.0.0'
-
+    - group: laplacian
+      name: schema.plugin-template
+      version: '1.0.0'

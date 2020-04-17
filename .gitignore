@@ -29,7 +29,7 @@ build/
 out/
 
 # Laplacian projects
-dest/
+/dest/
 subprojects/mvn-repo/
 subprojects/laplacian-arch.model.datasource/
 subprojects/laplacian-arch.model.service-api/
@@ -40,4 +40,4 @@ subprojects/laplacian.project-base.template/
 subprojects/laplacian.project-doc.content/
 subprojects/laplacian.project.schema-model/
 subprojects/laplacian.schema-doc.template/
-subprojects/laplacian.template.schema/
+subprojects/laplacian.schema.plugin-template/

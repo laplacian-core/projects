@@ -11,29 +11,24 @@ REMOTE_REPO_PATH='https://raw.github.com/nabla-squared/mvn-repo/master/'
 LOCAL_REPO_PATH="$PROJECT_BASE_DIR/../mvn-repo"
 
 DEST_DIR="$PROJECT_BASE_DIR/dest"
-SRC_DIR="$PROJECT_BASE_DIR/src"
 
 main() {
-  create_dest_dir
   generate
+  publish
+
+}
+
+## @generate-function@ ##
+generate() {
+  $SCRIPT_BASE_DIR/generate.sh
+}
+## @generate-function@ ##
+
+## @publish-function@ ##
+publish() {
   create_settings_gradle
   create_build_gradle
   run_gradle
-}
-
-create_dest_dir() {
-  mkdir -p $DEST_DIR
-  rm -rf $DEST_DIR
-  if [ -d $SRC_DIR ]
-  then
-    cp -rf $SRC_DIR $DEST_DIR
-  else
-    mkdir -p $DEST_DIR
-  fi
-}
-
-generate() {
-  $SCRIPT_BASE_DIR/generate.sh
 }
 
 run_gradle() {
@@ -103,5 +98,6 @@ publishing {
 }
 EOF
 }
+## @publish-function@ ##
 
 main
