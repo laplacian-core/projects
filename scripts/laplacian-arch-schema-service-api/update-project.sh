@@ -70,6 +70,7 @@ project:
   - group: laplacian-arch
     name: schema.datasource
     version: '1.0.0'
+  plugins: []
   templates:
   - group: laplacian
     name: template.schema

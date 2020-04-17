@@ -19,7 +19,7 @@ LOCAL_MODULE_REPOSITORY_PATH="$(normalize_path './subprojects/mvn-repo')"
 LOCAL_MODULE_REPOSITORY_URL='https://github.com/nabla-squared/mvn-repo'
 LOCAL_MODULE_REPOSITORY_BRANCH='master'
 
-TARGET_PROJECT_DIR="$(normalize_path 'subprojects/laplacian-arch.model.datasource')"
+TARGET_PROJECT_DIR="$(normalize_path 'subprojects/laplacian.project.schema-model')"
 TARGET_MODEL_DIR="$TARGET_PROJECT_DIR/model"
 TARGET_PROJECT_MODEL_FILE="$TARGET_MODEL_DIR/project.yaml"
 
@@ -53,35 +53,35 @@ create_project_model_file() {
   mkdir -p $TARGET_MODEL_DIR
   cat <<END_FILE > $TARGET_PROJECT_MODEL_FILE
 project:
-  group: laplacian-arch
-  name: model.datasource
+  group: laplacian
+  name: project.schema-model
   type: model
-  namespace: laplacian.arch.datasource
+  namespace: laplacian.project
   version: '1.0.0'
   description: |
-    This model expresses a view of a data-store (ex:RDBMS, KVS, etc..) from a certain client This model consists of the following entities:
-    - The information which is necessary to connect the data-store
-    - The entities allowed for clients to access
-    - The queries issued by the client
+    A model which expresses the logical structure of laplacian-based projects and modules.
   source_repository:
-    url: https://github.com/nabla-squared/laplacian-arch.model.datasource.git
+    url: https://github.com/nabla-squared/laplacian.project.schema-model.git
     branch: master
   subprojects: []
-  schemas:
+  schemas: []
+  plugins:
   - group: laplacian
     name: schema.metamodel
     version: '1.0.0'
-  plugins: []
   templates:
   - group: laplacian
-    name: template.metamodel.document
+    name: project-base.template
+    version: '1.0.0'
+  - group: laplacian
+    name: schema-doc.template
     version: '1.0.0'
   models:
   - group: laplacian
-    name: model.metamodel
+    name: project.schema-model
     version: '1.0.0'
-  - group: laplacian-arch
-    name: model.datasource
+  - group: laplacian
+    name: project-doc.content
     version: '1.0.0'
   model_files: []
   template_files: []
@@ -94,7 +94,7 @@ checkout_from_code_repository() {
     mkdir -p $TARGET_PROJECT_DIR
     rm -rf $TARGET_PROJECT_DIR
     git clone \
-        https://github.com/nabla-squared/laplacian-arch.model.datasource.git \
+        https://github.com/nabla-squared/laplacian.project.schema-model.git \
         $TARGET_PROJECT_DIR
   fi
   (cd $TARGET_PROJECT_DIR

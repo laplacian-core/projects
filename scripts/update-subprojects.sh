@@ -10,9 +10,9 @@ laplacian-arch-schema-service-api
 laplacian-arch-template-datasource-flyway-migration
 laplacian-arch-template-service-api-springboot2
 laplacian-model-metamodel
-laplacian-model-project
 laplacian-project-base-template
 laplacian-project-doc-content
+laplacian-project-schema-model
 laplacian-schema-doc-template
 laplacian-schema-metamodel
 laplacian-schema-project

@@ -19,5 +19,5 @@ project:
   - model/project.yaml
   templates:
   - group: laplacian
-    name: template.project.document
+    name: project-base.template
     version: '1.0.0'

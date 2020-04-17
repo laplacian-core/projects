@@ -67,6 +67,7 @@ project:
   - group: laplacian
     name: schema.project
     version: '1.0.0'
+  plugins: []
   templates:
   - group: laplacian
     name: template.schema

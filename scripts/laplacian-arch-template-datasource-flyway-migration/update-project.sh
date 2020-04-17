@@ -65,6 +65,7 @@ project:
     branch: master
   subprojects: []
   schemas: []
+  plugins: []
   templates: []
   models: []
   model_files: []

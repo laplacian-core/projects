@@ -66,6 +66,7 @@ project:
     branch: master
   subprojects: []
   schemas: []
+  plugins: []
   templates:
   - group: laplacian
     name: project-base.template

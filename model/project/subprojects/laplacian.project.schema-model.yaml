@@ -2,22 +2,28 @@ project:
   subprojects:
   - group: laplacian
     type: model
-    name: model.project
-    namespace: laplacian
+    name: project.schema-model
+    namespace: laplacian.project
     description: |
       A model which expresses the logical structure of laplacian-based projects and modules.
     version: '1.0.0'
     source_repository:
-      url: https://github.com/nabla-squared/laplacian.model.project.git
-    schemas:
+      url: https://github.com/nabla-squared/laplacian.project.schema-model.git
+    plugins:
     - group: laplacian
       name: schema.metamodel
       version: '1.0.0'
     models:
     - group: laplacian
-      name: model.project
+      name: project.schema-model
+      version: '1.0.0'
+    - group: laplacian
+      name: project-doc.content
       version: '1.0.0'
     templates:
     - group: laplacian
-      name: template.metamodel.document
+      name: project-base.template
+      version: '1.0.0'
+    - group: laplacian
+      name: schema-doc.template
       version: '1.0.0'
