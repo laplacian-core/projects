@@ -7,12 +7,12 @@ project:
     description: |
       A schema-plugin for project models.
     version: '1.0.0'
-    schemas:
+    plugins:
     - group: laplacian
-      name: schema.metamodel
+      name: metamodel-plugin
       version: '1.0.0'
     - group: laplacian
-      name: schema.project
+      name: project.schema-plugin
       version: '1.0.0'
     models:
     - group: laplacian

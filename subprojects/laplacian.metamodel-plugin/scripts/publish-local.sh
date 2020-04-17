@@ -56,7 +56,7 @@ pluginManagement {
         jcenter()
     }
 }
-rootProject.name = "laplacian.project.schema-plugin"
+rootProject.name = "laplacian.metamodel-plugin"
 EOF
 }
 

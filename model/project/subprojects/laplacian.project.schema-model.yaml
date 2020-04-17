@@ -11,7 +11,7 @@ project:
       url: https://github.com/nabla-squared/laplacian.project.schema-model.git
     plugins:
     - group: laplacian
-      name: schema.metamodel
+      name: metamodel-plugin
       version: '1.0.0'
     - group: laplacian
       name: project.schema-plugin

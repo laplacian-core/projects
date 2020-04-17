@@ -68,11 +68,11 @@ project:
   plugins: []
   templates:
   - group: laplacian
-    name: project-base.template
+    name: project.base-template
     version: '1.0.0'
   models:
   - group: laplacian
-    name: project-doc.content
+    name: project.document-content
     version: '1.0.0'
   model_files: []
   template_files: []

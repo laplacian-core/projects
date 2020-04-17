@@ -60,14 +60,14 @@ project:
   description: |
     A schema-plugin for project models.
   subprojects: []
-  schemas:
+  schemas: []
+  plugins:
   - group: laplacian
-    name: schema.metamodel
+    name: metamodel-plugin
     version: '1.0.0'
   - group: laplacian
-    name: schema.project
+    name: project.schema-plugin
     version: '1.0.0'
-  plugins: []
   templates:
   - group: laplacian
     name: project-base.template
