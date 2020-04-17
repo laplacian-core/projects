@@ -3,11 +3,11 @@ set -e
 SCRIPT_BASE_DIR=$(cd $"${BASH_SOURCE%/*}" && pwd)
 PROJECT_BASE_DIR=$(cd $SCRIPT_BASE_DIR && cd .. && pwd)
 LOG_FILE="./update-subprojects-$(date +%Y-%m-%dT%H%M%S).log"
-SUBPROJECTS='laplacian-arch-model-datasource
-laplacian-arch-model-service-api
+SUBPROJECTS='laplacian-arch-template-datasource-flyway-migration
+laplacian-arch-datasource-schema-model
 laplacian-arch-schema-datasource
+laplacian-arch-model-service-api
 laplacian-arch-schema-service-api
-laplacian-arch-template-datasource-flyway-migration
 laplacian-arch-template-service-api-springboot2
 laplacian-metamodel-plugin
 laplacian-metamodel

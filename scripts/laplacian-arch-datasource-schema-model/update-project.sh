@@ -19,7 +19,7 @@ LOCAL_MODULE_REPOSITORY_PATH="$(normalize_path './subprojects/mvn-repo')"
 LOCAL_MODULE_REPOSITORY_URL='https://github.com/nabla-squared/mvn-repo'
 LOCAL_MODULE_REPOSITORY_BRANCH='master'
 
-TARGET_PROJECT_DIR="$(normalize_path 'subprojects/laplacian-arch.model.datasource')"
+TARGET_PROJECT_DIR="$(normalize_path 'subprojects/laplacian-arch.datasource.schema-model')"
 TARGET_MODEL_DIR="$TARGET_PROJECT_DIR/model"
 TARGET_PROJECT_MODEL_FILE="$TARGET_MODEL_DIR/project.yaml"
 
@@ -54,7 +54,7 @@ create_project_model_file() {
   cat <<END_FILE > $TARGET_PROJECT_MODEL_FILE
 project:
   group: laplacian-arch
-  name: model.datasource
+  name: datasource.schema-model
   type: model
   namespace: laplacian.arch.datasource
   version: '1.0.0'
@@ -67,21 +67,30 @@ project:
     url: https://github.com/nabla-squared/laplacian-arch.model.datasource.git
     branch: master
   subprojects: []
-  schemas:
+  schemas: []
+  plugins:
   - group: laplacian
-    name: schema.metamodel
+    name: metamodel-plugin
     version: '1.0.0'
-  plugins: []
+  - group: laplacian
+    name: project.schema-plugin
+    version: '1.0.0'
   templates:
   - group: laplacian
-    name: template.metamodel.document
+    name: project.base-template
+    version: '1.0.0'
+  - group: laplacian
+    name: schema.document-template
     version: '1.0.0'
   models:
   - group: laplacian
-    name: model.metamodel
+    name: metamodel
+    version: '1.0.0'
+  - group: laplacian
+    name: project.document-content
     version: '1.0.0'
   - group: laplacian-arch
-    name: model.datasource
+    name: datasource.schema-model
     version: '1.0.0'
   model_files: []
   template_files: []

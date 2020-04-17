@@ -31,9 +31,9 @@ out/
 # Laplacian projects
 /dest/
 subprojects/mvn-repo/
-subprojects/laplacian-arch.model.datasource/
-subprojects/laplacian-arch.model.service-api/
 subprojects/laplacian-arch.template.datasource.flyway-migration/
+subprojects/laplacian-arch.datasource.schema-model/
+subprojects/laplacian-arch.model.service-api/
 subprojects/laplacian-arch.template.service-api.springboot2/
 subprojects/laplacian.metamodel/
 subprojects/laplacian.project.base-template/
