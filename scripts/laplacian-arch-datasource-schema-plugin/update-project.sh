@@ -19,7 +19,7 @@ LOCAL_MODULE_REPOSITORY_PATH="$(normalize_path './subprojects/mvn-repo')"
 LOCAL_MODULE_REPOSITORY_URL='https://github.com/nabla-squared/mvn-repo'
 LOCAL_MODULE_REPOSITORY_BRANCH='master'
 
-TARGET_PROJECT_DIR="$(normalize_path 'subprojects/laplacian.metamodel-plugin')"
+TARGET_PROJECT_DIR="$(normalize_path 'subprojects/laplacian-arch.datasource.schema-plugin')"
 TARGET_MODEL_DIR="$TARGET_PROJECT_DIR/model"
 TARGET_PROJECT_MODEL_FILE="$TARGET_MODEL_DIR/project.yaml"
 
@@ -52,13 +52,13 @@ create_project_model_file() {
   mkdir -p $TARGET_MODEL_DIR
   cat <<END_FILE > $TARGET_PROJECT_MODEL_FILE
 project:
-  group: laplacian
-  name: metamodel-plugin
+  group: laplacian-arch
+  name: datasource.schema-plugin
   type: plugin
-  namespace: laplacian.metamodel
+  namespace: laplacian.arch.datasource
   version: '1.0.0'
   description: |
-    A model which expresses the logical structure of laplacian-based projects and modules.
+    A schema gradle plugin for the datasource arch model
   subprojects: []
   schemas: []
   plugins:
@@ -78,6 +78,9 @@ project:
   models:
   - group: laplacian
     name: metamodel
+    version: '1.0.0'
+  - group: laplacian-arch
+    name: datasource.schema-model
     version: '1.0.0'
   model_files: []
   template_files: []

@@ -1,28 +1,30 @@
 project:
   subprojects:
   - group: laplacian-arch
-    type: schema
-    name: schema.datasource
+    type: plugin
+    name: datasource.schema-plugin
     namespace: laplacian.arch.datasource
     description: |
-      A model which expresses the logical structure of laplacian-based projects and modules. 
+      A schema gradle plugin for the datasource arch model
     version: '1.0.0'
-    schemas:
+    plugins:
     - group: laplacian
-      name: schema.metamodel
+      name: metamodel-plugin
       version: '1.0.0'
     - group: laplacian
-      name: schema.project
+      name: project.schema-plugin
       version: '1.0.0'
     models:
     - group: laplacian
-      name: model.metamodel
+      name: metamodel
       version: '1.0.0'
     - group: laplacian-arch
-      name: model.datasource
+      name: datasource.schema-model
       version: '1.0.0'
     templates:
-    - group: laplacian 
-      name: template.schema
+    - group: laplacian
+      name: project.base-template
       version: '1.0.0'
-    
+    - group: laplacian
+      name: schema.plugin-template
+      version: '1.0.0'

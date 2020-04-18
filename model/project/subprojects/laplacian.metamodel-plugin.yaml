@@ -20,6 +20,9 @@ project:
       version: '1.0.0'
     templates:
     - group: laplacian
+      name: project.base-template
+      version: '1.0.0'
+    - group: laplacian
       name: schema.plugin-template
       version: '1.0.0'
 

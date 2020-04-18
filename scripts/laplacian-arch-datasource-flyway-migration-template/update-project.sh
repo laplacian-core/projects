@@ -19,7 +19,7 @@ LOCAL_MODULE_REPOSITORY_PATH="$(normalize_path './subprojects/mvn-repo')"
 LOCAL_MODULE_REPOSITORY_URL='https://github.com/nabla-squared/mvn-repo'
 LOCAL_MODULE_REPOSITORY_BRANCH='master'
 
-TARGET_PROJECT_DIR="$(normalize_path 'subprojects/laplacian.metamodel-plugin')"
+TARGET_PROJECT_DIR="$(normalize_path 'subprojects/laplacian-arch.datasource.flyway-migration-template')"
 TARGET_MODEL_DIR="$TARGET_PROJECT_DIR/model"
 TARGET_PROJECT_MODEL_FILE="$TARGET_MODEL_DIR/project.yaml"
 
@@ -29,6 +29,7 @@ TARGET_PROJECT_GENERATOR_SCRIPT="$TARGET_SCRIPT_DIR/$GENERATOR_SCRIPT_FILE_NAME"
 
 main() {
   setup_local_module_repository
+  checkout_from_code_repository
   create_project_model_file
   run_generator
 }
@@ -52,38 +53,46 @@ create_project_model_file() {
   mkdir -p $TARGET_MODEL_DIR
   cat <<END_FILE > $TARGET_PROJECT_MODEL_FILE
 project:
-  group: laplacian
-  name: metamodel-plugin
-  type: plugin
-  namespace: laplacian.metamodel
+  group: laplacian-arch
+  name: datasource.flyway-migration-template
+  type: template
+  namespace: laplacian.arch
   version: '1.0.0'
   description: |
-    A model which expresses the logical structure of laplacian-based projects and modules.
+    This template generates [flyway](https://flywaydb.org/) database schema migration tasks from datasource models.
+  source_repository:
+    url: https://github.com/nabla-squared/laplacian-arch.datasource.flyway-migration-template.git
+    branch: master
   subprojects: []
   schemas: []
-  plugins:
-  - group: laplacian
-    name: metamodel-plugin
-    version: '1.0.0'
-  - group: laplacian
-    name: project.schema-plugin
-    version: '1.0.0'
+  plugins: []
   templates:
   - group: laplacian
     name: project.base-template
     version: '1.0.0'
-  - group: laplacian
-    name: schema.plugin-template
-    version: '1.0.0'
   models:
   - group: laplacian
-    name: metamodel
+    name: project.document-content
     version: '1.0.0'
   model_files: []
   template_files: []
 END_FILE
 }
 
+checkout_from_code_repository() {
+  if [[ ! -d $TARGET_PROJECT_DIR/.git ]]
+  then
+    mkdir -p $TARGET_PROJECT_DIR
+    rm -rf $TARGET_PROJECT_DIR
+    git clone \
+        https://github.com/nabla-squared/laplacian-arch.datasource.flyway-migration-template.git \
+        $TARGET_PROJECT_DIR
+  fi
+  (cd $TARGET_PROJECT_DIR
+    git checkout master
+    git pull
+  )
+}
 
 
 run_generator() {

@@ -3,9 +3,9 @@ set -e
 SCRIPT_BASE_DIR=$(cd $"${BASH_SOURCE%/*}" && pwd)
 PROJECT_BASE_DIR=$(cd $SCRIPT_BASE_DIR && cd .. && pwd)
 LOCAL_REPO_PATH='../mvn-repo'
-SUBPROJECTS='subprojects/laplacian-arch.template.datasource.flyway-migration
+SUBPROJECTS='subprojects/laplacian-arch.datasource.flyway-migration-template
 subprojects/laplacian-arch.datasource.schema-model
-subprojects/laplacian-arch.schema.datasource
+subprojects/laplacian-arch.datasource.schema-plugin
 subprojects/laplacian-arch.model.service-api
 subprojects/laplacian-arch.schema.service-api
 subprojects/laplacian-arch.template.service-api.springboot2
