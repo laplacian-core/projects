@@ -5,10 +5,10 @@ A model which expresses the logical structure of laplacian-based projects and mo
 
 <!-- @head-content@ -->
 
-<!-- @toc -->
+<!-- @toc@ -->
 
-<!-- @toc -->
+<!-- @toc@ -->
 
-<!-- @main-content -->
+<!-- @main-content@ -->
 
-<!-- @main-content -->
+<!-- @main-content@ -->
