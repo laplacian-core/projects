@@ -67,7 +67,6 @@ generate() {
     --template 'laplacian:laplacian.project.base-template:1.0.0' \
     --model-files $(normalize_path './model/project.yaml') \
     --model-files $(normalize_path './model/project/') \
-    --model-files $(normalize_path 'model/project.yaml') \
     --target-dir ./ \
     --local-repo "$LOCAL_REPO_PATH"
 }

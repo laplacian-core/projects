@@ -15,8 +15,6 @@ project:
   - group: laplacian
     name: project.schema-plugin
     version: '1.0.0'
-  model_files:
-  - model/project.yaml
   templates:
   - group: laplacian
     name: project.base-template
