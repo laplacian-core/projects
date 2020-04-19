@@ -1,6 +1,7 @@
 project:
   group: laplacian
   name: projects
+  type: model
   version: "1.0.0"
   description: |
     The core modules for the Laplacian generator.
@@ -15,7 +16,15 @@ project:
   - group: laplacian
     name: project.schema-plugin
     version: '1.0.0'
+  models:
+  - group: laplacian
+    name: projects
+    version: '1.0.0'
+  - group: laplacian
+    name: project.document-content
+    version: '1.0.0'
   templates:
   - group: laplacian
     name: project.base-template
     version: '1.0.0'
+
