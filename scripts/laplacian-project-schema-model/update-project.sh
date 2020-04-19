@@ -7,11 +7,11 @@ FILE_INDEX_PATH="$PROJECT_BASE_DIR/model/project/files.yaml"
 
 normalize_path () {
   local path=$1
-  if [[ $path == /* ]]
+  if [[ $path == ./* ]]
   then
-    echo $path
-  else
     echo "${PROJECT_BASE_DIR}/$path"
+  else
+    echo $path
   fi
 }
 
@@ -74,19 +74,17 @@ project:
     version: '1.0.0'
   templates:
   - group: laplacian
-    name: project-base.template
+    name: project.base-template
     version: '1.0.0'
   - group: laplacian
-    name: schema-doc.template
+    name: schema.document-template
     version: '1.0.0'
   models:
   - group: laplacian
-    name: project.schema-model
+    name: project.document-content
     version: '1.0.0'
-  - group: laplacian
-    name: project-doc.content
-    version: '1.0.0'
-  model_files: []
+  model_files:
+  - $(normalize_path 'src/')
   template_files: []
 END_FILE
 }

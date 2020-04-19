@@ -5,10 +5,10 @@ A schema-plugin for project models.
 
 <!-- @head-content@ -->
 
-<!-- @toc -->
+<!-- @toc@ -->
 
-<!-- @toc -->
+<!-- @toc@ -->
 
-<!-- @main-content -->
+<!-- @main-content@ -->
 
-<!-- @main-content -->
+<!-- @main-content@ -->

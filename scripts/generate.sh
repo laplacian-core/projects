@@ -33,11 +33,11 @@ create_dest_dir() {
 
 normalize_path () {
   local path=$1
-  if [[ $path == /* ]]
+  if [[ $path == ./* ]]
   then
-    echo $path
-  else
     echo "${PROJECT_BASE_DIR}/$path"
+  else
+    echo $path
   fi
 }
 
@@ -45,7 +45,7 @@ create_file_index() {
   mkdir -p $PROJECT_MODEL_DIR
   cat <<EOF > $PROJECT_SOURCE_INDEX
 project:
-  sources:$(file_list)
+  sources:$(file_list | sort -d)
 EOF
 }
 
@@ -69,10 +69,10 @@ generate() {
   ${SCRIPT_BASE_DIR}/laplacian-generate.sh \
     --plugin 'laplacian:laplacian.project.schema-plugin:1.0.0' \
     --template 'laplacian:laplacian.project.base-template:1.0.0' \
-    --model 'laplacian:laplacian.projects:1.0.0' \
     --model 'laplacian:laplacian.project.document-content:1.0.0' \
     --model-files $(normalize_path './model/project.yaml') \
     --model-files $(normalize_path './model/project/') \
+    --model-files $(normalize_path 'src/') \
     --target-dir ./ \
     --local-repo "$LOCAL_REPO_PATH"
 }
