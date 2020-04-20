@@ -63,7 +63,6 @@ project:
   source_repository:
     url: https://github.com/nabla-squared/laplacian.project.document-content.git
     branch: master
-  subprojects: []
   plugins:
   - group: laplacian
     name: project.schema-plugin
@@ -76,8 +75,6 @@ project:
   - group: laplacian
     name: project.document-content
     version: '1.0.0'
-  model_files: []
-  template_files: []
 END_FILE
 }
 

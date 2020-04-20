@@ -64,7 +64,6 @@ project:
   source_repository:
     url: https://github.com/nabla-squared/laplacian.metamodel.git
     branch: master
-  subprojects: []
   plugins:
   - group: laplacian
     name: metamodel-plugin
@@ -86,8 +85,6 @@ project:
   - group: laplacian
     name: project.document-content
     version: '1.0.0'
-  model_files: []
-  template_files: []
 END_FILE
 }
 

@@ -59,7 +59,6 @@ project:
   version: '1.0.0'
   description: |
     A model which expresses the logical structure of laplacian-based projects and modules.
-  subprojects: []
   plugins:
   - group: laplacian
     name: metamodel-plugin
@@ -78,8 +77,6 @@ project:
   - group: laplacian
     name: metamodel
     version: '1.0.0'
-  model_files: []
-  template_files: []
 END_FILE
 }
 

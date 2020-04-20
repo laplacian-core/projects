@@ -66,7 +66,6 @@ project:
   source_repository:
     url: https://github.com/nabla-squared/laplacian-arch.model.datasource.git
     branch: master
-  subprojects: []
   plugins:
   - group: laplacian
     name: metamodel-plugin
@@ -91,8 +90,6 @@ project:
   - group: laplacian-arch
     name: datasource.schema-model
     version: '1.0.0'
-  model_files: []
-  template_files: []
 END_FILE
 }
 

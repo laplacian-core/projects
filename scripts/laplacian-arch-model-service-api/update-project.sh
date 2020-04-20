@@ -64,8 +64,6 @@ project:
   source_repository:
     url: https://github.com/nabla-squared/laplacian-arch.model.service-api.git
     branch: master
-  subprojects: []
-  plugins: []
   templates:
   - group: laplacian
     name: template.metamodel.document
@@ -80,8 +78,6 @@ project:
   - group: laplacian-arch
     name: model.service-api
     version: '1.0.0'
-  model_files: []
-  template_files: []
 END_FILE
 }
 

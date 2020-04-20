@@ -59,8 +59,6 @@ project:
   version: '1.0.0'
   description: |
     A schema for service-api architecture model.
-  subprojects: []
-  plugins: []
   templates:
   - group: laplacian
     name: template.schema
@@ -75,8 +73,6 @@ project:
   - group: laplacian-arch
     name: model.service-api
     version: '1.0.0'
-  model_files: []
-  template_files: []
 END_FILE
 }
 

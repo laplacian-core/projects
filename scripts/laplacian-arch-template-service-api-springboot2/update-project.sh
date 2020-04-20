@@ -68,12 +68,6 @@ project:
   source_repository:
     url: https://github.com/nabla-squared/laplacian-arch.template.service-api.springboot2.git
     branch: master
-  subprojects: []
-  plugins: []
-  templates: []
-  models: []
-  model_files: []
-  template_files: []
 END_FILE
 }
 

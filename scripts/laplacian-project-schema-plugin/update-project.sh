@@ -59,7 +59,6 @@ project:
   version: '1.0.0'
   description: |
     A schema-plugin for project models.
-  subprojects: []
   plugins:
   - group: laplacian
     name: metamodel-plugin
@@ -78,8 +77,6 @@ project:
   - group: laplacian
     name: project.schema-model
     version: '1.0.0'
-  model_files: []
-  template_files: []
 END_FILE
 }
 
