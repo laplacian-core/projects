@@ -64,15 +64,14 @@ project:
     url: https://github.com/nabla-squared/laplacian.project.base-template.git
     branch: master
   subprojects: []
-  schemas: []
-  plugins: []
-  templates:
+  plugins:
   - group: laplacian
-    name: project.base-template
+    name: project.schema-plugin
     version: '1.0.0'
+  templates: []
   models:
   - group: laplacian
-    name: project-doc.content
+    name: project.project-types
     version: '1.0.0'
   model_files: []
   template_files: []
@@ -98,10 +97,7 @@ checkout_from_code_repository() {
 run_generator() {
   mkdir -p $TARGET_SCRIPT_DIR
   (cd $TARGET_PROJECT_DIR
-    if [[ ! -f ./scripts/laplacian-generate.sh ]]
-    then
-      curl -Ls https://git.io/fhxcl | bash
-    fi
+    curl -Ls https://git.io/fhxcl | bash
     ./scripts/update-project.sh
   )
 }

@@ -66,6 +66,8 @@ project:
 
 [src/project/subprojects/laplacian.project.document-content.yaml](<./src/project/subprojects/laplacian.project.document-content.yaml>)
 
+[src/project/subprojects/laplacian.project.project-types.yaml](<./src/project/subprojects/laplacian.project.project-types.yaml>)
+
 [src/project/subprojects/laplacian.project.schema-model.yaml](<./src/project/subprojects/laplacian.project.schema-model.yaml>)
 
 [src/project/subprojects/laplacian.project.schema-plugin.yaml](<./src/project/subprojects/laplacian.project.schema-plugin.yaml>)

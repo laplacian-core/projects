@@ -39,6 +39,7 @@ subprojects/laplacian-arch.template.service-api.springboot2/
 subprojects/laplacian.metamodel/
 subprojects/laplacian.project.base-template/
 subprojects/laplacian.project.document-content/
+subprojects/laplacian.project.project-types/
 subprojects/laplacian.project.schema-model/
 subprojects/laplacian.schema.document-template/
 subprojects/laplacian.schema.plugin-template/

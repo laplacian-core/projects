@@ -60,7 +60,6 @@ project:
   description: |
     A schema-plugin for project models.
   subprojects: []
-  schemas: []
   plugins:
   - group: laplacian
     name: metamodel-plugin
@@ -89,10 +88,7 @@ END_FILE
 run_generator() {
   mkdir -p $TARGET_SCRIPT_DIR
   (cd $TARGET_PROJECT_DIR
-    if [[ ! -f ./scripts/laplacian-generate.sh ]]
-    then
-      curl -Ls https://git.io/fhxcl | bash
-    fi
+    curl -Ls https://git.io/fhxcl | bash
     ./scripts/update-project.sh
   )
 }

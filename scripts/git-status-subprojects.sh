@@ -13,6 +13,7 @@ subprojects/laplacian.metamodel-plugin
 subprojects/laplacian.metamodel
 subprojects/laplacian.project.base-template
 subprojects/laplacian.project.document-content
+subprojects/laplacian.project.project-types
 subprojects/laplacian.project.schema-model
 subprojects/laplacian.project.schema-plugin
 subprojects/laplacian.schema.document-template

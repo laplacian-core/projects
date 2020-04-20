@@ -60,16 +60,6 @@ project:
   description: |
     A schema for service-api architecture model.
   subprojects: []
-  schemas:
-  - group: laplacian
-    name: schema.metamodel
-    version: '1.0.0'
-  - group: laplacian
-    name: schema.project
-    version: '1.0.0'
-  - group: laplacian-arch
-    name: schema.datasource
-    version: '1.0.0'
   plugins: []
   templates:
   - group: laplacian
@@ -95,10 +85,7 @@ END_FILE
 run_generator() {
   mkdir -p $TARGET_SCRIPT_DIR
   (cd $TARGET_PROJECT_DIR
-    if [[ ! -f ./scripts/laplacian-generate.sh ]]
-    then
-      curl -Ls https://git.io/fhxcl | bash
-    fi
+    curl -Ls https://git.io/fhxcl | bash
     ./scripts/update-project.sh
   )
 }
