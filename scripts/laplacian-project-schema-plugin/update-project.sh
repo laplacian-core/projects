@@ -54,25 +54,11 @@ create_project_model_file() {
 project:
   group: laplacian
   name: project.schema-plugin
-  type: plugin
+  type: schema-plugin
   namespace: laplacian.project
   version: '1.0.0'
   description: |
     A schema-plugin for project models.
-  plugins:
-  - group: laplacian
-    name: metamodel-plugin
-    version: '1.0.0'
-  - group: laplacian
-    name: project.schema-plugin
-    version: '1.0.0'
-  templates:
-  - group: laplacian
-    name: project.base-template
-    version: '1.0.0'
-  - group: laplacian
-    name: schema.plugin-template
-    version: '1.0.0'
   models:
   - group: laplacian
     name: project.schema-model

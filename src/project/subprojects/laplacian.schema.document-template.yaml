@@ -10,11 +10,3 @@ project:
     version: '1.0.0'
     source_repository:
       url: https://github.com/nabla-squared/laplacian.schema.document-template.git
-    templates:
-    - group: laplacian
-      name: project.base-template
-      version: '1.0.0'
-    models:
-    - group: laplacian
-      name: project.document-content
-      version: '1.0.0'

@@ -30,9 +30,77 @@ generate() {
 
 ## @publish-function@ ##
 publish() {
-    (cd $DEST_DIR
-      ./gradlew publish
-    )
+  create_settings_gradle
+  create_build_gradle
+  run_gradle
+}
+
+run_gradle() {
+  (cd $GRADLE_DIR
+    ./gradlew \
+      --stacktrace \
+      --build-file build.gradle \
+      --settings-file settings.gradle \
+      --project-dir $GRADLE_DIR \
+      publish
+  )
+}
+
+create_settings_gradle() {
+  cat <<EOF > $GRADLE_SETTINGS_FILE
+pluginManagement {
+    repositories {
+        maven {
+            url '${LOCAL_REPO_PATH}'
+        }
+        maven {
+            url '${REMOTE_REPO_PATH}'
+        }
+        gradlePluginPortal()
+        jcenter()
+    }
+}
+rootProject.name = "laplacian.project.schema-plugin"
+EOF
+}
+
+create_build_gradle() {
+  cat <<EOF > $GRADLE_BUILD_FILE
+plugins {
+    id 'maven-publish'
+    id 'org.jetbrains.kotlin.jvm' version '1.3.70'
+}
+
+group = 'laplacian'
+version = '1.0.0'
+
+repositories {
+    maven {
+        url '${LOCAL_REPO_PATH}'
+    }
+    maven {
+        url '${REMOTE_REPO_PATH}'
+    }
+    jcenter()
+}
+
+task moduleJar(type: Jar) {
+    from '${DEST_DIR}'
+}
+
+publishing {
+    repositories {
+        maven {
+            url '${LOCAL_REPO_PATH}'
+        }
+    }
+    publications {
+        mavenJava(MavenPublication) {
+            artifact moduleJar
+        }
+    }
+}
+EOF
 }
 ## @publish-function@ ##
 

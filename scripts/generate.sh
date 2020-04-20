@@ -69,6 +69,7 @@ generate() {
   ${SCRIPT_BASE_DIR}/laplacian-generate.sh \
     --plugin 'laplacian:laplacian.project.schema-plugin:1.0.0' \
     --template 'laplacian:laplacian.project.base-template:1.0.0' \
+    --model 'laplacian:laplacian.project.project-types:1.0.0' \
     --model 'laplacian:laplacian.project.document-content:1.0.0' \
     --model-files $(normalize_path 'model/project.yaml') \
     --model-files $(normalize_path 'model/project/') \

@@ -55,7 +55,7 @@ create_project_model_file() {
 project:
   group: laplacian
   name: metamodel
-  type: model
+  type: schema-model
   namespace: laplacian.metamodel
   version: '1.0.0'
   description: |
@@ -64,27 +64,8 @@ project:
   source_repository:
     url: https://github.com/nabla-squared/laplacian.metamodel.git
     branch: master
-  plugins:
-  - group: laplacian
-    name: metamodel-plugin
-    version: '1.0.0'
-  - group: laplacian
-    name: project.schema-plugin
-    version: '1.0.0'
-  templates:
-  - group: laplacian
-    name: project.base-template
-    version: '1.0.0'
-  - group: laplacian
-    name: schema.document-template
-    version: '1.0.0'
-  models:
-  - group: laplacian
-    name: metamodel
-    version: '1.0.0'
-  - group: laplacian
-    name: project.document-content
-    version: '1.0.0'
+  model_files:
+  - $(normalize_path 'src/')
 END_FILE
 }
 

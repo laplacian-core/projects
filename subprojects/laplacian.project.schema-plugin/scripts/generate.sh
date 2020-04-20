@@ -67,13 +67,15 @@ file_list() {
 #
 generate() {
   ${SCRIPT_BASE_DIR}/laplacian-generate.sh \
-    --plugin 'laplacian:laplacian.metamodel-plugin:1.0.0' \
     --plugin 'laplacian:laplacian.project.schema-plugin:1.0.0' \
+    --plugin 'laplacian:laplacian.metamodel-plugin:1.0.0' \
     --template 'laplacian:laplacian.project.base-template:1.0.0' \
     --template 'laplacian:laplacian.schema.plugin-template:1.0.0' \
+    --model 'laplacian:laplacian.project.project-types:1.0.0' \
+    --model 'laplacian:laplacian.metamodel:1.0.0' \
     --model 'laplacian:laplacian.project.schema-model:1.0.0' \
-    --model-files $(normalize_path './model/project.yaml') \
-    --model-files $(normalize_path './model/project/') \
+    --model-files $(normalize_path 'model/project.yaml') \
+    --model-files $(normalize_path 'model/project/') \
     --target-dir ./ \
     --local-repo "$LOCAL_REPO_PATH"
 }

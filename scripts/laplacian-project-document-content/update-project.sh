@@ -63,18 +63,8 @@ project:
   source_repository:
     url: https://github.com/nabla-squared/laplacian.project.document-content.git
     branch: master
-  plugins:
-  - group: laplacian
-    name: project.schema-plugin
-    version: '1.0.0'
-  templates:
-  - group: laplacian
-    name: project.base-template
-    version: '1.0.0'
-  models:
-  - group: laplacian
-    name: project.document-content
-    version: '1.0.0'
+  model_files:
+  - $(normalize_path 'src/')
 END_FILE
 }
 

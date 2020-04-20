@@ -1,29 +1,14 @@
 project:
   subprojects:
   - group: laplacian
-    type: plugin
+    type: schema-plugin
     name: metamodel-plugin
     namespace: laplacian.metamodel
     description: |
       A model which expresses the logical structure of laplacian-based projects and modules.
     version: '1.0.0'
-    plugins:
-    - group: laplacian
-      name: metamodel-plugin
-      version: '1.0.0'
-    - group: laplacian
-      name: project.schema-plugin
-      version: '1.0.0'
     models:
     - group: laplacian
       name: metamodel
       version: '1.0.0'
-    templates:
-    - group: laplacian
-      name: project.base-template
-      version: '1.0.0'
-    - group: laplacian
-      name: schema.plugin-template
-      version: '1.0.0'
-
 
