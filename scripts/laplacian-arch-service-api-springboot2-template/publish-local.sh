@@ -4,7 +4,7 @@ set -e
 SCRIPT_BASE_DIR=$(cd $"${BASH_SOURCE%/*}" && pwd)
 PROJECT_BASE_DIR=$(cd $SCRIPT_BASE_DIR && cd ../.. && pwd)
 
-TARGET_PROJECT_DIR="${PROJECT_BASE_DIR}/subprojects/laplacian-arch.model.service-api"
+TARGET_PROJECT_DIR="${PROJECT_BASE_DIR}/subprojects/laplacian-arch.service-api.springboot2-template"
 
 (cd $TARGET_PROJECT_DIR
   if [[ ! -f ./scripts/laplacian-generate.sh ]]

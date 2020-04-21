@@ -63,14 +63,6 @@ project:
   source_repository:
     url: https://github.com/nabla-squared/laplacian-arch.datasource.flyway-migration-template.git
     branch: master
-  templates:
-  - group: laplacian
-    name: project.base-template
-    version: '1.0.0'
-  models:
-  - group: laplacian
-    name: project.document-content
-    version: '1.0.0'
 END_FILE
 }
 

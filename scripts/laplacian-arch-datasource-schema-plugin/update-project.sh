@@ -54,29 +54,12 @@ create_project_model_file() {
 project:
   group: laplacian-arch
   name: datasource.schema-plugin
-  type: plugin
+  type: schema-plugin
   namespace: laplacian.arch.datasource
   version: '1.0.0'
   description: |
     A schema gradle plugin for the datasource arch model
-  plugins:
-  - group: laplacian
-    name: metamodel-plugin
-    version: '1.0.0'
-  - group: laplacian
-    name: project.schema-plugin
-    version: '1.0.0'
-  templates:
-  - group: laplacian
-    name: project.base-template
-    version: '1.0.0'
-  - group: laplacian
-    name: schema.plugin-template
-    version: '1.0.0'
   models:
-  - group: laplacian
-    name: metamodel
-    version: '1.0.0'
   - group: laplacian-arch
     name: datasource.schema-model
     version: '1.0.0'

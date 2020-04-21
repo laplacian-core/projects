@@ -6,9 +6,9 @@ LOCAL_REPO_PATH='../mvn-repo'
 SUBPROJECTS='subprojects/laplacian-arch.datasource.flyway-migration-template
 subprojects/laplacian-arch.datasource.schema-model
 subprojects/laplacian-arch.datasource.schema-plugin
-subprojects/laplacian-arch.model.service-api
-subprojects/laplacian-arch.schema.service-api
-subprojects/laplacian-arch.template.service-api.springboot2
+subprojects/laplacian-arch.service-api.schema-model
+subprojects/laplacian-arch.service-api.schema-plugin
+subprojects/laplacian-arch.service-api.springboot2-template
 subprojects/laplacian.metamodel-plugin
 subprojects/laplacian.metamodel
 subprojects/laplacian.project.base-template

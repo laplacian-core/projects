@@ -19,7 +19,7 @@ LOCAL_MODULE_REPOSITORY_PATH="$(normalize_path './subprojects/mvn-repo')"
 LOCAL_MODULE_REPOSITORY_URL='https://github.com/nabla-squared/mvn-repo'
 LOCAL_MODULE_REPOSITORY_BRANCH='master'
 
-TARGET_PROJECT_DIR="$(normalize_path 'subprojects/laplacian-arch.model.service-api')"
+TARGET_PROJECT_DIR="$(normalize_path 'subprojects/laplacian-arch.service-api.schema-plugin')"
 TARGET_MODEL_DIR="$TARGET_PROJECT_DIR/model"
 TARGET_PROJECT_MODEL_FILE="$TARGET_MODEL_DIR/project.yaml"
 
@@ -29,7 +29,6 @@ TARGET_PROJECT_GENERATOR_SCRIPT="$TARGET_SCRIPT_DIR/$GENERATOR_SCRIPT_FILE_NAME"
 
 main() {
   setup_local_module_repository
-  checkout_from_code_repository
   create_project_model_file
   run_generator
 }
@@ -54,47 +53,26 @@ create_project_model_file() {
   cat <<END_FILE > $TARGET_PROJECT_MODEL_FILE
 project:
   group: laplacian-arch
-  name: model.service-api
-  type: model
+  name: service-api.schema-plugin
+  type: schema-plugin
   namespace: laplacian.arch.service.api
   version: '1.0.0'
   description: |
-    A model that expresses the logical structure of a service API.
-    This model consists of REST api model, GraphQL interface model, and datasource usage model.
-  source_repository:
-    url: https://github.com/nabla-squared/laplacian-arch.model.service-api.git
-    branch: master
-  templates:
-  - group: laplacian
-    name: template.metamodel.document
+    A schema for service-api architecture model.
+  plugins:
+  - group: laplacian-arch
+    name: datasource.schema-plugin
     version: '1.0.0'
   models:
-  - group: laplacian
-    name: model.metamodel
+  - group: laplacian-arch
+    name: datasource.schema-model
     version: '1.0.0'
   - group: laplacian-arch
-    name: model.datasource
-    version: '1.0.0'
-  - group: laplacian-arch
-    name: model.service-api
+    name: service-api.schema-model
     version: '1.0.0'
 END_FILE
 }
 
-checkout_from_code_repository() {
-  if [[ ! -d $TARGET_PROJECT_DIR/.git ]]
-  then
-    mkdir -p $TARGET_PROJECT_DIR
-    rm -rf $TARGET_PROJECT_DIR
-    git clone \
-        https://github.com/nabla-squared/laplacian-arch.model.service-api.git \
-        $TARGET_PROJECT_DIR
-  fi
-  (cd $TARGET_PROJECT_DIR
-    git checkout master
-    git pull
-  )
-}
 
 
 run_generator() {

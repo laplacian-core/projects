@@ -19,7 +19,7 @@ LOCAL_MODULE_REPOSITORY_PATH="$(normalize_path './subprojects/mvn-repo')"
 LOCAL_MODULE_REPOSITORY_URL='https://github.com/nabla-squared/mvn-repo'
 LOCAL_MODULE_REPOSITORY_BRANCH='master'
 
-TARGET_PROJECT_DIR="$(normalize_path 'subprojects/laplacian-arch.template.service-api.springboot2')"
+TARGET_PROJECT_DIR="$(normalize_path 'subprojects/laplacian-arch.service-api.springboot2-template')"
 TARGET_MODEL_DIR="$TARGET_PROJECT_DIR/model"
 TARGET_PROJECT_MODEL_FILE="$TARGET_MODEL_DIR/project.yaml"
 
@@ -54,19 +54,19 @@ create_project_model_file() {
   cat <<END_FILE > $TARGET_PROJECT_MODEL_FILE
 project:
   group: laplacian-arch
-  name: template.service-api.springboot2
+  name: service-api.springboot2-template
   type: template
-  namespace: laplacian_arch.template_service_api_springboot2
+  namespace: laplacian_arch.service_api_springboot2_template
   version: '1.0.0'
   description: |
-    This template gives a service api implementation based on the [service-api](https://github.com/nabla-squared/laplacian-arch.model.service-api) model.
+    This template gives a service api implementation based on the [service-api](https://github.com/nabla-squared/laplacian-arch.service-api.schema-model/) model.
     The architecture stack which is employed in this template is:
       - Alpine based docker image
       - OpenJDK8
       - SpringBoot 2
       - Java-Graphql
   source_repository:
-    url: https://github.com/nabla-squared/laplacian-arch.template.service-api.springboot2.git
+    url: https://github.com/nabla-squared/laplacian-arch.service-api.springboot2-template.git
     branch: master
 END_FILE
 }
@@ -77,7 +77,7 @@ checkout_from_code_repository() {
     mkdir -p $TARGET_PROJECT_DIR
     rm -rf $TARGET_PROJECT_DIR
     git clone \
-        https://github.com/nabla-squared/laplacian-arch.template.service-api.springboot2.git \
+        https://github.com/nabla-squared/laplacian-arch.service-api.springboot2-template.git \
         $TARGET_PROJECT_DIR
   fi
   (cd $TARGET_PROJECT_DIR

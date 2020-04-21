@@ -52,11 +52,11 @@ project:
 
 [src/project/subprojects/laplacian-arch.datasource.schema-plugin.yaml](<./src/project/subprojects/laplacian-arch.datasource.schema-plugin.yaml>)
 
-[src/project/subprojects/laplacian-arch.model.service-api.yaml](<./src/project/subprojects/laplacian-arch.model.service-api.yaml>)
+[src/project/subprojects/laplacian-arch.service-api.schema-model.yaml](<./src/project/subprojects/laplacian-arch.service-api.schema-model.yaml>)
 
-[src/project/subprojects/laplacian-arch.schema.service-api.yaml](<./src/project/subprojects/laplacian-arch.schema.service-api.yaml>)
+[src/project/subprojects/laplacian-arch.service-api.schema-plugin.yaml](<./src/project/subprojects/laplacian-arch.service-api.schema-plugin.yaml>)
 
-[src/project/subprojects/laplacian-arch.template.service-api.springboot2.yaml](<./src/project/subprojects/laplacian-arch.template.service-api.springboot2.yaml>)
+[src/project/subprojects/laplacian-arch.service-api.springboot2-template.yaml](<./src/project/subprojects/laplacian-arch.service-api.springboot2-template.yaml>)
 
 [src/project/subprojects/laplacian.metamodel-plugin.yaml](<./src/project/subprojects/laplacian.metamodel-plugin.yaml>)
 

@@ -6,9 +6,9 @@ LOG_FILE="./update-subprojects-$(date +%Y-%m-%dT%H%M%S).log"
 SUBPROJECTS='laplacian-arch-datasource-flyway-migration-template
 laplacian-arch-datasource-schema-model
 laplacian-arch-datasource-schema-plugin
-laplacian-arch-model-service-api
-laplacian-arch-schema-service-api
-laplacian-arch-template-service-api-springboot2
+laplacian-arch-service-api-schema-model
+laplacian-arch-service-api-schema-plugin
+laplacian-arch-service-api-springboot2-template
 laplacian-metamodel-plugin
 laplacian-metamodel
 laplacian-project-base-template
