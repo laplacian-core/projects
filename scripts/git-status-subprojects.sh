@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 set -e
-SCRIPT_BASE_DIR=$(cd $"${BASH_SOURCE%/*}" && pwd)
-PROJECT_BASE_DIR=$(cd $SCRIPT_BASE_DIR && cd .. && pwd)
+PROJECT_BASE_DIR=$(cd $"${BASH_SOURCE%/*}/../" && pwd)
+
+SCRIPT_BASE_DIR="$PROJECT_BASE_DIR/scripts"
 LOCAL_REPO_PATH='../mvn-repo'
 SUBPROJECTS='subprojects/laplacian-arch.datasource.flyway-migration-template
 subprojects/laplacian-arch.datasource.schema-model
