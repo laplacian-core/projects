@@ -4,7 +4,8 @@ PROJECT_BASE_DIR=$(cd $"${BASH_SOURCE%/*}/../" && pwd)
 
 SCRIPT_BASE_DIR="$PROJECT_BASE_DIR/scripts"
 LOG_FILE="./update-subprojects-$(date +%Y-%m-%dT%H%M%S).log"
-SUBPROJECTS='laplacian-arch-datasource-flyway-migration-template
+SUBPROJECTS='laplacian-arch-architecture-document-template
+laplacian-arch-datasource-flyway-migration-template
 laplacian-arch-datasource-schema-model
 laplacian-arch-datasource-schema-plugin
 laplacian-arch-service-api-schema-model

@@ -32,6 +32,7 @@ out/
 /dest/
 subprojects/mvn-repo/
 subprojects/mvn-repo
+subprojects/laplacian-arch.architecture-document-template/
 subprojects/laplacian-arch.datasource.flyway-migration-template/
 subprojects/laplacian-arch.datasource.schema-model/
 subprojects/laplacian-arch.service-api.schema-model/

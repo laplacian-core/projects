@@ -46,6 +46,8 @@ project:
 
 [model/project.yaml](<./model/project.yaml>)
 
+[src/project/subprojects/laplacian-arch.architecture-document-template.yaml](<./src/project/subprojects/laplacian-arch.architecture-document-template.yaml>)
+
 [src/project/subprojects/laplacian-arch.datasource.flyway-migration-template.yaml](<./src/project/subprojects/laplacian-arch.datasource.flyway-migration-template.yaml>)
 
 [src/project/subprojects/laplacian-arch.datasource.schema-model.yaml](<./src/project/subprojects/laplacian-arch.datasource.schema-model.yaml>)
