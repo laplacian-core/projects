@@ -10,6 +10,7 @@ subprojects/laplacian-arch.datasource.schema-plugin
 subprojects/laplacian-arch.service-api.schema-model
 subprojects/laplacian-arch.service-api.schema-plugin
 subprojects/laplacian-arch.service-api.springboot2-template
+subprojects/laplacian.common-model
 subprojects/laplacian.metamodel-plugin
 subprojects/laplacian.metamodel
 subprojects/laplacian.project.base-template

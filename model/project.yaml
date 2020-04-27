@@ -13,4 +13,4 @@ project:
     remote:
     - https://github.com/nabla-squared/mvn-repo
   model_files:
-  - src/
+  - dest/

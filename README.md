@@ -34,14 +34,6 @@ project:
 ## Source list
 
 
-[README.md](<./README.md>)
-
-[.editorconfig](<./.editorconfig>)
-
-[.gitattributes](<./.gitattributes>)
-
-[.gitignore](<./.gitignore>)
-
 [model/project/sources.yaml](<./model/project/sources.yaml>)
 
 [model/project.yaml](<./model/project.yaml>)
@@ -57,6 +49,8 @@ project:
 [src/project/subprojects/laplacian-arch.service-api.schema-plugin.yaml](<./src/project/subprojects/laplacian-arch.service-api.schema-plugin.yaml>)
 
 [src/project/subprojects/laplacian-arch.service-api.springboot2-template.yaml](<./src/project/subprojects/laplacian-arch.service-api.springboot2-template.yaml>)
+
+[src/project/subprojects/laplacian.common-model.yaml](<./src/project/subprojects/laplacian.common-model.yaml>)
 
 [src/project/subprojects/laplacian.metamodel-plugin.yaml](<./src/project/subprojects/laplacian.metamodel-plugin.yaml>)
 

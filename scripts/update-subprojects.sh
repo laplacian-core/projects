@@ -10,6 +10,7 @@ laplacian-arch-datasource-schema-plugin
 laplacian-arch-service-api-schema-model
 laplacian-arch-service-api-schema-plugin
 laplacian-arch-service-api-springboot2-template
+laplacian-common-model
 laplacian-metamodel-plugin
 laplacian-metamodel
 laplacian-project-base-template
