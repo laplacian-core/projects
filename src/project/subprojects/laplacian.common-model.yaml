@@ -3,7 +3,7 @@ project:
   - group: laplacian
     type: domain-model
     name: common-model
-    namespace: laplacian.project
+    namespace: laplacian.common
     description: |
       Some value objects and mixins which can be applicable to any domain models.
     version: '1.0.0'

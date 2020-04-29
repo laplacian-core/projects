@@ -19,7 +19,7 @@ LOCAL_MODULE_REPOSITORY_PATH="$(normalize_path './subprojects/mvn-repo')"
 LOCAL_MODULE_REPOSITORY_URL='https://github.com/nabla-squared/mvn-repo'
 LOCAL_MODULE_REPOSITORY_BRANCH='master'
 
-TARGET_PROJECT_DIR="$(normalize_path 'subprojects/laplacian.project.document-content')"
+TARGET_PROJECT_DIR="$(normalize_path 'subprojects/laplacian.common-model-plugin')"
 TARGET_MODEL_DIR="$TARGET_PROJECT_DIR/model"
 TARGET_PROJECT_MODEL_FILE="$TARGET_MODEL_DIR/project.yaml"
 
@@ -29,7 +29,6 @@ TARGET_PROJECT_GENERATOR_SCRIPT="$TARGET_SCRIPT_DIR/$GENERATOR_SCRIPT_FILE_NAME"
 
 main() {
   setup_local_module_repository
-  checkout_from_code_repository
   create_project_model_file
   run_generator
 }
@@ -54,34 +53,19 @@ create_project_model_file() {
   cat <<END_FILE > $TARGET_PROJECT_MODEL_FILE
 project:
   group: laplacian
-  name: project.document-content
-  type: model
-  namespace: laplacian
+  name: common-model-plugin
+  type: schema-plugin
+  namespace: laplacian.common
   version: '1.0.0'
   description: |
-    The content of the project documentation.
-  source_repository:
-    url: https://github.com/nabla-squared/laplacian.project.document-content.git
-    branch: master
-  model_files:
-  - $(normalize_path 'src/')
+    Plugin module for the laplacian common model.
+  models:
+  - group: laplacian
+    name: common-model
+    version: '1.0.0'
 END_FILE
 }
 
-checkout_from_code_repository() {
-  if [[ ! -d $TARGET_PROJECT_DIR/.git ]]
-  then
-    mkdir -p $TARGET_PROJECT_DIR
-    rm -rf $TARGET_PROJECT_DIR
-    git clone \
-        https://github.com/nabla-squared/laplacian.project.document-content.git \
-        $TARGET_PROJECT_DIR
-  fi
-  (cd $TARGET_PROJECT_DIR
-    git checkout master
-    git pull
-  )
-}
 
 
 run_generator() {

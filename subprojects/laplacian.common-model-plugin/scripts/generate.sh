@@ -23,7 +23,7 @@ CONTENT_FILES='.editorconfig .gitattributes .gitignore README.md'
 HELP=
 VERBOSE=
 DRY_RUN=
-MAX_RECURSION=5
+MAX_RECURSION=10
 RECURSION_COUNT=1
 
 main() {
@@ -157,6 +157,7 @@ generate() {
     --template 'laplacian:laplacian.schema.plugin-template:1.0.0' \
     --model 'laplacian:laplacian.project.project-types:1.0.0' \
     --model 'laplacian:laplacian.metamodel:1.0.0' \
+    --model 'laplacian:laplacian.common-model:1.0.0' \
     --model-files $(normalize_path 'model/') \
     --template-files $(normalize_path 'template/') \
     --target-dir "$NEXT_CONTENT_DIR_NAME" \

@@ -1,0 +1,13 @@
+project:
+  subprojects:
+  - group: laplacian
+    type: template
+    name: project.document-template
+    namespace: laplacian
+    description: |
+      The base template for the project documentation.
+    version: '1.0.0'
+    source_repository:
+      url: https://github.com/nabla-squared/laplacian.project.document-template.git
+    template_files:
+    - dest/

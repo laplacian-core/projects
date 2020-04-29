@@ -11,11 +11,12 @@ laplacian-arch-datasource-schema-plugin
 laplacian-arch-service-api-schema-model
 laplacian-arch-service-api-schema-plugin
 laplacian-arch-service-api-springboot2-template
+laplacian-common-model-plugin
 laplacian-common-model
 laplacian-metamodel-plugin
 laplacian-metamodel
 laplacian-project-base-template
-laplacian-project-document-content
+laplacian-project-document-template
 laplacian-project-project-types
 laplacian-project-schema-model
 laplacian-project-schema-plugin

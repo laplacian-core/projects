@@ -1,0 +1,14 @@
+project:
+  subprojects:
+  - group: laplacian
+    type: schema-plugin
+    name: common-model-plugin
+    namespace: laplacian.common
+    description: |
+      Plugin module for the laplacian common model.
+    version: '1.0.0'
+    models:
+    - group: laplacian
+      name: common-model
+      version: '1.0.0'
+

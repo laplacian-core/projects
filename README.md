@@ -60,7 +60,7 @@ project:
 
 [src/project/subprojects/laplacian.project.base-template.yaml](<./src/project/subprojects/laplacian.project.base-template.yaml>)
 
-[src/project/subprojects/laplacian.project.document-content.yaml](<./src/project/subprojects/laplacian.project.document-content.yaml>)
+[src/project/subprojects/laplacian.project.document-template.yaml](<./src/project/subprojects/laplacian.project.document-template.yaml>)
 
 [src/project/subprojects/laplacian.project.project-types.yaml](<./src/project/subprojects/laplacian.project.project-types.yaml>)
 
