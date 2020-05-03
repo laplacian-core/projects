@@ -58,8 +58,13 @@ project:
   type: template
   namespace: laplacian
   version: '1.0.0'
-  description: |
-    This template is generates a schema gradle plugin which defines the structure of models.
+  description:
+    en: |
+      This template is generates a schema gradle plugin which defines the structure of models.
+    ja: |
+      This template is generates a schema gradle plugin which defines the structure of models.
+    zh: |
+      This template is generates a schema gradle plugin which defines the structure of models.
   source_repository:
     url: https://github.com/nabla-squared/laplacian.schema.plugin-template.git
     branch: master

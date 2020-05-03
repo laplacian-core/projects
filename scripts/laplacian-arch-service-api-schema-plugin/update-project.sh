@@ -57,8 +57,13 @@ project:
   type: schema-plugin
   namespace: laplacian.arch.service.api
   version: '1.0.0'
-  description: |
-    A schema for service-api architecture model.
+  description:
+    en: |
+      A schema for service-api architecture model.
+    ja: |
+      A schema for service-api architecture model.
+    zh: |
+      A schema for service-api architecture model.
   plugins:
   - group: laplacian-arch
     name: datasource.schema-plugin

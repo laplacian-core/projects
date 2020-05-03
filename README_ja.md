@@ -4,21 +4,21 @@
 The core modules for the Laplacian generator.
 
 
-*Read this in other languages*: [[日本語](README_ja.md)] [[简体中文](README_zh.md)]
+*Read this in other languages*: [[English](README.md)] [[简体中文](README_zh.md)]
 <!-- @head-content@ -->
 
 <!-- @toc@ -->
 ## Table of contents
-1. [Usage](#Usage)
-1. [Index](#Index)
+1. [使用方法](#使用方法)
+1. [インデックス](#インデックス)
 
 
 <!-- @toc@ -->
 
 <!-- @main-content@ -->
-## Usage
+## 使用方法
 
-To apply this Model module, add the following entry to your project definition.
+この modelモジュールを適用するには、プロジェクト定義に以下のエントリを追加してください。
 ```yaml
 project:
   models:
@@ -27,7 +27,8 @@ project:
     version: 1.0.0
 ```
 
-You can run the following command to see a list of resources affected by the application of this module and their contents.
+下記のコマンドを実行すると、このモジュールの適用によって影響を受ける資源の一覧とその内容を確認できます。
+
 ```console
 $ ./script/generate --dry-run
 
@@ -38,17 +39,18 @@ diff --color -r PROJECT_HOME/.NEXT/somewhere/something.md PROJECT_HOME/somewhere
 > content: NEW CONTENT
 ```
 
-If there is no problem, execute the following command to reflect the change.
+内容に問題が無ければ、下記コマンドを実行して変更を反映してください。
+
 ```console
 $ ./script/generate --dry-run
 
 ```
 
 
-## Index
+## インデックス
 
 
-### Source code list
+### ソースコード一覧
 
 
 - [model/project.yaml](<./model/project.yaml>)

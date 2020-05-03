@@ -58,8 +58,13 @@ project:
   type: model
   namespace: laplacian
   version: '1.0.0'
-  description: |
-    The basic project types used in the Laplacian project.
+  description:
+    en: |
+      The basic project types used in the Laplacian project.
+    ja: |
+      The basic project types used in the Laplacian project.
+    zh: |
+      The basic project types used in the Laplacian project.
   source_repository:
     url: https://github.com/nabla-squared/laplacian.project.project-types.git
     branch: master

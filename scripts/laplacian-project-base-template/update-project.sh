@@ -58,8 +58,13 @@ project:
   type: template
   namespace: laplacian
   version: '1.0.0'
-  description: |
-    This template generates scripts and other basic files needed for a Laplacian based project.
+  description:
+    en: |
+      null
+    ja: |
+      null
+    zh: |
+      null
   source_repository:
     url: https://github.com/nabla-squared/laplacian.project.base-template.git
     branch: master

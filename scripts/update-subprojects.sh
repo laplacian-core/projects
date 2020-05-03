@@ -13,6 +13,7 @@ laplacian-arch-service-api-schema-plugin
 laplacian-arch-service-api-springboot2-template
 laplacian-common-model-plugin
 laplacian-common-model
+laplacian-domain-model-document-template
 laplacian-metamodel-plugin
 laplacian-metamodel
 laplacian-project-base-template
@@ -20,7 +21,6 @@ laplacian-project-document-template
 laplacian-project-project-types
 laplacian-project-schema-model
 laplacian-project-schema-plugin
-laplacian-schema-document-template
 laplacian-schema-plugin-template
 '
 

@@ -55,16 +55,29 @@ create_project_model_file() {
 project:
   group: laplacian
   name: project.schema-model
-  type: schema-model
+  type: domain-model
   namespace: laplacian.project
   version: '1.0.0'
-  description: |
-    A model which expresses the logical structure of laplacian-based projects and modules.
+  description:
+    en: |
+      A model which expresses the logical structure of laplacian-based projects and modules.
+    ja: |
+      A model which expresses the logical structure of laplacian-based projects and modules.
+    zh: |
+      A model which expresses the logical structure of laplacian-based projects and modules.
   source_repository:
     url: https://github.com/nabla-squared/laplacian.project.schema-model.git
     branch: master
+  plugins:
+  - group: laplacian
+    name: common-model-plugin
+    version: '1.0.0'
+  models:
+  - group: laplacian
+    name: common-model
+    version: '1.0.0'
   model_files:
-  - $(normalize_path 'src/')
+  - $(normalize_path 'dest/')
 END_FILE
 }
 

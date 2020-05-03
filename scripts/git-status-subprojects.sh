@@ -13,6 +13,7 @@ subprojects/laplacian-arch.service-api.schema-plugin
 subprojects/laplacian-arch.service-api.springboot2-template
 subprojects/laplacian.common-model-plugin
 subprojects/laplacian.common-model
+subprojects/laplacian.domain-model.document-template
 subprojects/laplacian.metamodel-plugin
 subprojects/laplacian.metamodel
 subprojects/laplacian.project.base-template
@@ -20,7 +21,6 @@ subprojects/laplacian.project.document-template
 subprojects/laplacian.project.project-types
 subprojects/laplacian.project.schema-model
 subprojects/laplacian.project.schema-plugin
-subprojects/laplacian.schema.document-template
 subprojects/laplacian.schema.plugin-template
 '
 

@@ -40,10 +40,10 @@ subprojects/laplacian-arch.datasource.schema-model/
 subprojects/laplacian-arch.service-api.schema-model/
 subprojects/laplacian-arch.service-api.springboot2-template/
 subprojects/laplacian.common-model/
+subprojects/laplacian.domain-model.document-template/
 subprojects/laplacian.metamodel/
 subprojects/laplacian.project.base-template/
 subprojects/laplacian.project.document-template/
 subprojects/laplacian.project.project-types/
 subprojects/laplacian.project.schema-model/
-subprojects/laplacian.schema.document-template/
 subprojects/laplacian.schema.plugin-template/

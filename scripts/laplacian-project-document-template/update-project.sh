@@ -58,8 +58,15 @@ project:
   type: template
   namespace: laplacian
   version: '1.0.0'
-  description: |
-    The base template for the project documentation.
+  description:
+    en: |
+      This module generates a README document that describes how to use
+      and develop it for a given *Laplacian* project.
+    ja: |
+      このモジュールは任意の*Laplacian*プロジェクトについて、使用方法や開発手順などを説明する
+      READMEドキュメントを生成します。
+    zh: |
+      这个模块会生成一个README文档，描述如何在给定的*Laplacian*项目中使用和开发它。
   source_repository:
     url: https://github.com/nabla-squared/laplacian.project.document-template.git
     branch: master

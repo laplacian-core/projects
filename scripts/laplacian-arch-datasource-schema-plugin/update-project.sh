@@ -57,8 +57,13 @@ project:
   type: schema-plugin
   namespace: laplacian.arch.datasource
   version: '1.0.0'
-  description: |
-    A schema gradle plugin for the datasource arch model
+  description:
+    en: |
+      A schema gradle plugin for the datasource arch model
+    ja: |
+      A schema gradle plugin for the datasource arch model
+    zh: |
+      A schema gradle plugin for the datasource arch model
   models:
   - group: laplacian-arch
     name: datasource.schema-model

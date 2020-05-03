@@ -4,8 +4,9 @@ project:
     type: template
     name: architecture-document-template
     namespace: laplacian-arch
-    description: |
-      This template generates a set of documentation of the system architecture defined by the `laplacian-arch` model.
+    description:
+      en: |
+        This template generates a set of documentation of the system architecture defined by the `laplacian-arch` model.
     version: '1.0.0'
     source_repository:
       url: https://github.com/nabla-squared/laplacian-arch.architecture-document-template.git

@@ -4,10 +4,19 @@ project:
     type: schema-plugin
     name: project.schema-plugin
     namespace: laplacian.project
-    description: |
-      A schema-plugin for project models.
+    description:
+      en: |
+        A schema-plugin for project models.
     version: '1.0.0'
+    plugins:
+    - group: laplacian
+      name: common-model-plugin
+      version: '1.0.0'
     models:
     - group: laplacian
       name: project.schema-model
       version: '1.0.0'
+    - group: laplacian
+      name: common-model
+      version: '1.0.0'
+

@@ -4,8 +4,9 @@ project:
     type: schema-plugin
     name: service-api.schema-plugin
     namespace: laplacian.arch.service.api
-    description: |
-      A schema for service-api architecture model.
+    description:
+      en: |
+        A schema for service-api architecture model.
     version: '1.0.0'
     plugins:
     - group: laplacian-arch

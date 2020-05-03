@@ -57,8 +57,13 @@ project:
   type: schema-plugin
   namespace: laplacian.common
   version: '1.0.0'
-  description: |
-    Plugin module for the laplacian common model.
+  description:
+    en: |
+      Plugin module for the laplacian common model.
+    ja: |
+      Plugin module for the laplacian common model.
+    zh: |
+      Plugin module for the laplacian common model.
   models:
   - group: laplacian
     name: common-model

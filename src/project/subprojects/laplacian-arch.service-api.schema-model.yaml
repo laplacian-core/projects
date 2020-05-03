@@ -4,9 +4,10 @@ project:
     type: schema-model
     name: service-api.schema-model
     namespace: laplacian.arch.service.api
-    description: |
-      A model that expresses the logical structure of a service API.
-      This model consists of REST api model, GraphQL interface model, and datasource usage model.
+    description:
+      en: |
+        A model that expresses the logical structure of a service API.
+        This model consists of REST api model, GraphQL interface model, and datasource usage model.
     version: '1.0.0'
     source_repository:
       url: https://github.com/nabla-squared/laplacian-arch.service-api-schema-model.git

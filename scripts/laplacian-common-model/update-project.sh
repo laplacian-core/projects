@@ -58,8 +58,13 @@ project:
   type: domain-model
   namespace: laplacian.common
   version: '1.0.0'
-  description: |
-    Some value objects and mixins which can be applicable to any domain models.
+  description:
+    en: |
+      Some value objects and mixins which can be applicable to any domain models.
+    ja: |
+      Some value objects and mixins which can be applicable to any domain models.
+    zh: |
+      Some value objects and mixins which can be applicable to any domain models.
   source_repository:
     url: https://github.com/nabla-squared/laplacian.common-model.git
     branch: master

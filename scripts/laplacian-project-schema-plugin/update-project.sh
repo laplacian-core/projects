@@ -57,11 +57,23 @@ project:
   type: schema-plugin
   namespace: laplacian.project
   version: '1.0.0'
-  description: |
-    A schema-plugin for project models.
+  description:
+    en: |
+      A schema-plugin for project models.
+    ja: |
+      A schema-plugin for project models.
+    zh: |
+      A schema-plugin for project models.
+  plugins:
+  - group: laplacian
+    name: common-model-plugin
+    version: '1.0.0'
   models:
   - group: laplacian
     name: project.schema-model
+    version: '1.0.0'
+  - group: laplacian
+    name: common-model
     version: '1.0.0'
 END_FILE
 }

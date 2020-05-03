@@ -4,7 +4,8 @@ project:
     type: schema-model
     name: datasource.schema-model
     namespace: laplacian.arch.datasource
-    description: |
+    description:
+      en: |
       This model expresses a view of a data-store (ex:RDBMS, KVS, etc..) from a certain client This model consists of the following entities:
       - The information which is necessary to connect the data-store
       - The entities allowed for clients to access

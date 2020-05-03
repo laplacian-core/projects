@@ -55,12 +55,19 @@ create_project_model_file() {
 project:
   group: laplacian
   name: metamodel
-  type: schema-model
+  type: domain-model
   namespace: laplacian.metamodel
   version: '1.0.0'
-  description: |
-    A model that expresses the structure of relational model with aggregation support.
-    This model is used to define models from which templates generate resources such as source code or document.
+  description:
+    en: |
+      A model that expresses the structure of relational model with aggregation support.
+      This model is used to define models from which templates generate resources such as source code or document.
+    ja: |
+      A model that expresses the structure of relational model with aggregation support.
+      This model is used to define models from which templates generate resources such as source code or document.
+    zh: |
+      A model that expresses the structure of relational model with aggregation support.
+      This model is used to define models from which templates generate resources such as source code or document.
   source_repository:
     url: https://github.com/nabla-squared/laplacian.metamodel.git
     branch: master

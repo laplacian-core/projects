@@ -4,8 +4,9 @@ project:
     type: schema-plugin
     name: metamodel-plugin
     namespace: laplacian.metamodel
-    description: |
-      A model which expresses the logical structure of laplacian-based projects and modules.
+    description:
+      en: |
+        A model which expresses the logical structure of laplacian-based projects and modules.
     version: '1.0.0'
     models:
     - group: laplacian

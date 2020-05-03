@@ -18,7 +18,7 @@ SRC_DIR_NAME='src'
 
 CONTENT_DIRS='src template model'
 UPDATABLE_DIRS='dest scripts doc'
-CONTENT_FILES='.editorconfig .gitattributes .gitignore README.md'
+CONTENT_FILES='.editorconfig .gitattributes .gitignore README.md README_*.md'
 
 HELP=
 VERBOSE=
@@ -154,6 +154,7 @@ generate() {
     --plugin 'laplacian:laplacian.project.schema-plugin:1.0.0' \
     --plugin 'laplacian:laplacian.metamodel-plugin:1.0.0' \
     --template 'laplacian:laplacian.project.base-template:1.0.0' \
+    --template 'laplacian:laplacian.project.document-template:1.0.0' \
     --template 'laplacian:laplacian.schema.plugin-template:1.0.0' \
     --model 'laplacian:laplacian.project.project-types:1.0.0' \
     --model 'laplacian:laplacian.metamodel:1.0.0' \

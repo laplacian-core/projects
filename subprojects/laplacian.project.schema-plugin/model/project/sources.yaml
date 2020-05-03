@@ -1,7 +1,0 @@
-project:
-  sources:
-  - ".editorconfig"
-  - ".gitattributes"
-  - ".gitignore"
-  - "model/project/sources.yaml"
-  - "model/project.yaml"

@@ -19,7 +19,7 @@ LOCAL_MODULE_REPOSITORY_PATH="$(normalize_path './subprojects/mvn-repo')"
 LOCAL_MODULE_REPOSITORY_URL='https://github.com/nabla-squared/mvn-repo'
 LOCAL_MODULE_REPOSITORY_BRANCH='master'
 
-TARGET_PROJECT_DIR="$(normalize_path 'subprojects/laplacian.schema.document-template')"
+TARGET_PROJECT_DIR="$(normalize_path 'subprojects/laplacian.domain-model.document-template')"
 TARGET_MODEL_DIR="$TARGET_PROJECT_DIR/model"
 TARGET_PROJECT_MODEL_FILE="$TARGET_MODEL_DIR/project.yaml"
 
@@ -54,15 +54,22 @@ create_project_model_file() {
   cat <<END_FILE > $TARGET_PROJECT_MODEL_FILE
 project:
   group: laplacian
-  name: schema.document-template
+  name: domain-model.document-template
   type: template
   namespace: laplacian
   version: '1.0.0'
-  description: |
-    This template generates diagrams that represents the structure of schemas
-    defined by the [Metamodel](https://github.com/nabla-squared/laplacian.model.metamodel).
+  description:
+    en: |
+      This template generates diagrams that represents the structure of schemas
+      defined by the [Metamodel](https://github.com/nabla-squared/laplacian.model.metamodel).
+    ja: |
+      This template generates diagrams that represents the structure of schemas
+      defined by the [Metamodel](https://github.com/nabla-squared/laplacian.model.metamodel).
+    zh: |
+      This template generates diagrams that represents the structure of schemas
+      defined by the [Metamodel](https://github.com/nabla-squared/laplacian.model.metamodel).
   source_repository:
-    url: https://github.com/nabla-squared/laplacian.schema.document-template.git
+    url: https://github.com/nabla-squared/laplacian.domain-model.document-template.git
     branch: master
 END_FILE
 }
@@ -73,7 +80,7 @@ checkout_from_code_repository() {
     mkdir -p $TARGET_PROJECT_DIR
     rm -rf $TARGET_PROJECT_DIR
     git clone \
-        https://github.com/nabla-squared/laplacian.schema.document-template.git \
+        https://github.com/nabla-squared/laplacian.domain-model.document-template.git \
         $TARGET_PROJECT_DIR
   fi
   (cd $TARGET_PROJECT_DIR
