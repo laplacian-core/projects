@@ -9,6 +9,12 @@ The core modules for the Laplacian generator.
 
 <!-- @toc@ -->
 ## Table of contents
+- [Overview](#overview)
+
+  * [Project dependencies](#project-dependencies)
+
+- [Usage](#usage)
+
 - [Index](#index)
 
   * [Project list](#project-list)
@@ -16,12 +22,6 @@ The core modules for the Laplacian generator.
   * [Script List](#script-list)
 
   * [Source code list](#source-code-list)
-
-- [Overview](#overview)
-
-  * [Project dependencies](#project-dependencies)
-
-- [Usage](#usage)
 
 
 
@@ -34,12 +34,88 @@ The core modules for the Laplacian generator.
 ### Project list
 
 
-{{#each project.subprojects as |subproject| ~}}
-- [**{{lookup subproject.title lang.code}}**](<subproject.source_repository.url>)
+- [**laplacian-arch/architecture-document-template**](<https://github.com/nabla-squared/laplacian-arch.architecture-document-template.git>)
 
-{{#each (lookup entity.description lang.code) as |line| ~}}
-> {{line}}
-{{/each}}
+> This template generates a set of documentation of the system architecture defined by the `laplacian-arch` model.
+> 
+- [**laplacian-arch/datasource.flyway-migration-template**](<https://github.com/nabla-squared/laplacian-arch.datasource.flyway-migration-template.git>)
+
+> This template generates [flyway](https://flywaydb.org/) database schema migration tasks from datasource models.
+> 
+- [**laplacian-arch/datasource.schema-model**](<https://github.com/nabla-squared/laplacian-arch.model.datasource.git>)
+
+> 
+- [**laplacian-arch/datasource.schema-plugin**](<>)
+
+> A schema gradle plugin for the datasource arch model
+> 
+- [**laplacian-arch/service-api.schema-model**](<https://github.com/nabla-squared/laplacian-arch.service-api-schema-model.git>)
+
+> A model that expresses the logical structure of a service API.
+> This model consists of REST api model, GraphQL interface model, and datasource usage model.
+> 
+- [**laplacian-arch/service-api.schema-plugin**](<>)
+
+> A schema for service-api architecture model.
+> 
+- [**laplacian-arch/service-api.springboot2-template**](<https://github.com/nabla-squared/laplacian-arch.service-api.springboot2-template.git>)
+
+> This template gives a service api implementation based on the [service-api](https://github.com/nabla-squared/laplacian-arch.service-api.schema-model/) model.
+> The architecture stack which is employed in this template is:
+>   - Alpine based docker image
+>   - OpenJDK8
+>   - SpringBoot 2
+>   - Java-Graphql
+> 
+- [**laplacian/common-model-plugin**](<>)
+
+> Plugin module for the laplacian common model.
+> 
+- [**laplacian/common-model**](<https://github.com/nabla-squared/laplacian.common-model.git>)
+
+> Some value objects and mixins which can be applicable to any domain models.
+> 
+- [**laplacian/domain-model.document-template**](<https://github.com/nabla-squared/laplacian.domain-model.document-template.git>)
+
+> This template generates diagrams that represents the structure of schemas
+> defined by the [Metamodel](https://github.com/nabla-squared/laplacian.model.metamodel).
+> 
+- [**laplacian/metamodel-plugin**](<>)
+
+> A model which expresses the logical structure of laplacian-based projects and modules.
+> 
+- [**laplacian/metamodel**](<https://github.com/nabla-squared/laplacian.metamodel.git>)
+
+> A model that expresses the structure of relational model with aggregation support.
+> This model is used to define models from which templates generate resources such as source code or document.
+> 
+- [**laplacian/project-group.document-template**](<https://github.com/nabla-squared/laplacian.project-group.document-template.git>)
+
+> A template to generate documentation about a project group.
+> 
+- [**laplacian/project.base-template**](<https://github.com/nabla-squared/laplacian.project.base-template.git>)
+
+- [**laplacian/project.document-template**](<https://github.com/nabla-squared/laplacian.project.document-template.git>)
+
+> This module generates a README document that describes how to use
+> and develop it for a given *Laplacian* project.
+> 
+- [**laplacian/project.project-types**](<https://github.com/nabla-squared/laplacian.project.project-types.git>)
+
+> The basic project types used in the Laplacian project.
+> 
+- [**laplacian/project.schema-model**](<https://github.com/nabla-squared/laplacian.project.schema-model.git>)
+
+> This model represents the logical structure of a *Laplacian*-based project.
+> 
+- [**laplacian/project.schema-plugin**](<>)
+
+> A schema-plugin for project models.
+> 
+- [**laplacian/schema.plugin-template**](<https://github.com/nabla-squared/laplacian.schema.plugin-template.git>)
+
+> This template is generates a schema gradle plugin which defines the structure of models.
+> 
 ### Script List
 
 
@@ -189,7 +265,7 @@ diff --color -r PROJECT_HOME/.NEXT/somewhere/something.md PROJECT_HOME/somewhere
 
 If there is no problem, execute the following command to reflect the change.
 ```console
-$ ./script/generate --dry-run
+$ ./script/generate
 
 ```
 
