@@ -28,6 +28,47 @@ The core modules for the Laplacian generator.
 <!-- @toc@ -->
 
 <!-- @main-content@ -->
+## 概述
+
+
+### 项目依赖性
+
+
+下图是每个项目之间的依赖关系。
+![](./doc/image/project-dependency-graph.svg)
+
+## 如何使用
+
+要应用此model模块，请在项目定义中加入以下条目
+
+```yaml
+project:
+  models:
+  - group: laplacian
+    name: projects
+    version: 1.0.0
+```
+
+您可以运行以下命令查看受本模块应用影响的资源列表及其内容
+
+```console
+$ ./script/generate --dry-run
+
+diff --color -r PROJECT_HOME/.NEXT/somewhere/something.md PROJECT_HOME/somewhere/something.md
+1,26c1,10
+< content: OLD CONTENT
+---
+> content: NEW CONTENT
+```
+
+如果没有问题，请执行下面的命令来反映变化
+
+```console
+$ ./script/generate
+
+```
+
+
 ## 索引
 
 
@@ -222,47 +263,6 @@ The core modules for the Laplacian generator.
 - [src/project/subprojects/laplacian.project.schema-model.yaml](<./src/project/subprojects/laplacian.project.schema-model.yaml>)
 - [src/project/subprojects/laplacian.project.schema-plugin.yaml](<./src/project/subprojects/laplacian.project.schema-plugin.yaml>)
 - [src/project/subprojects/laplacian.schema.plugin-template.yaml](<./src/project/subprojects/laplacian.schema.plugin-template.yaml>)
-
-## 概述
-
-
-### 项目依赖性
-
-
-下图是每个项目之间的依赖关系。
-![](./doc/image/project-dependency-graph.svg)
-
-## 如何使用
-
-要应用此model模块，请在项目定义中加入以下条目
-
-```yaml
-project:
-  models:
-  - group: laplacian
-    name: projects
-    version: 1.0.0
-```
-
-您可以运行以下命令查看受本模块应用影响的资源列表及其内容
-
-```console
-$ ./script/generate --dry-run
-
-diff --color -r PROJECT_HOME/.NEXT/somewhere/something.md PROJECT_HOME/somewhere/something.md
-1,26c1,10
-< content: OLD CONTENT
----
-> content: NEW CONTENT
-```
-
-如果没有问题，请执行下面的命令来反映变化
-
-```console
-$ ./script/generate
-
-```
-
 
 
 <!-- @main-content@ -->

@@ -28,6 +28,44 @@ The core modules for the Laplacian generator.
 <!-- @toc@ -->
 
 <!-- @main-content@ -->
+## Overview
+
+
+### Project dependencies
+
+
+The following graph shows the dependencies between each project.
+![](./doc/image/project-dependency-graph.svg)
+
+## Usage
+
+To apply this Model module, add the following entry to your project definition.
+```yaml
+project:
+  models:
+  - group: laplacian
+    name: projects
+    version: 1.0.0
+```
+
+You can run the following command to see a list of resources affected by the application of this module and their contents.
+```console
+$ ./script/generate --dry-run
+
+diff --color -r PROJECT_HOME/.NEXT/somewhere/something.md PROJECT_HOME/somewhere/something.md
+1,26c1,10
+< content: OLD CONTENT
+---
+> content: NEW CONTENT
+```
+
+If there is no problem, execute the following command to reflect the change.
+```console
+$ ./script/generate
+
+```
+
+
 ## Index
 
 
@@ -231,44 +269,6 @@ The core modules for the Laplacian generator.
 - [src/project/subprojects/laplacian.project.schema-model.yaml](<./src/project/subprojects/laplacian.project.schema-model.yaml>)
 - [src/project/subprojects/laplacian.project.schema-plugin.yaml](<./src/project/subprojects/laplacian.project.schema-plugin.yaml>)
 - [src/project/subprojects/laplacian.schema.plugin-template.yaml](<./src/project/subprojects/laplacian.schema.plugin-template.yaml>)
-
-## Overview
-
-
-### Project dependencies
-
-
-The following graph shows the dependencies between each project.
-![](./doc/image/project-dependency-graph.svg)
-
-## Usage
-
-To apply this Model module, add the following entry to your project definition.
-```yaml
-project:
-  models:
-  - group: laplacian
-    name: projects
-    version: 1.0.0
-```
-
-You can run the following command to see a list of resources affected by the application of this module and their contents.
-```console
-$ ./script/generate --dry-run
-
-diff --color -r PROJECT_HOME/.NEXT/somewhere/something.md PROJECT_HOME/somewhere/something.md
-1,26c1,10
-< content: OLD CONTENT
----
-> content: NEW CONTENT
-```
-
-If there is no problem, execute the following command to reflect the change.
-```console
-$ ./script/generate
-
-```
-
 
 
 <!-- @main-content@ -->
