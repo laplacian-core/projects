@@ -1,7 +1,7 @@
 project:
   group: laplacian
   name: projects
-  type: model
+  type: project-group
   version: "1.0.0"
   description:
     en: |

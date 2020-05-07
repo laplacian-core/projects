@@ -5,8 +5,12 @@ project:
     name: project.schema-model
     namespace: laplacian.project
     description:
+      ja: |
+        このモデルは*Laplacian*プロジェクトの論理構造を表します。
       en: |
-        A model which expresses the logical structure of laplacian-based projects and modules.
+        This model represents the logical structure of a *Laplacian*-based project.
+      zh: |
+        该模型代表了*Laplacian*项目的逻辑结构。
     version: '1.0.0'
     source_repository:
       url: https://github.com/nabla-squared/laplacian.project.schema-model.git

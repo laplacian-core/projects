@@ -16,6 +16,7 @@ subprojects/laplacian.common-model
 subprojects/laplacian.domain-model.document-template
 subprojects/laplacian.metamodel-plugin
 subprojects/laplacian.metamodel
+subprojects/laplacian.project-group.document-template
 subprojects/laplacian.project.base-template
 subprojects/laplacian.project.document-template
 subprojects/laplacian.project.project-types

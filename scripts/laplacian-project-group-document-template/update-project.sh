@@ -19,7 +19,7 @@ LOCAL_MODULE_REPOSITORY_PATH="$(normalize_path './subprojects/mvn-repo')"
 LOCAL_MODULE_REPOSITORY_URL='https://github.com/nabla-squared/mvn-repo'
 LOCAL_MODULE_REPOSITORY_BRANCH='master'
 
-TARGET_PROJECT_DIR="$(normalize_path 'subprojects/laplacian.project.schema-model')"
+TARGET_PROJECT_DIR="$(normalize_path 'subprojects/laplacian.project-group.document-template')"
 TARGET_MODEL_DIR="$TARGET_PROJECT_DIR/model"
 TARGET_PROJECT_MODEL_FILE="$TARGET_MODEL_DIR/project.yaml"
 
@@ -54,29 +54,21 @@ create_project_model_file() {
   cat <<END_FILE > $TARGET_PROJECT_MODEL_FILE
 project:
   group: laplacian
-  name: project.schema-model
-  type: domain-model
-  namespace: laplacian.project
+  name: project-group.document-template
+  type: project-group
+  namespace: laplacian
   version: '1.0.0'
   description:
     en: |
-      This model represents the logical structure of a *Laplacian*-based project.
+      A template to generate documentation about a project group.
     ja: |
-      このモデルは*Laplacian*プロジェクトの論理構造を表します。
+      プロジェクトグループに関するドキュメントを生成するテンプレートです。
     zh: |
-      该模型代表了*Laplacian*项目的逻辑结构。
+      一个模板，用于生成关于项目组的文件。
   source_repository:
-    url: https://github.com/nabla-squared/laplacian.project.schema-model.git
+    url: https://github.com/nabla-squared/laplacian.project-group.document-template.git
     branch: master
-  plugins:
-  - group: laplacian
-    name: common-model-plugin
-    version: '1.0.0'
-  models:
-  - group: laplacian
-    name: common-model
-    version: '1.0.0'
-  model_files:
+  template_files:
   - $(normalize_path 'dest/')
 END_FILE
 }
@@ -87,7 +79,7 @@ checkout_from_code_repository() {
     mkdir -p $TARGET_PROJECT_DIR
     rm -rf $TARGET_PROJECT_DIR
     git clone \
-        https://github.com/nabla-squared/laplacian.project.schema-model.git \
+        https://github.com/nabla-squared/laplacian.project-group.document-template.git \
         $TARGET_PROJECT_DIR
   fi
   (cd $TARGET_PROJECT_DIR
