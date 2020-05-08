@@ -85,6 +85,10 @@ $ ./script/generate
 > 
 - [**laplacian-arch/datasource.schema-model**](<https://github.com/nabla-squared/laplacian-arch.model.datasource.git>)
 
+> This model expresses a view of a data-store (ex:RDBMS, KVS, etc..) from a certain client This model consists of the following entities:
+> - The information which is necessary to connect the data-store
+> - The entities allowed for clients to access
+> - The queries issued by the client
 > 
 - [**laplacian-arch/datasource.schema-plugin**](<>)
 
