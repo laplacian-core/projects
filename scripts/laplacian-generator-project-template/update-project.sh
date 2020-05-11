@@ -5,7 +5,7 @@ PROJECT_BASE_DIR=$(cd $"${BASH_SOURCE%/*}/../../" && pwd)
 SCRIPT_BASE_DIR="$PROJECT_BASE_DIR/scripts"
 LOCAL_REPO_PATH="$PROJECT_BASE_DIR/../mvn-repo"
 
-TARGET_PROJECT_DIR="$PROJECT_BASE_DIR/subprojects/laplacian.metamodel"
+TARGET_PROJECT_DIR="$PROJECT_BASE_DIR/subprojects/laplacian.generator.project-template"
 TARGET_MODEL_DIR="$TARGET_PROJECT_DIR/model"
 TARGET_PROJECT_MODEL_FILE="$TARGET_MODEL_DIR/project.yaml"
 
@@ -25,22 +25,21 @@ create_project_model_file() {
   cat <<END_FILE > $TARGET_PROJECT_MODEL_FILE
 project:
   group: laplacian
-  name: metamodel
-  type: domain-model
-  namespace: laplacian.metamodel
+  name: generator.project-template
+  type: template
+  namespace: laplacian
   version: '1.0.0'
   description:
     en: |
-      A model that expresses the structure of relational model with aggregation support.
-      This model is used to define models from which templates generate resources such as source code or document.
+      This template module generates the standard directory structure and common scripts
+      for building and publishing to local repositories in a Laplacian project.
     ja: |
-      A model that expresses the structure of relational model with aggregation support.
-      This model is used to define models from which templates generate resources such as source code or document.
+      このテンプレートモジュールは、Laplacianプロジェクトにおける標準的なディレクトリ構成と、
+      ビルドおよびローカルリポジトリへの公開を行う共通的なスクリプトを生成します。
     zh: |
-      A model that expresses the structure of relational model with aggregation support.
-      This model is used to define models from which templates generate resources such as source code or document.
+      这个模板模块生成标准目录结构和常用脚本，用于在Laplacian项目中构建和发布到本地资源库。
   source_repository:
-    url: https://github.com/nabla-squared/laplacian.metamodel.git
+    url: https://github.com/nabla-squared/laplacian.generator.project-template.git
     branch: master
   module_repositories:
     local:
@@ -49,8 +48,6 @@ project:
       branch: master
     remote:
     - https://github.com/nabla-squared/mvn-repo
-  model_files:
-  - $(normalize_path 'src/')
 END_FILE
 }
 
@@ -60,7 +57,7 @@ checkout_from_code_repository() {
     mkdir -p $TARGET_PROJECT_DIR
     rm -rf $TARGET_PROJECT_DIR
     git clone \
-        https://github.com/nabla-squared/laplacian.metamodel.git \
+        https://github.com/nabla-squared/laplacian.generator.project-template.git \
         $TARGET_PROJECT_DIR
   fi
   (cd $TARGET_PROJECT_DIR

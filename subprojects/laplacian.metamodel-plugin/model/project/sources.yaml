@@ -1,4 +1,0 @@
-project:
-  sources:
-  - "model/project/sources.yaml"
-  - "model/project.yaml"

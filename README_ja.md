@@ -119,10 +119,18 @@ $ ./script/generate
 
 > Some value objects and mixins which can be applicable to any domain models.
 > 
-- [**laplacian/domain-model.document-template**](<https://github.com/nabla-squared/laplacian.domain-model.document-template.git>)
+- [**laplacian/domain-model-plugin.project-template**](<https://github.com/nabla-squared/laplacian.domain-model-plugin.project-template.git>)
 
-> This template generates diagrams that represents the structure of schemas
-> defined by the [Metamodel](https://github.com/nabla-squared/laplacian.model.metamodel).
+> ドメインモデルプラグインプロジェクトのテンプレートです。
+> 
+- [**laplacian/domain-model.project-template**](<https://github.com/nabla-squared/laplacian.domain-model.project-template.git>)
+
+> ドメインモデルプロジェクトのディレクトリ構成、開発用スクリプト、各種ドキュメントを生成するテンプレートモジュールです。
+> 
+- [**laplacian/generator.project-template**](<https://github.com/nabla-squared/laplacian.generator.project-template.git>)
+
+> このテンプレートモジュールは、Laplacianプロジェクトにおける標準的なディレクトリ構成と、
+> ビルドおよびローカルリポジトリへの公開を行う共通的なスクリプトを生成します。
 > 
 - [**laplacian/metamodel-plugin**](<>)
 
@@ -137,28 +145,13 @@ $ ./script/generate
 
 > プロジェクトグループに関するドキュメントを生成するテンプレートです。
 > 
-- [**laplacian/project.base-template**](<https://github.com/nabla-squared/laplacian.project.base-template.git>)
+- [**laplacian/project.domain-model**](<https://github.com/nabla-squared/laplacian.project.domain-model.git>)
 
-- [**laplacian/project.document-template**](<https://github.com/nabla-squared/laplacian.project.document-template.git>)
-
-> このモジュールは任意の*Laplacian*プロジェクトについて、使用方法や開発手順などを説明する
-> READMEドキュメントを生成します。
+> このモデルは*Laplacian*プロジェクトの論理構造を表します。
 > 
 - [**laplacian/project.project-types**](<https://github.com/nabla-squared/laplacian.project.project-types.git>)
 
 > The basic project types used in the Laplacian project.
-> 
-- [**laplacian/project.schema-model**](<https://github.com/nabla-squared/laplacian.project.schema-model.git>)
-
-> このモデルは*Laplacian*プロジェクトの論理構造を表します。
-> 
-- [**laplacian/project.schema-plugin**](<>)
-
-> A schema-plugin for project models.
-> 
-- [**laplacian/schema.plugin-template**](<https://github.com/nabla-squared/laplacian.schema.plugin-template.git>)
-
-> This template is generates a schema gradle plugin which defines the structure of models.
 > 
 ### スクリプト一覧
 
@@ -258,16 +251,14 @@ $ ./script/generate
 - [src/project/subprojects/laplacian-arch/laplacian-arch.service-api.springboot2-template.yaml](<./src/project/subprojects/laplacian-arch/laplacian-arch.service-api.springboot2-template.yaml>)
 - [src/project/subprojects/laplacian/laplacian.common-model-plugin.yaml](<./src/project/subprojects/laplacian/laplacian.common-model-plugin.yaml>)
 - [src/project/subprojects/laplacian/laplacian.common-model.yaml](<./src/project/subprojects/laplacian/laplacian.common-model.yaml>)
-- [src/project/subprojects/laplacian/laplacian.domain-model.document-template.yaml](<./src/project/subprojects/laplacian/laplacian.domain-model.document-template.yaml>)
+- [src/project/subprojects/laplacian/laplacian.domain-model-plugin.project-template.yaml](<./src/project/subprojects/laplacian/laplacian.domain-model-plugin.project-template.yaml>)
+- [src/project/subprojects/laplacian/laplacian.domain-model.project-template.yaml](<./src/project/subprojects/laplacian/laplacian.domain-model.project-template.yaml>)
+- [src/project/subprojects/laplacian/laplacian.generator.project-template.yaml](<./src/project/subprojects/laplacian/laplacian.generator.project-template.yaml>)
 - [src/project/subprojects/laplacian/laplacian.metamodel-plugin.yaml](<./src/project/subprojects/laplacian/laplacian.metamodel-plugin.yaml>)
 - [src/project/subprojects/laplacian/laplacian.metamodel.yaml](<./src/project/subprojects/laplacian/laplacian.metamodel.yaml>)
-- [src/project/subprojects/laplacian/laplacian.project.base-template.yaml](<./src/project/subprojects/laplacian/laplacian.project.base-template.yaml>)
-- [src/project/subprojects/laplacian/laplacian.project.document-template.yaml](<./src/project/subprojects/laplacian/laplacian.project.document-template.yaml>)
+- [src/project/subprojects/laplacian/laplacian.project.domain-model.yaml](<./src/project/subprojects/laplacian/laplacian.project.domain-model.yaml>)
 - [src/project/subprojects/laplacian/laplacian.project-group.document-template.yaml](<./src/project/subprojects/laplacian/laplacian.project-group.document-template.yaml>)
 - [src/project/subprojects/laplacian/laplacian.project.project-types.yaml](<./src/project/subprojects/laplacian/laplacian.project.project-types.yaml>)
-- [src/project/subprojects/laplacian/laplacian.project.schema-model.yaml](<./src/project/subprojects/laplacian/laplacian.project.schema-model.yaml>)
-- [src/project/subprojects/laplacian/laplacian.project.schema-plugin.yaml](<./src/project/subprojects/laplacian/laplacian.project.schema-plugin.yaml>)
-- [src/project/subprojects/laplacian/laplacian.schema.plugin-template.yaml](<./src/project/subprojects/laplacian/laplacian.schema.plugin-template.yaml>)
 
 
 <!-- @main-content@ -->

@@ -5,7 +5,7 @@ PROJECT_BASE_DIR=$(cd $"${BASH_SOURCE%/*}/../../" && pwd)
 SCRIPT_BASE_DIR="$PROJECT_BASE_DIR/scripts"
 LOCAL_REPO_PATH="$PROJECT_BASE_DIR/../mvn-repo"
 
-TARGET_PROJECT_DIR="$PROJECT_BASE_DIR/subprojects/laplacian.metamodel"
+TARGET_PROJECT_DIR="$PROJECT_BASE_DIR/subprojects/laplacian.project.domain-model"
 TARGET_MODEL_DIR="$TARGET_PROJECT_DIR/model"
 TARGET_PROJECT_MODEL_FILE="$TARGET_MODEL_DIR/project.yaml"
 
@@ -25,22 +25,19 @@ create_project_model_file() {
   cat <<END_FILE > $TARGET_PROJECT_MODEL_FILE
 project:
   group: laplacian
-  name: metamodel
+  name: project.domain-model
   type: domain-model
-  namespace: laplacian.metamodel
+  namespace: laplacian.project
   version: '1.0.0'
   description:
     en: |
-      A model that expresses the structure of relational model with aggregation support.
-      This model is used to define models from which templates generate resources such as source code or document.
+      This model represents the logical structure of a *Laplacian*-based project.
     ja: |
-      A model that expresses the structure of relational model with aggregation support.
-      This model is used to define models from which templates generate resources such as source code or document.
+      このモデルは*Laplacian*プロジェクトの論理構造を表します。
     zh: |
-      A model that expresses the structure of relational model with aggregation support.
-      This model is used to define models from which templates generate resources such as source code or document.
+      该模型代表了*Laplacian*项目的逻辑结构。
   source_repository:
-    url: https://github.com/nabla-squared/laplacian.metamodel.git
+    url: https://github.com/nabla-squared/laplacian.project.domain-model.git
     branch: master
   module_repositories:
     local:
@@ -49,8 +46,16 @@ project:
       branch: master
     remote:
     - https://github.com/nabla-squared/mvn-repo
+  plugins:
+  - group: laplacian
+    name: common-model-plugin
+    version: '1.0.0'
+  models:
+  - group: laplacian
+    name: common-model
+    version: '1.0.0'
   model_files:
-  - $(normalize_path 'src/')
+  - $(normalize_path 'dest/')
 END_FILE
 }
 
@@ -60,7 +65,7 @@ checkout_from_code_repository() {
     mkdir -p $TARGET_PROJECT_DIR
     rm -rf $TARGET_PROJECT_DIR
     git clone \
-        https://github.com/nabla-squared/laplacian.metamodel.git \
+        https://github.com/nabla-squared/laplacian.project.domain-model.git \
         $TARGET_PROJECT_DIR
   fi
   (cd $TARGET_PROJECT_DIR

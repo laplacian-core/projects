@@ -1,0 +1,20 @@
+_description: &description
+  en: |
+    This is a template module that generates directory structure, development scripts, and relating documents for a domain model project.
+  ja: |
+    ドメインモデルプロジェクトのディレクトリ構成、開発用スクリプト、各種ドキュメントを生成するテンプレートモジュールです。
+  zh: |
+    这是一个模板模块、用于生成域模型项目的目录结构、开发脚本和相关文档。
+
+project:
+  subprojects:
+  - group: laplacian
+    type: template
+    name: domain-model.project-template
+    namespace: laplacian
+    description: *description
+    version: '1.0.0'
+    source_repository:
+      url: https://github.com/nabla-squared/laplacian.domain-model.project-template.git
+    template_files:
+    - dest/
