@@ -54,7 +54,7 @@ project:
     name: datasource.schema-model
     version: '1.0.0'
   model_files:
-  - $(normalize_path 'src/')
+  - 'src/'
 END_FILE
 }
 

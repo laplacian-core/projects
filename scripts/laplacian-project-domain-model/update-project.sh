@@ -55,7 +55,7 @@ project:
     name: common-model
     version: '1.0.0'
   model_files:
-  - $(normalize_path 'dest/')
+  - 'dest/'
 END_FILE
 }
 

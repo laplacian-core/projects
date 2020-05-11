@@ -47,7 +47,7 @@ project:
     remote:
     - https://github.com/nabla-squared/mvn-repo
   model_files:
-  - $(normalize_path 'dest/')
+  - 'dest/'
 END_FILE
 }
 

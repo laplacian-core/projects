@@ -51,7 +51,7 @@ project:
     name: project.schema-plugin
     version: '1.0.0'
   model_files:
-  - $(normalize_path 'src/')
+  - 'src/'
 END_FILE
 }
 

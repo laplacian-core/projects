@@ -26,10 +26,10 @@ subprojects/laplacian.project.project-types
 for subproject in $SUBPROJECTS
 do
   if [[ -d "$subproject/.git" ]]
-  echo "
-  === $subproject ===
-  "
   then
+    echo "
+    === $subproject ===
+    "
     (cd $subproject && git status)
   fi
 done
