@@ -154,6 +154,403 @@ $ ./script/generate
 ### Script List
 
 
+- [./script/do-each-subproject.sh](<./scripts/do-each-subproject.sh>)
+
+  Executes the command specified by the argument for each subproject.
+
+  Example:
+  ```console
+  $ ./scripts/null -c git status
+  ```
+
+  > Usage: do-each-subproject.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   Displays how to use this command.
+  >   
+  > -v, --verbose
+  >
+  >   Displays more detailed command execution information.
+  >   
+  > -c, --continue-on-error
+  >
+  >   Even if the given command fails in a subproject in the middle, executes it for the remaining subprojects.
+  >   
+- [./script/generate-laplacian-arch-architecture-document-template.sh](<./scripts/generate-laplacian-arch-architecture-document-template.sh>)
+
+  Generates the [laplacian-arch/architecture-document-template](<https://github.com/nabla-squared/laplacian-arch.architecture-document-template.git>) project as a subproject in the following directory.
+  ```
+  subprojects/laplacian-arch.architecture-document-template
+  ```
+  If the subproject already exists, the content of the subproject is updated.
+
+  > Usage: generate-laplacian-arch-architecture-document-template.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   Displays how to use this command.
+  >   
+  > -v, --verbose
+  >
+  >   Displays more detailed command execution information.
+  >   
+  > -c, --clean
+  >
+  >   Delete all local resources of the subproject and regenerate them.
+  >   
+- [./script/generate-laplacian-arch-datasource-flyway-migration-template.sh](<./scripts/generate-laplacian-arch-datasource-flyway-migration-template.sh>)
+
+  Generates the [laplacian-arch/datasource.flyway-migration-template](<https://github.com/nabla-squared/laplacian-arch.datasource.flyway-migration-template.git>) project as a subproject in the following directory.
+  ```
+  subprojects/laplacian-arch.datasource.flyway-migration-template
+  ```
+  If the subproject already exists, the content of the subproject is updated.
+
+  > Usage: generate-laplacian-arch-datasource-flyway-migration-template.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   Displays how to use this command.
+  >   
+  > -v, --verbose
+  >
+  >   Displays more detailed command execution information.
+  >   
+  > -c, --clean
+  >
+  >   Delete all local resources of the subproject and regenerate them.
+  >   
+- [./script/generate-laplacian-arch-datasource-schema-model.sh](<./scripts/generate-laplacian-arch-datasource-schema-model.sh>)
+
+  Generates the [laplacian-arch/datasource.schema-model](<https://github.com/nabla-squared/laplacian-arch.model.datasource.git>) project as a subproject in the following directory.
+  ```
+  subprojects/laplacian-arch.datasource.schema-model
+  ```
+  If the subproject already exists, the content of the subproject is updated.
+
+  > Usage: generate-laplacian-arch-datasource-schema-model.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   Displays how to use this command.
+  >   
+  > -v, --verbose
+  >
+  >   Displays more detailed command execution information.
+  >   
+  > -c, --clean
+  >
+  >   Delete all local resources of the subproject and regenerate them.
+  >   
+- [./script/generate-laplacian-arch-datasource-schema-plugin.sh](<./scripts/generate-laplacian-arch-datasource-schema-plugin.sh>)
+
+  Generates the [laplacian-arch/datasource.schema-plugin](<null>) project as a subproject in the following directory.
+  ```
+  subprojects/laplacian-arch.datasource.schema-plugin
+  ```
+  If the subproject already exists, the content of the subproject is updated.
+
+  > Usage: generate-laplacian-arch-datasource-schema-plugin.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   Displays how to use this command.
+  >   
+  > -v, --verbose
+  >
+  >   Displays more detailed command execution information.
+  >   
+  > -c, --clean
+  >
+  >   Delete all local resources of the subproject and regenerate them.
+  >   
+- [./script/generate-laplacian-arch-service-api-schema-model.sh](<./scripts/generate-laplacian-arch-service-api-schema-model.sh>)
+
+  Generates the [laplacian-arch/service-api.schema-model](<https://github.com/nabla-squared/laplacian-arch.service-api-schema-model.git>) project as a subproject in the following directory.
+  ```
+  subprojects/laplacian-arch.service-api.schema-model
+  ```
+  If the subproject already exists, the content of the subproject is updated.
+
+  > Usage: generate-laplacian-arch-service-api-schema-model.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   Displays how to use this command.
+  >   
+  > -v, --verbose
+  >
+  >   Displays more detailed command execution information.
+  >   
+  > -c, --clean
+  >
+  >   Delete all local resources of the subproject and regenerate them.
+  >   
+- [./script/generate-laplacian-arch-service-api-schema-plugin.sh](<./scripts/generate-laplacian-arch-service-api-schema-plugin.sh>)
+
+  Generates the [laplacian-arch/service-api.schema-plugin](<null>) project as a subproject in the following directory.
+  ```
+  subprojects/laplacian-arch.service-api.schema-plugin
+  ```
+  If the subproject already exists, the content of the subproject is updated.
+
+  > Usage: generate-laplacian-arch-service-api-schema-plugin.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   Displays how to use this command.
+  >   
+  > -v, --verbose
+  >
+  >   Displays more detailed command execution information.
+  >   
+  > -c, --clean
+  >
+  >   Delete all local resources of the subproject and regenerate them.
+  >   
+- [./script/generate-laplacian-arch-service-api-springboot2-template.sh](<./scripts/generate-laplacian-arch-service-api-springboot2-template.sh>)
+
+  Generates the [laplacian-arch/service-api.springboot2-template](<https://github.com/nabla-squared/laplacian-arch.service-api.springboot2-template.git>) project as a subproject in the following directory.
+  ```
+  subprojects/laplacian-arch.service-api.springboot2-template
+  ```
+  If the subproject already exists, the content of the subproject is updated.
+
+  > Usage: generate-laplacian-arch-service-api-springboot2-template.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   Displays how to use this command.
+  >   
+  > -v, --verbose
+  >
+  >   Displays more detailed command execution information.
+  >   
+  > -c, --clean
+  >
+  >   Delete all local resources of the subproject and regenerate them.
+  >   
+- [./script/generate-laplacian-common-model-plugin.sh](<./scripts/generate-laplacian-common-model-plugin.sh>)
+
+  Generates the [laplacian/common-model-plugin](<null>) project as a subproject in the following directory.
+  ```
+  subprojects/laplacian.common-model-plugin
+  ```
+  If the subproject already exists, the content of the subproject is updated.
+
+  > Usage: generate-laplacian-common-model-plugin.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   Displays how to use this command.
+  >   
+  > -v, --verbose
+  >
+  >   Displays more detailed command execution information.
+  >   
+  > -c, --clean
+  >
+  >   Delete all local resources of the subproject and regenerate them.
+  >   
+- [./script/generate-laplacian-common-model.sh](<./scripts/generate-laplacian-common-model.sh>)
+
+  Generates the [laplacian/common-model](<https://github.com/nabla-squared/laplacian.common-model.git>) project as a subproject in the following directory.
+  ```
+  subprojects/laplacian.common-model
+  ```
+  If the subproject already exists, the content of the subproject is updated.
+
+  > Usage: generate-laplacian-common-model.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   Displays how to use this command.
+  >   
+  > -v, --verbose
+  >
+  >   Displays more detailed command execution information.
+  >   
+  > -c, --clean
+  >
+  >   Delete all local resources of the subproject and regenerate them.
+  >   
+- [./script/generate-laplacian-domain-model-plugin-project-template.sh](<./scripts/generate-laplacian-domain-model-plugin-project-template.sh>)
+
+  Generates the [laplacian/domain-model-plugin.project-template](<https://github.com/nabla-squared/laplacian.domain-model-plugin.project-template.git>) project as a subproject in the following directory.
+  ```
+  subprojects/laplacian.domain-model-plugin.project-template
+  ```
+  If the subproject already exists, the content of the subproject is updated.
+
+  > Usage: generate-laplacian-domain-model-plugin-project-template.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   Displays how to use this command.
+  >   
+  > -v, --verbose
+  >
+  >   Displays more detailed command execution information.
+  >   
+  > -c, --clean
+  >
+  >   Delete all local resources of the subproject and regenerate them.
+  >   
+- [./script/generate-laplacian-domain-model-project-template.sh](<./scripts/generate-laplacian-domain-model-project-template.sh>)
+
+  Generates the [laplacian/domain-model.project-template](<https://github.com/nabla-squared/laplacian.domain-model.project-template.git>) project as a subproject in the following directory.
+  ```
+  subprojects/laplacian.domain-model.project-template
+  ```
+  If the subproject already exists, the content of the subproject is updated.
+
+  > Usage: generate-laplacian-domain-model-project-template.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   Displays how to use this command.
+  >   
+  > -v, --verbose
+  >
+  >   Displays more detailed command execution information.
+  >   
+  > -c, --clean
+  >
+  >   Delete all local resources of the subproject and regenerate them.
+  >   
+- [./script/generate-laplacian-generator-project-template.sh](<./scripts/generate-laplacian-generator-project-template.sh>)
+
+  Generates the [laplacian/generator.project-template](<https://github.com/nabla-squared/laplacian.generator.project-template.git>) project as a subproject in the following directory.
+  ```
+  subprojects/laplacian.generator.project-template
+  ```
+  If the subproject already exists, the content of the subproject is updated.
+
+  > Usage: generate-laplacian-generator-project-template.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   Displays how to use this command.
+  >   
+  > -v, --verbose
+  >
+  >   Displays more detailed command execution information.
+  >   
+  > -c, --clean
+  >
+  >   Delete all local resources of the subproject and regenerate them.
+  >   
+- [./script/generate-laplacian-metamodel-plugin.sh](<./scripts/generate-laplacian-metamodel-plugin.sh>)
+
+  Generates the [laplacian/metamodel-plugin](<null>) project as a subproject in the following directory.
+  ```
+  subprojects/laplacian.metamodel-plugin
+  ```
+  If the subproject already exists, the content of the subproject is updated.
+
+  > Usage: generate-laplacian-metamodel-plugin.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   Displays how to use this command.
+  >   
+  > -v, --verbose
+  >
+  >   Displays more detailed command execution information.
+  >   
+  > -c, --clean
+  >
+  >   Delete all local resources of the subproject and regenerate them.
+  >   
+- [./script/generate-laplacian-metamodel.sh](<./scripts/generate-laplacian-metamodel.sh>)
+
+  Generates the [laplacian/metamodel](<https://github.com/nabla-squared/laplacian.metamodel.git>) project as a subproject in the following directory.
+  ```
+  subprojects/laplacian.metamodel
+  ```
+  If the subproject already exists, the content of the subproject is updated.
+
+  > Usage: generate-laplacian-metamodel.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   Displays how to use this command.
+  >   
+  > -v, --verbose
+  >
+  >   Displays more detailed command execution information.
+  >   
+  > -c, --clean
+  >
+  >   Delete all local resources of the subproject and regenerate them.
+  >   
+- [./script/generate-laplacian-project-domain-model.sh](<./scripts/generate-laplacian-project-domain-model.sh>)
+
+  Generates the [laplacian/project.domain-model](<https://github.com/nabla-squared/laplacian.project.domain-model.git>) project as a subproject in the following directory.
+  ```
+  subprojects/laplacian.project.domain-model
+  ```
+  If the subproject already exists, the content of the subproject is updated.
+
+  > Usage: generate-laplacian-project-domain-model.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   Displays how to use this command.
+  >   
+  > -v, --verbose
+  >
+  >   Displays more detailed command execution information.
+  >   
+  > -c, --clean
+  >
+  >   Delete all local resources of the subproject and regenerate them.
+  >   
+- [./script/generate-laplacian-project-group-document-template.sh](<./scripts/generate-laplacian-project-group-document-template.sh>)
+
+  Generates the [laplacian/project-group.document-template](<https://github.com/nabla-squared/laplacian.project-group.document-template.git>) project as a subproject in the following directory.
+  ```
+  subprojects/laplacian.project-group.document-template
+  ```
+  If the subproject already exists, the content of the subproject is updated.
+
+  > Usage: generate-laplacian-project-group-document-template.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   Displays how to use this command.
+  >   
+  > -v, --verbose
+  >
+  >   Displays more detailed command execution information.
+  >   
+  > -c, --clean
+  >
+  >   Delete all local resources of the subproject and regenerate them.
+  >   
+- [./script/generate-laplacian-project-project-types.sh](<./scripts/generate-laplacian-project-project-types.sh>)
+
+  Generates the [laplacian/project.project-types](<https://github.com/nabla-squared/laplacian.project.project-types.git>) project as a subproject in the following directory.
+  ```
+  subprojects/laplacian.project.project-types
+  ```
+  If the subproject already exists, the content of the subproject is updated.
+
+  > Usage: generate-laplacian-project-project-types.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   Displays how to use this command.
+  >   
+  > -v, --verbose
+  >
+  >   Displays more detailed command execution information.
+  >   
+  > -c, --clean
+  >
+  >   Delete all local resources of the subproject and regenerate them.
+  >   
 - [./script/generate.sh](<./scripts/generate.sh>)
 
   Generates The resources in each directory of `src/` `model/` `template/` in this project.
@@ -242,6 +639,244 @@ $ ./script/generate
   > , --skip-generation
   >
   >   This option is the same as the option of the same name in [generate.sh](<./scripts/generate.sh>).
+  >   
+- [./script/publish-local-laplacian-arch-architecture-document-template.sh](<./scripts/publish-local-laplacian-arch-architecture-document-template.sh>)
+
+  Generates resources for the [laplacian-arch/architecture-document-template](<https://github.com/nabla-squared/laplacian-arch.architecture-document-template.git>) subproject.
+
+  > Usage: publish-local-laplacian-arch-architecture-document-template.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   Displays how to use this command.
+  >   
+  > -v, --verbose
+  >
+  >   Displays more detailed command execution information.
+  >   
+- [./script/publish-local-laplacian-arch-datasource-flyway-migration-template.sh](<./scripts/publish-local-laplacian-arch-datasource-flyway-migration-template.sh>)
+
+  Generates resources for the [laplacian-arch/datasource.flyway-migration-template](<https://github.com/nabla-squared/laplacian-arch.datasource.flyway-migration-template.git>) subproject.
+
+  > Usage: publish-local-laplacian-arch-datasource-flyway-migration-template.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   Displays how to use this command.
+  >   
+  > -v, --verbose
+  >
+  >   Displays more detailed command execution information.
+  >   
+- [./script/publish-local-laplacian-arch-datasource-schema-model.sh](<./scripts/publish-local-laplacian-arch-datasource-schema-model.sh>)
+
+  Generates resources for the [laplacian-arch/datasource.schema-model](<https://github.com/nabla-squared/laplacian-arch.model.datasource.git>) subproject.
+
+  > Usage: publish-local-laplacian-arch-datasource-schema-model.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   Displays how to use this command.
+  >   
+  > -v, --verbose
+  >
+  >   Displays more detailed command execution information.
+  >   
+- [./script/publish-local-laplacian-arch-datasource-schema-plugin.sh](<./scripts/publish-local-laplacian-arch-datasource-schema-plugin.sh>)
+
+  Generates resources for the [laplacian-arch/datasource.schema-plugin](<null>) subproject.
+
+  > Usage: publish-local-laplacian-arch-datasource-schema-plugin.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   Displays how to use this command.
+  >   
+  > -v, --verbose
+  >
+  >   Displays more detailed command execution information.
+  >   
+- [./script/publish-local-laplacian-arch-service-api-schema-model.sh](<./scripts/publish-local-laplacian-arch-service-api-schema-model.sh>)
+
+  Generates resources for the [laplacian-arch/service-api.schema-model](<https://github.com/nabla-squared/laplacian-arch.service-api-schema-model.git>) subproject.
+
+  > Usage: publish-local-laplacian-arch-service-api-schema-model.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   Displays how to use this command.
+  >   
+  > -v, --verbose
+  >
+  >   Displays more detailed command execution information.
+  >   
+- [./script/publish-local-laplacian-arch-service-api-schema-plugin.sh](<./scripts/publish-local-laplacian-arch-service-api-schema-plugin.sh>)
+
+  Generates resources for the [laplacian-arch/service-api.schema-plugin](<null>) subproject.
+
+  > Usage: publish-local-laplacian-arch-service-api-schema-plugin.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   Displays how to use this command.
+  >   
+  > -v, --verbose
+  >
+  >   Displays more detailed command execution information.
+  >   
+- [./script/publish-local-laplacian-arch-service-api-springboot2-template.sh](<./scripts/publish-local-laplacian-arch-service-api-springboot2-template.sh>)
+
+  Generates resources for the [laplacian-arch/service-api.springboot2-template](<https://github.com/nabla-squared/laplacian-arch.service-api.springboot2-template.git>) subproject.
+
+  > Usage: publish-local-laplacian-arch-service-api-springboot2-template.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   Displays how to use this command.
+  >   
+  > -v, --verbose
+  >
+  >   Displays more detailed command execution information.
+  >   
+- [./script/publish-local-laplacian-common-model-plugin.sh](<./scripts/publish-local-laplacian-common-model-plugin.sh>)
+
+  Generates resources for the [laplacian/common-model-plugin](<null>) subproject.
+
+  > Usage: publish-local-laplacian-common-model-plugin.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   Displays how to use this command.
+  >   
+  > -v, --verbose
+  >
+  >   Displays more detailed command execution information.
+  >   
+- [./script/publish-local-laplacian-common-model.sh](<./scripts/publish-local-laplacian-common-model.sh>)
+
+  Generates resources for the [laplacian/common-model](<https://github.com/nabla-squared/laplacian.common-model.git>) subproject.
+
+  > Usage: publish-local-laplacian-common-model.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   Displays how to use this command.
+  >   
+  > -v, --verbose
+  >
+  >   Displays more detailed command execution information.
+  >   
+- [./script/publish-local-laplacian-domain-model-plugin-project-template.sh](<./scripts/publish-local-laplacian-domain-model-plugin-project-template.sh>)
+
+  Generates resources for the [laplacian/domain-model-plugin.project-template](<https://github.com/nabla-squared/laplacian.domain-model-plugin.project-template.git>) subproject.
+
+  > Usage: publish-local-laplacian-domain-model-plugin-project-template.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   Displays how to use this command.
+  >   
+  > -v, --verbose
+  >
+  >   Displays more detailed command execution information.
+  >   
+- [./script/publish-local-laplacian-domain-model-project-template.sh](<./scripts/publish-local-laplacian-domain-model-project-template.sh>)
+
+  Generates resources for the [laplacian/domain-model.project-template](<https://github.com/nabla-squared/laplacian.domain-model.project-template.git>) subproject.
+
+  > Usage: publish-local-laplacian-domain-model-project-template.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   Displays how to use this command.
+  >   
+  > -v, --verbose
+  >
+  >   Displays more detailed command execution information.
+  >   
+- [./script/publish-local-laplacian-generator-project-template.sh](<./scripts/publish-local-laplacian-generator-project-template.sh>)
+
+  Generates resources for the [laplacian/generator.project-template](<https://github.com/nabla-squared/laplacian.generator.project-template.git>) subproject.
+
+  > Usage: publish-local-laplacian-generator-project-template.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   Displays how to use this command.
+  >   
+  > -v, --verbose
+  >
+  >   Displays more detailed command execution information.
+  >   
+- [./script/publish-local-laplacian-metamodel-plugin.sh](<./scripts/publish-local-laplacian-metamodel-plugin.sh>)
+
+  Generates resources for the [laplacian/metamodel-plugin](<null>) subproject.
+
+  > Usage: publish-local-laplacian-metamodel-plugin.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   Displays how to use this command.
+  >   
+  > -v, --verbose
+  >
+  >   Displays more detailed command execution information.
+  >   
+- [./script/publish-local-laplacian-metamodel.sh](<./scripts/publish-local-laplacian-metamodel.sh>)
+
+  Generates resources for the [laplacian/metamodel](<https://github.com/nabla-squared/laplacian.metamodel.git>) subproject.
+
+  > Usage: publish-local-laplacian-metamodel.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   Displays how to use this command.
+  >   
+  > -v, --verbose
+  >
+  >   Displays more detailed command execution information.
+  >   
+- [./script/publish-local-laplacian-project-domain-model.sh](<./scripts/publish-local-laplacian-project-domain-model.sh>)
+
+  Generates resources for the [laplacian/project.domain-model](<https://github.com/nabla-squared/laplacian.project.domain-model.git>) subproject.
+
+  > Usage: publish-local-laplacian-project-domain-model.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   Displays how to use this command.
+  >   
+  > -v, --verbose
+  >
+  >   Displays more detailed command execution information.
+  >   
+- [./script/publish-local-laplacian-project-group-document-template.sh](<./scripts/publish-local-laplacian-project-group-document-template.sh>)
+
+  Generates resources for the [laplacian/project-group.document-template](<https://github.com/nabla-squared/laplacian.project-group.document-template.git>) subproject.
+
+  > Usage: publish-local-laplacian-project-group-document-template.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   Displays how to use this command.
+  >   
+  > -v, --verbose
+  >
+  >   Displays more detailed command execution information.
+  >   
+- [./script/publish-local-laplacian-project-project-types.sh](<./scripts/publish-local-laplacian-project-project-types.sh>)
+
+  Generates resources for the [laplacian/project.project-types](<https://github.com/nabla-squared/laplacian.project.project-types.git>) subproject.
+
+  > Usage: publish-local-laplacian-project-project-types.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   Displays how to use this command.
+  >   
+  > -v, --verbose
+  >
+  >   Displays more detailed command execution information.
   >   
 ### Source code list
 
