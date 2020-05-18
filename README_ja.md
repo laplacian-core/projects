@@ -179,6 +179,24 @@ $ ./script/generate
   >
   >   途中のサブプロジェクトで与えられたコマンドが失敗しても、残りのサブプロジェクトに対してコマンドを実行します。
   >   
+- [./script/generate-all.sh](<./scripts/generate-all.sh>)
+
+  サブプロジェクトを含むプロジェクト内の資源を自動生成します。
+
+  > Usage: generate-all.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   このコマンドの使用方法を表示します。
+  >   
+  > -v, --verbose
+  >
+  >   より詳細なコマンドの実行情報を表示します。
+  >   
+  > -c, --continue-on-error
+  >
+  >   途中のサブプロジェクトで与えられたコマンドが失敗しても、残りのサブプロジェクトに対してコマンドを実行します。
+  >   
 - [./script/generate-laplacian-arch-architecture-document-template.sh](<./scripts/generate-laplacian-arch-architecture-document-template.sh>)
 
   [laplacian-arch/architecture-document-template](<https://github.com/nabla-squared/laplacian-arch.architecture-document-template.git>)プロジェクトをサブプロジェクトとして下記のディレクトリに生成します。

@@ -23,14 +23,11 @@ main() {
   for subproject in $SUBPROJECTS
   do
     local path="$PROJECT_BASE_DIR/$subproject"
-    if [[ -d "$path/.git" ]]
-    then
-      echo "
-      === $subproject ===
-      "
-      (cd $path
-        $ARGS
-      )
-    fi
+    echo "
+    === $subproject ===
+    "
+    (cd $path
+      $ARGS
+    )
   done
 }

@@ -179,6 +179,24 @@ $ ./script/generate
   >
   >   即使给定的命令在中间的一个子项目中失败，对其余的子项目执行该命令。
   >   
+- [./script/generate-all.sh](<./scripts/generate-all.sh>)
+
+  生成项目中的资源，包括子项目。
+
+  > Usage: generate-all.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   显示如何使用此命令。
+  >   
+  > -v, --verbose
+  >
+  >   显示更详细的命令执行信息。
+  >   
+  > -c, --continue-on-error
+  >
+  >   即使给定的命令在中间的一个子项目中失败，对其余的子项目执行该命令。
+  >   
 - [./script/generate-laplacian-arch-architecture-document-template.sh](<./scripts/generate-laplacian-arch-architecture-document-template.sh>)
 
   在下面的目录中生成[laplacian-arch/architecture-document-template](<https://github.com/nabla-squared/laplacian-arch.architecture-document-template.git>)项目，作为子项目。

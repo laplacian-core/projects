@@ -177,6 +177,24 @@ $ ./script/generate
   >
   >   Even if the given command fails in a subproject in the middle, executes it for the remaining subprojects.
   >   
+- [./script/generate-all.sh](<./scripts/generate-all.sh>)
+
+  Generates resources in the project, including subprojects.
+
+  > Usage: generate-all.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   Displays how to use this command.
+  >   
+  > -v, --verbose
+  >
+  >   Displays more detailed command execution information.
+  >   
+  > -c, --continue-on-error
+  >
+  >   Even if the given command fails in a subproject in the middle, executes it for the remaining subprojects.
+  >   
 - [./script/generate-laplacian-arch-architecture-document-template.sh](<./scripts/generate-laplacian-arch-architecture-document-template.sh>)
 
   Generates the [laplacian-arch/architecture-document-template](<https://github.com/nabla-squared/laplacian-arch.architecture-document-template.git>) project as a subproject in the following directory.
@@ -553,7 +571,7 @@ $ ./script/generate
   >   
 - [./script/generate.sh](<./scripts/generate.sh>)
 
-  Generates The resources in each directory of `src/` `model/` `template/` in this project.
+  Generates the resources in each directory of `src/` `model/` `template/` in this project.
   The results are reflected in each directory of `dest/` `doc/` `script/`.
 
   *Generator input files*
