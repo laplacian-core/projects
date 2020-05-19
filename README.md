@@ -634,6 +634,29 @@ $ ./script/generate
   >   when the contents of the `model/` `template/` directory are updated
   >   during the generation process.
   >    (Default: 10)
+- [./script/git-each-subproject.sh](<./scripts/git-each-subproject.sh>)
+
+  Executes the git sub-command specified by the argument for each subproject.
+
+  Example:
+  ```console
+  $ ./scripts/null -c status
+  ```
+
+  > Usage: git-each-subproject.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   Displays how to use this command.
+  >   
+  > -v, --verbose
+  >
+  >   Displays more detailed command execution information.
+  >   
+  > -c, --continue-on-error
+  >
+  >   Even if the given command fails in a subproject in the middle, executes it for the remaining subprojects.
+  >   
 - [./script/publish-local.sh](<./scripts/publish-local.sh>)
 
   After the resources in the project are generated,
