@@ -75,50 +75,9 @@ $ ./script/generate
 ### 项目清单
 
 
-- [**laplacian-arch/architecture-document-template**](<https://github.com/nabla-squared/laplacian-arch.architecture-document-template.git>)
-
-> This template generates a set of documentation of the system architecture defined by the `laplacian-arch` model.
-> 
-- [**laplacian-arch/datasource.flyway-migration-template**](<https://github.com/nabla-squared/laplacian-arch.datasource.flyway-migration-template.git>)
-
-> This template generates [flyway](https://flywaydb.org/) database schema migration tasks from datasource models.
-> 
-- [**laplacian-arch/datasource.schema-model**](<https://github.com/nabla-squared/laplacian-arch.model.datasource.git>)
-
-> This model expresses a view of a data-store (ex:RDBMS, KVS, etc..) from a certain client This model consists of the following entities:
-> - The information which is necessary to connect the data-store
-> - The entities allowed for clients to access
-> - The queries issued by the client
-> 
-- [**laplacian-arch/datasource.schema-plugin**](<>)
-
-> A schema gradle plugin for the datasource arch model
-> 
-- [**laplacian-arch/service-api.schema-model**](<https://github.com/nabla-squared/laplacian-arch.service-api-schema-model.git>)
-
-> A model that expresses the logical structure of a service API.
-> This model consists of REST api model, GraphQL interface model, and datasource usage model.
-> 
-- [**laplacian-arch/service-api.schema-plugin**](<>)
-
-> A schema for service-api architecture model.
-> 
-- [**laplacian-arch/service-api.springboot2-template**](<https://github.com/nabla-squared/laplacian-arch.service-api.springboot2-template.git>)
-
-> This template gives a service api implementation based on the [service-api](https://github.com/nabla-squared/laplacian-arch.service-api.schema-model/) model.
-> The architecture stack which is employed in this template is:
->   - Alpine based docker image
->   - OpenJDK8
->   - SpringBoot 2
->   - Java-Graphql
-> 
-- [**laplacian/common-model-plugin**](<>)
-
-> Plugin module for the laplacian common model.
-> 
 - [**laplacian/common-model**](<https://github.com/nabla-squared/laplacian.common-model.git>)
 
-> Some value objects and mixins which can be applicable to any domain models.
+> 定义了不特定于某一领域的普遍适用模型。
 > 
 - [**laplacian/domain-model-plugin.project-template**](<https://github.com/nabla-squared/laplacian.domain-model-plugin.project-template.git>)
 
@@ -128,22 +87,29 @@ $ ./script/generate
 
 > 这是一个模板模块、用于生成域模型项目的目录结构、开发脚本和相关文档。
 > 
+- [**laplacian/generator.model-validator-template**](<https://github.com/nabla-squared/laplacian.generator.model-validator-template.git>)
+
+> 生成一个使用域模型定义执行模型验证的脚本。
+> 此外，在[Visual Studio Code](https://code.visualstudio.com/)上输出能够进行验证和代码完成的设置。
+> 
 - [**laplacian/generator.project-template**](<https://github.com/nabla-squared/laplacian.generator.project-template.git>)
 
 > 这个模板模块生成标准目录结构和常用脚本，用于在Laplacian项目中构建和发布到本地资源库。
 > 
-- [**laplacian/metamodel-plugin**](<>)
-
-> A model which expresses the logical structure of laplacian-based projects and modules.
-> 
 - [**laplacian/metamodel**](<https://github.com/nabla-squared/laplacian.metamodel.git>)
 
-> A model that expresses the structure of relational model with aggregation support.
-> This model is used to define models from which templates generate resources such as source code or document.
+> This model is a model for defining a model, i.e. a metamodel.
+> In this model, you can define a model with the following structure
 > 
-- [**laplacian/project-group.document-template**](<https://github.com/nabla-squared/laplacian.project-group.document-template.git>)
+> - attribute
+> - relationship
+> - aggregation
+> - inheritance
+> - mixin
+> 
+- [**laplacian/project-group.project-template**](<https://github.com/nabla-squared/laplacian.project-group.project-template.git>)
 
-> 一个模板，用于生成关于项目组的文件。
+> 这个模板是项目组用来生成标准的项目文件夹结构和操作和开发脚本的模板。
 > 
 - [**laplacian/project.domain-model**](<https://github.com/nabla-squared/laplacian.project.domain-model.git>)
 
@@ -151,7 +117,7 @@ $ ./script/generate
 > 
 - [**laplacian/project.project-types**](<https://github.com/nabla-squared/laplacian.project.project-types.git>)
 
-> The basic project types used in the Laplacian project.
+> 定义了每个项目类型的内容的模型数据。
 > 
 ### 命令列表
 
@@ -197,183 +163,7 @@ $ ./script/generate
   >
   >   即使给定的命令在中间的一个子项目中失败，对其余的子项目执行该命令。
   >   
-- [./script/generate-laplacian-arch-architecture-document-template.sh](<./scripts/generate-laplacian-arch-architecture-document-template.sh>)
-
-  在下面的目录中生成[laplacian-arch/architecture-document-template](<https://github.com/nabla-squared/laplacian-arch.architecture-document-template.git>)项目，作为子项目。
-  ```
-  subprojects/laplacian-arch.architecture-document-template
-  ```
-  如果子项目已经存在，则更新子项目的内容。
-
-  > Usage: generate-laplacian-arch-architecture-document-template.sh [OPTION]...
-  >
-  > -h, --help
-  >
-  >   显示如何使用此命令。
-  >   
-  > -v, --verbose
-  >
-  >   显示更详细的命令执行信息。
-  >   
-  > -c, --clean
-  >
-  >   删除子项目的所有本地资源，并对其进行再生。
-  >   
-- [./script/generate-laplacian-arch-datasource-flyway-migration-template.sh](<./scripts/generate-laplacian-arch-datasource-flyway-migration-template.sh>)
-
-  在下面的目录中生成[laplacian-arch/datasource.flyway-migration-template](<https://github.com/nabla-squared/laplacian-arch.datasource.flyway-migration-template.git>)项目，作为子项目。
-  ```
-  subprojects/laplacian-arch.datasource.flyway-migration-template
-  ```
-  如果子项目已经存在，则更新子项目的内容。
-
-  > Usage: generate-laplacian-arch-datasource-flyway-migration-template.sh [OPTION]...
-  >
-  > -h, --help
-  >
-  >   显示如何使用此命令。
-  >   
-  > -v, --verbose
-  >
-  >   显示更详细的命令执行信息。
-  >   
-  > -c, --clean
-  >
-  >   删除子项目的所有本地资源，并对其进行再生。
-  >   
-- [./script/generate-laplacian-arch-datasource-schema-model.sh](<./scripts/generate-laplacian-arch-datasource-schema-model.sh>)
-
-  在下面的目录中生成[laplacian-arch/datasource.schema-model](<https://github.com/nabla-squared/laplacian-arch.model.datasource.git>)项目，作为子项目。
-  ```
-  subprojects/laplacian-arch.datasource.schema-model
-  ```
-  如果子项目已经存在，则更新子项目的内容。
-
-  > Usage: generate-laplacian-arch-datasource-schema-model.sh [OPTION]...
-  >
-  > -h, --help
-  >
-  >   显示如何使用此命令。
-  >   
-  > -v, --verbose
-  >
-  >   显示更详细的命令执行信息。
-  >   
-  > -c, --clean
-  >
-  >   删除子项目的所有本地资源，并对其进行再生。
-  >   
-- [./script/generate-laplacian-arch-datasource-schema-plugin.sh](<./scripts/generate-laplacian-arch-datasource-schema-plugin.sh>)
-
-  在下面的目录中生成[laplacian-arch/datasource.schema-plugin](<null>)项目，作为子项目。
-  ```
-  subprojects/laplacian-arch.datasource.schema-plugin
-  ```
-  如果子项目已经存在，则更新子项目的内容。
-
-  > Usage: generate-laplacian-arch-datasource-schema-plugin.sh [OPTION]...
-  >
-  > -h, --help
-  >
-  >   显示如何使用此命令。
-  >   
-  > -v, --verbose
-  >
-  >   显示更详细的命令执行信息。
-  >   
-  > -c, --clean
-  >
-  >   删除子项目的所有本地资源，并对其进行再生。
-  >   
-- [./script/generate-laplacian-arch-service-api-schema-model.sh](<./scripts/generate-laplacian-arch-service-api-schema-model.sh>)
-
-  在下面的目录中生成[laplacian-arch/service-api.schema-model](<https://github.com/nabla-squared/laplacian-arch.service-api-schema-model.git>)项目，作为子项目。
-  ```
-  subprojects/laplacian-arch.service-api.schema-model
-  ```
-  如果子项目已经存在，则更新子项目的内容。
-
-  > Usage: generate-laplacian-arch-service-api-schema-model.sh [OPTION]...
-  >
-  > -h, --help
-  >
-  >   显示如何使用此命令。
-  >   
-  > -v, --verbose
-  >
-  >   显示更详细的命令执行信息。
-  >   
-  > -c, --clean
-  >
-  >   删除子项目的所有本地资源，并对其进行再生。
-  >   
-- [./script/generate-laplacian-arch-service-api-schema-plugin.sh](<./scripts/generate-laplacian-arch-service-api-schema-plugin.sh>)
-
-  在下面的目录中生成[laplacian-arch/service-api.schema-plugin](<null>)项目，作为子项目。
-  ```
-  subprojects/laplacian-arch.service-api.schema-plugin
-  ```
-  如果子项目已经存在，则更新子项目的内容。
-
-  > Usage: generate-laplacian-arch-service-api-schema-plugin.sh [OPTION]...
-  >
-  > -h, --help
-  >
-  >   显示如何使用此命令。
-  >   
-  > -v, --verbose
-  >
-  >   显示更详细的命令执行信息。
-  >   
-  > -c, --clean
-  >
-  >   删除子项目的所有本地资源，并对其进行再生。
-  >   
-- [./script/generate-laplacian-arch-service-api-springboot2-template.sh](<./scripts/generate-laplacian-arch-service-api-springboot2-template.sh>)
-
-  在下面的目录中生成[laplacian-arch/service-api.springboot2-template](<https://github.com/nabla-squared/laplacian-arch.service-api.springboot2-template.git>)项目，作为子项目。
-  ```
-  subprojects/laplacian-arch.service-api.springboot2-template
-  ```
-  如果子项目已经存在，则更新子项目的内容。
-
-  > Usage: generate-laplacian-arch-service-api-springboot2-template.sh [OPTION]...
-  >
-  > -h, --help
-  >
-  >   显示如何使用此命令。
-  >   
-  > -v, --verbose
-  >
-  >   显示更详细的命令执行信息。
-  >   
-  > -c, --clean
-  >
-  >   删除子项目的所有本地资源，并对其进行再生。
-  >   
-- [./script/generate-laplacian-common-model-plugin.sh](<./scripts/generate-laplacian-common-model-plugin.sh>)
-
-  在下面的目录中生成[laplacian/common-model-plugin](<null>)项目，作为子项目。
-  ```
-  subprojects/laplacian.common-model-plugin
-  ```
-  如果子项目已经存在，则更新子项目的内容。
-
-  > Usage: generate-laplacian-common-model-plugin.sh [OPTION]...
-  >
-  > -h, --help
-  >
-  >   显示如何使用此命令。
-  >   
-  > -v, --verbose
-  >
-  >   显示更详细的命令执行信息。
-  >   
-  > -c, --clean
-  >
-  >   删除子项目的所有本地资源，并对其进行再生。
-  >   
-- [./script/generate-laplacian-common-model.sh](<./scripts/generate-laplacian-common-model.sh>)
+- [./script/generate-common-model.sh](<./scripts/generate-common-model.sh>)
 
   在下面的目录中生成[laplacian/common-model](<https://github.com/nabla-squared/laplacian.common-model.git>)项目，作为子项目。
   ```
@@ -381,7 +171,7 @@ $ ./script/generate
   ```
   如果子项目已经存在，则更新子项目的内容。
 
-  > Usage: generate-laplacian-common-model.sh [OPTION]...
+  > Usage: generate-common-model.sh [OPTION]...
   >
   > -h, --help
   >
@@ -395,7 +185,7 @@ $ ./script/generate
   >
   >   删除子项目的所有本地资源，并对其进行再生。
   >   
-- [./script/generate-laplacian-domain-model-plugin-project-template.sh](<./scripts/generate-laplacian-domain-model-plugin-project-template.sh>)
+- [./script/generate-domain-model-plugin-project-template.sh](<./scripts/generate-domain-model-plugin-project-template.sh>)
 
   在下面的目录中生成[laplacian/domain-model-plugin.project-template](<https://github.com/nabla-squared/laplacian.domain-model-plugin.project-template.git>)项目，作为子项目。
   ```
@@ -403,7 +193,7 @@ $ ./script/generate
   ```
   如果子项目已经存在，则更新子项目的内容。
 
-  > Usage: generate-laplacian-domain-model-plugin-project-template.sh [OPTION]...
+  > Usage: generate-domain-model-plugin-project-template.sh [OPTION]...
   >
   > -h, --help
   >
@@ -417,7 +207,7 @@ $ ./script/generate
   >
   >   删除子项目的所有本地资源，并对其进行再生。
   >   
-- [./script/generate-laplacian-domain-model-project-template.sh](<./scripts/generate-laplacian-domain-model-project-template.sh>)
+- [./script/generate-domain-model-project-template.sh](<./scripts/generate-domain-model-project-template.sh>)
 
   在下面的目录中生成[laplacian/domain-model.project-template](<https://github.com/nabla-squared/laplacian.domain-model.project-template.git>)项目，作为子项目。
   ```
@@ -425,7 +215,7 @@ $ ./script/generate
   ```
   如果子项目已经存在，则更新子项目的内容。
 
-  > Usage: generate-laplacian-domain-model-project-template.sh [OPTION]...
+  > Usage: generate-domain-model-project-template.sh [OPTION]...
   >
   > -h, --help
   >
@@ -439,7 +229,29 @@ $ ./script/generate
   >
   >   删除子项目的所有本地资源，并对其进行再生。
   >   
-- [./script/generate-laplacian-generator-project-template.sh](<./scripts/generate-laplacian-generator-project-template.sh>)
+- [./script/generate-generator-model-validator-template.sh](<./scripts/generate-generator-model-validator-template.sh>)
+
+  在下面的目录中生成[laplacian/generator.model-validator-template](<https://github.com/nabla-squared/laplacian.generator.model-validator-template.git>)项目，作为子项目。
+  ```
+  subprojects/laplacian.generator.model-validator-template
+  ```
+  如果子项目已经存在，则更新子项目的内容。
+
+  > Usage: generate-generator-model-validator-template.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   显示如何使用此命令。
+  >   
+  > -v, --verbose
+  >
+  >   显示更详细的命令执行信息。
+  >   
+  > -c, --clean
+  >
+  >   删除子项目的所有本地资源，并对其进行再生。
+  >   
+- [./script/generate-generator-project-template.sh](<./scripts/generate-generator-project-template.sh>)
 
   在下面的目录中生成[laplacian/generator.project-template](<https://github.com/nabla-squared/laplacian.generator.project-template.git>)项目，作为子项目。
   ```
@@ -447,7 +259,7 @@ $ ./script/generate
   ```
   如果子项目已经存在，则更新子项目的内容。
 
-  > Usage: generate-laplacian-generator-project-template.sh [OPTION]...
+  > Usage: generate-generator-project-template.sh [OPTION]...
   >
   > -h, --help
   >
@@ -461,29 +273,7 @@ $ ./script/generate
   >
   >   删除子项目的所有本地资源，并对其进行再生。
   >   
-- [./script/generate-laplacian-metamodel-plugin.sh](<./scripts/generate-laplacian-metamodel-plugin.sh>)
-
-  在下面的目录中生成[laplacian/metamodel-plugin](<null>)项目，作为子项目。
-  ```
-  subprojects/laplacian.metamodel-plugin
-  ```
-  如果子项目已经存在，则更新子项目的内容。
-
-  > Usage: generate-laplacian-metamodel-plugin.sh [OPTION]...
-  >
-  > -h, --help
-  >
-  >   显示如何使用此命令。
-  >   
-  > -v, --verbose
-  >
-  >   显示更详细的命令执行信息。
-  >   
-  > -c, --clean
-  >
-  >   删除子项目的所有本地资源，并对其进行再生。
-  >   
-- [./script/generate-laplacian-metamodel.sh](<./scripts/generate-laplacian-metamodel.sh>)
+- [./script/generate-metamodel.sh](<./scripts/generate-metamodel.sh>)
 
   在下面的目录中生成[laplacian/metamodel](<https://github.com/nabla-squared/laplacian.metamodel.git>)项目，作为子项目。
   ```
@@ -491,7 +281,7 @@ $ ./script/generate
   ```
   如果子项目已经存在，则更新子项目的内容。
 
-  > Usage: generate-laplacian-metamodel.sh [OPTION]...
+  > Usage: generate-metamodel.sh [OPTION]...
   >
   > -h, --help
   >
@@ -505,7 +295,7 @@ $ ./script/generate
   >
   >   删除子项目的所有本地资源，并对其进行再生。
   >   
-- [./script/generate-laplacian-project-domain-model.sh](<./scripts/generate-laplacian-project-domain-model.sh>)
+- [./script/generate-project-domain-model.sh](<./scripts/generate-project-domain-model.sh>)
 
   在下面的目录中生成[laplacian/project.domain-model](<https://github.com/nabla-squared/laplacian.project.domain-model.git>)项目，作为子项目。
   ```
@@ -513,7 +303,7 @@ $ ./script/generate
   ```
   如果子项目已经存在，则更新子项目的内容。
 
-  > Usage: generate-laplacian-project-domain-model.sh [OPTION]...
+  > Usage: generate-project-domain-model.sh [OPTION]...
   >
   > -h, --help
   >
@@ -527,15 +317,15 @@ $ ./script/generate
   >
   >   删除子项目的所有本地资源，并对其进行再生。
   >   
-- [./script/generate-laplacian-project-group-document-template.sh](<./scripts/generate-laplacian-project-group-document-template.sh>)
+- [./script/generate-project-group-project-template.sh](<./scripts/generate-project-group-project-template.sh>)
 
-  在下面的目录中生成[laplacian/project-group.document-template](<https://github.com/nabla-squared/laplacian.project-group.document-template.git>)项目，作为子项目。
+  在下面的目录中生成[laplacian/project-group.project-template](<https://github.com/nabla-squared/laplacian.project-group.project-template.git>)项目，作为子项目。
   ```
-  subprojects/laplacian.project-group.document-template
+  subprojects/laplacian.project-group.project-template
   ```
   如果子项目已经存在，则更新子项目的内容。
 
-  > Usage: generate-laplacian-project-group-document-template.sh [OPTION]...
+  > Usage: generate-project-group-project-template.sh [OPTION]...
   >
   > -h, --help
   >
@@ -549,7 +339,7 @@ $ ./script/generate
   >
   >   删除子项目的所有本地资源，并对其进行再生。
   >   
-- [./script/generate-laplacian-project-project-types.sh](<./scripts/generate-laplacian-project-project-types.sh>)
+- [./script/generate-project-project-types.sh](<./scripts/generate-project-project-types.sh>)
 
   在下面的目录中生成[laplacian/project.project-types](<https://github.com/nabla-squared/laplacian.project.project-types.git>)项目，作为子项目。
   ```
@@ -557,7 +347,7 @@ $ ./script/generate
   ```
   如果子项目已经存在，则更新子项目的内容。
 
-  > Usage: generate-laplacian-project-project-types.sh [OPTION]...
+  > Usage: generate-project-project-types.sh [OPTION]...
   >
   > -h, --help
   >
@@ -675,123 +465,11 @@ $ ./script/generate
   >
   >   这个选项与[generate.sh](<./scripts/generate.sh>)中的同名选项相同。
   >   
-- [./script/publish-local-laplacian-arch-architecture-document-template.sh](<./scripts/publish-local-laplacian-arch-architecture-document-template.sh>)
-
-  为[laplacian-arch/architecture-document-template](<https://github.com/nabla-squared/laplacian-arch.architecture-document-template.git>)子项目生成资源。
-
-  > Usage: publish-local-laplacian-arch-architecture-document-template.sh [OPTION]...
-  >
-  > -h, --help
-  >
-  >   显示如何使用此命令。
-  >   
-  > -v, --verbose
-  >
-  >   显示更详细的命令执行信息。
-  >   
-- [./script/publish-local-laplacian-arch-datasource-flyway-migration-template.sh](<./scripts/publish-local-laplacian-arch-datasource-flyway-migration-template.sh>)
-
-  为[laplacian-arch/datasource.flyway-migration-template](<https://github.com/nabla-squared/laplacian-arch.datasource.flyway-migration-template.git>)子项目生成资源。
-
-  > Usage: publish-local-laplacian-arch-datasource-flyway-migration-template.sh [OPTION]...
-  >
-  > -h, --help
-  >
-  >   显示如何使用此命令。
-  >   
-  > -v, --verbose
-  >
-  >   显示更详细的命令执行信息。
-  >   
-- [./script/publish-local-laplacian-arch-datasource-schema-model.sh](<./scripts/publish-local-laplacian-arch-datasource-schema-model.sh>)
-
-  为[laplacian-arch/datasource.schema-model](<https://github.com/nabla-squared/laplacian-arch.model.datasource.git>)子项目生成资源。
-
-  > Usage: publish-local-laplacian-arch-datasource-schema-model.sh [OPTION]...
-  >
-  > -h, --help
-  >
-  >   显示如何使用此命令。
-  >   
-  > -v, --verbose
-  >
-  >   显示更详细的命令执行信息。
-  >   
-- [./script/publish-local-laplacian-arch-datasource-schema-plugin.sh](<./scripts/publish-local-laplacian-arch-datasource-schema-plugin.sh>)
-
-  为[laplacian-arch/datasource.schema-plugin](<null>)子项目生成资源。
-
-  > Usage: publish-local-laplacian-arch-datasource-schema-plugin.sh [OPTION]...
-  >
-  > -h, --help
-  >
-  >   显示如何使用此命令。
-  >   
-  > -v, --verbose
-  >
-  >   显示更详细的命令执行信息。
-  >   
-- [./script/publish-local-laplacian-arch-service-api-schema-model.sh](<./scripts/publish-local-laplacian-arch-service-api-schema-model.sh>)
-
-  为[laplacian-arch/service-api.schema-model](<https://github.com/nabla-squared/laplacian-arch.service-api-schema-model.git>)子项目生成资源。
-
-  > Usage: publish-local-laplacian-arch-service-api-schema-model.sh [OPTION]...
-  >
-  > -h, --help
-  >
-  >   显示如何使用此命令。
-  >   
-  > -v, --verbose
-  >
-  >   显示更详细的命令执行信息。
-  >   
-- [./script/publish-local-laplacian-arch-service-api-schema-plugin.sh](<./scripts/publish-local-laplacian-arch-service-api-schema-plugin.sh>)
-
-  为[laplacian-arch/service-api.schema-plugin](<null>)子项目生成资源。
-
-  > Usage: publish-local-laplacian-arch-service-api-schema-plugin.sh [OPTION]...
-  >
-  > -h, --help
-  >
-  >   显示如何使用此命令。
-  >   
-  > -v, --verbose
-  >
-  >   显示更详细的命令执行信息。
-  >   
-- [./script/publish-local-laplacian-arch-service-api-springboot2-template.sh](<./scripts/publish-local-laplacian-arch-service-api-springboot2-template.sh>)
-
-  为[laplacian-arch/service-api.springboot2-template](<https://github.com/nabla-squared/laplacian-arch.service-api.springboot2-template.git>)子项目生成资源。
-
-  > Usage: publish-local-laplacian-arch-service-api-springboot2-template.sh [OPTION]...
-  >
-  > -h, --help
-  >
-  >   显示如何使用此命令。
-  >   
-  > -v, --verbose
-  >
-  >   显示更详细的命令执行信息。
-  >   
-- [./script/publish-local-laplacian-common-model-plugin.sh](<./scripts/publish-local-laplacian-common-model-plugin.sh>)
-
-  为[laplacian/common-model-plugin](<null>)子项目生成资源。
-
-  > Usage: publish-local-laplacian-common-model-plugin.sh [OPTION]...
-  >
-  > -h, --help
-  >
-  >   显示如何使用此命令。
-  >   
-  > -v, --verbose
-  >
-  >   显示更详细的命令执行信息。
-  >   
-- [./script/publish-local-laplacian-common-model.sh](<./scripts/publish-local-laplacian-common-model.sh>)
+- [./script/publish-local-common-model.sh](<./scripts/publish-local-common-model.sh>)
 
   为[laplacian/common-model](<https://github.com/nabla-squared/laplacian.common-model.git>)子项目生成资源。
 
-  > Usage: publish-local-laplacian-common-model.sh [OPTION]...
+  > Usage: publish-local-common-model.sh [OPTION]...
   >
   > -h, --help
   >
@@ -801,11 +479,11 @@ $ ./script/generate
   >
   >   显示更详细的命令执行信息。
   >   
-- [./script/publish-local-laplacian-domain-model-plugin-project-template.sh](<./scripts/publish-local-laplacian-domain-model-plugin-project-template.sh>)
+- [./script/publish-local-domain-model-plugin-project-template.sh](<./scripts/publish-local-domain-model-plugin-project-template.sh>)
 
   为[laplacian/domain-model-plugin.project-template](<https://github.com/nabla-squared/laplacian.domain-model-plugin.project-template.git>)子项目生成资源。
 
-  > Usage: publish-local-laplacian-domain-model-plugin-project-template.sh [OPTION]...
+  > Usage: publish-local-domain-model-plugin-project-template.sh [OPTION]...
   >
   > -h, --help
   >
@@ -815,11 +493,11 @@ $ ./script/generate
   >
   >   显示更详细的命令执行信息。
   >   
-- [./script/publish-local-laplacian-domain-model-project-template.sh](<./scripts/publish-local-laplacian-domain-model-project-template.sh>)
+- [./script/publish-local-domain-model-project-template.sh](<./scripts/publish-local-domain-model-project-template.sh>)
 
   为[laplacian/domain-model.project-template](<https://github.com/nabla-squared/laplacian.domain-model.project-template.git>)子项目生成资源。
 
-  > Usage: publish-local-laplacian-domain-model-project-template.sh [OPTION]...
+  > Usage: publish-local-domain-model-project-template.sh [OPTION]...
   >
   > -h, --help
   >
@@ -829,11 +507,25 @@ $ ./script/generate
   >
   >   显示更详细的命令执行信息。
   >   
-- [./script/publish-local-laplacian-generator-project-template.sh](<./scripts/publish-local-laplacian-generator-project-template.sh>)
+- [./script/publish-local-generator-model-validator-template.sh](<./scripts/publish-local-generator-model-validator-template.sh>)
+
+  为[laplacian/generator.model-validator-template](<https://github.com/nabla-squared/laplacian.generator.model-validator-template.git>)子项目生成资源。
+
+  > Usage: publish-local-generator-model-validator-template.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   显示如何使用此命令。
+  >   
+  > -v, --verbose
+  >
+  >   显示更详细的命令执行信息。
+  >   
+- [./script/publish-local-generator-project-template.sh](<./scripts/publish-local-generator-project-template.sh>)
 
   为[laplacian/generator.project-template](<https://github.com/nabla-squared/laplacian.generator.project-template.git>)子项目生成资源。
 
-  > Usage: publish-local-laplacian-generator-project-template.sh [OPTION]...
+  > Usage: publish-local-generator-project-template.sh [OPTION]...
   >
   > -h, --help
   >
@@ -843,25 +535,11 @@ $ ./script/generate
   >
   >   显示更详细的命令执行信息。
   >   
-- [./script/publish-local-laplacian-metamodel-plugin.sh](<./scripts/publish-local-laplacian-metamodel-plugin.sh>)
-
-  为[laplacian/metamodel-plugin](<null>)子项目生成资源。
-
-  > Usage: publish-local-laplacian-metamodel-plugin.sh [OPTION]...
-  >
-  > -h, --help
-  >
-  >   显示如何使用此命令。
-  >   
-  > -v, --verbose
-  >
-  >   显示更详细的命令执行信息。
-  >   
-- [./script/publish-local-laplacian-metamodel.sh](<./scripts/publish-local-laplacian-metamodel.sh>)
+- [./script/publish-local-metamodel.sh](<./scripts/publish-local-metamodel.sh>)
 
   为[laplacian/metamodel](<https://github.com/nabla-squared/laplacian.metamodel.git>)子项目生成资源。
 
-  > Usage: publish-local-laplacian-metamodel.sh [OPTION]...
+  > Usage: publish-local-metamodel.sh [OPTION]...
   >
   > -h, --help
   >
@@ -871,11 +549,11 @@ $ ./script/generate
   >
   >   显示更详细的命令执行信息。
   >   
-- [./script/publish-local-laplacian-project-domain-model.sh](<./scripts/publish-local-laplacian-project-domain-model.sh>)
+- [./script/publish-local-project-domain-model.sh](<./scripts/publish-local-project-domain-model.sh>)
 
   为[laplacian/project.domain-model](<https://github.com/nabla-squared/laplacian.project.domain-model.git>)子项目生成资源。
 
-  > Usage: publish-local-laplacian-project-domain-model.sh [OPTION]...
+  > Usage: publish-local-project-domain-model.sh [OPTION]...
   >
   > -h, --help
   >
@@ -885,11 +563,11 @@ $ ./script/generate
   >
   >   显示更详细的命令执行信息。
   >   
-- [./script/publish-local-laplacian-project-group-document-template.sh](<./scripts/publish-local-laplacian-project-group-document-template.sh>)
+- [./script/publish-local-project-group-project-template.sh](<./scripts/publish-local-project-group-project-template.sh>)
 
-  为[laplacian/project-group.document-template](<https://github.com/nabla-squared/laplacian.project-group.document-template.git>)子项目生成资源。
+  为[laplacian/project-group.project-template](<https://github.com/nabla-squared/laplacian.project-group.project-template.git>)子项目生成资源。
 
-  > Usage: publish-local-laplacian-project-group-document-template.sh [OPTION]...
+  > Usage: publish-local-project-group-project-template.sh [OPTION]...
   >
   > -h, --help
   >
@@ -899,11 +577,11 @@ $ ./script/generate
   >
   >   显示更详细的命令执行信息。
   >   
-- [./script/publish-local-laplacian-project-project-types.sh](<./scripts/publish-local-laplacian-project-project-types.sh>)
+- [./script/publish-local-project-project-types.sh](<./scripts/publish-local-project-project-types.sh>)
 
   为[laplacian/project.project-types](<https://github.com/nabla-squared/laplacian.project.project-types.git>)子项目生成资源。
 
-  > Usage: publish-local-laplacian-project-project-types.sh [OPTION]...
+  > Usage: publish-local-project-project-types.sh [OPTION]...
   >
   > -h, --help
   >
@@ -917,22 +595,14 @@ $ ./script/generate
 
 
 - [model/project.yaml](<./model/project.yaml>)
-- [src/project/subprojects/laplacian-arch/laplacian-arch.architecture-document-template.yaml](<./src/project/subprojects/laplacian-arch/laplacian-arch.architecture-document-template.yaml>)
-- [src/project/subprojects/laplacian-arch/laplacian-arch.datasource.flyway-migration-template.yaml](<./src/project/subprojects/laplacian-arch/laplacian-arch.datasource.flyway-migration-template.yaml>)
-- [src/project/subprojects/laplacian-arch/laplacian-arch.datasource.schema-model.yaml](<./src/project/subprojects/laplacian-arch/laplacian-arch.datasource.schema-model.yaml>)
-- [src/project/subprojects/laplacian-arch/laplacian-arch.datasource.schema-plugin.yaml](<./src/project/subprojects/laplacian-arch/laplacian-arch.datasource.schema-plugin.yaml>)
-- [src/project/subprojects/laplacian-arch/laplacian-arch.service-api.schema-model.yaml](<./src/project/subprojects/laplacian-arch/laplacian-arch.service-api.schema-model.yaml>)
-- [src/project/subprojects/laplacian-arch/laplacian-arch.service-api.schema-plugin.yaml](<./src/project/subprojects/laplacian-arch/laplacian-arch.service-api.schema-plugin.yaml>)
-- [src/project/subprojects/laplacian-arch/laplacian-arch.service-api.springboot2-template.yaml](<./src/project/subprojects/laplacian-arch/laplacian-arch.service-api.springboot2-template.yaml>)
-- [src/project/subprojects/laplacian/laplacian.common-model-plugin.yaml](<./src/project/subprojects/laplacian/laplacian.common-model-plugin.yaml>)
 - [src/project/subprojects/laplacian/laplacian.common-model.yaml](<./src/project/subprojects/laplacian/laplacian.common-model.yaml>)
 - [src/project/subprojects/laplacian/laplacian.domain-model-plugin.project-template.yaml](<./src/project/subprojects/laplacian/laplacian.domain-model-plugin.project-template.yaml>)
 - [src/project/subprojects/laplacian/laplacian.domain-model.project-template.yaml](<./src/project/subprojects/laplacian/laplacian.domain-model.project-template.yaml>)
+- [src/project/subprojects/laplacian/laplacian.generator.model-validator-template.yaml](<./src/project/subprojects/laplacian/laplacian.generator.model-validator-template.yaml>)
 - [src/project/subprojects/laplacian/laplacian.generator.project-template.yaml](<./src/project/subprojects/laplacian/laplacian.generator.project-template.yaml>)
-- [src/project/subprojects/laplacian/laplacian.metamodel-plugin.yaml](<./src/project/subprojects/laplacian/laplacian.metamodel-plugin.yaml>)
 - [src/project/subprojects/laplacian/laplacian.metamodel.yaml](<./src/project/subprojects/laplacian/laplacian.metamodel.yaml>)
 - [src/project/subprojects/laplacian/laplacian.project.domain-model.yaml](<./src/project/subprojects/laplacian/laplacian.project.domain-model.yaml>)
-- [src/project/subprojects/laplacian/laplacian.project-group.document-template.yaml](<./src/project/subprojects/laplacian/laplacian.project-group.document-template.yaml>)
+- [src/project/subprojects/laplacian/laplacian.project-group.project-template.yaml](<./src/project/subprojects/laplacian/laplacian.project-group.project-template.yaml>)
 - [src/project/subprojects/laplacian/laplacian.project.project-types.yaml](<./src/project/subprojects/laplacian/laplacian.project.project-types.yaml>)
 
 

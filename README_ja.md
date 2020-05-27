@@ -74,50 +74,9 @@ $ ./script/generate
 ### プロジェクト一覧
 
 
-- [**laplacian-arch/architecture-document-template**](<https://github.com/nabla-squared/laplacian-arch.architecture-document-template.git>)
-
-> This template generates a set of documentation of the system architecture defined by the `laplacian-arch` model.
-> 
-- [**laplacian-arch/datasource.flyway-migration-template**](<https://github.com/nabla-squared/laplacian-arch.datasource.flyway-migration-template.git>)
-
-> This template generates [flyway](https://flywaydb.org/) database schema migration tasks from datasource models.
-> 
-- [**laplacian-arch/datasource.schema-model**](<https://github.com/nabla-squared/laplacian-arch.model.datasource.git>)
-
-> This model expresses a view of a data-store (ex:RDBMS, KVS, etc..) from a certain client This model consists of the following entities:
-> - The information which is necessary to connect the data-store
-> - The entities allowed for clients to access
-> - The queries issued by the client
-> 
-- [**laplacian-arch/datasource.schema-plugin**](<>)
-
-> A schema gradle plugin for the datasource arch model
-> 
-- [**laplacian-arch/service-api.schema-model**](<https://github.com/nabla-squared/laplacian-arch.service-api-schema-model.git>)
-
-> A model that expresses the logical structure of a service API.
-> This model consists of REST api model, GraphQL interface model, and datasource usage model.
-> 
-- [**laplacian-arch/service-api.schema-plugin**](<>)
-
-> A schema for service-api architecture model.
-> 
-- [**laplacian-arch/service-api.springboot2-template**](<https://github.com/nabla-squared/laplacian-arch.service-api.springboot2-template.git>)
-
-> This template gives a service api implementation based on the [service-api](https://github.com/nabla-squared/laplacian-arch.service-api.schema-model/) model.
-> The architecture stack which is employed in this template is:
->   - Alpine based docker image
->   - OpenJDK8
->   - SpringBoot 2
->   - Java-Graphql
-> 
-- [**laplacian/common-model-plugin**](<>)
-
-> Plugin module for the laplacian common model.
-> 
 - [**laplacian/common-model**](<https://github.com/nabla-squared/laplacian.common-model.git>)
 
-> Some value objects and mixins which can be applicable to any domain models.
+> 特定のドメインに特化していない汎用的に適用できるモデルを定義します。
 > 
 - [**laplacian/domain-model-plugin.project-template**](<https://github.com/nabla-squared/laplacian.domain-model-plugin.project-template.git>)
 
@@ -127,23 +86,29 @@ $ ./script/generate
 
 > ドメインモデルプロジェクトのディレクトリ構成、開発用スクリプト、各種ドキュメントを生成するテンプレートモジュールです。
 > 
+- [**laplacian/generator.model-validator-template**](<https://github.com/nabla-squared/laplacian.generator.model-validator-template.git>)
+
+> ドメインモデル定義に沿ったモデル検証を行うスクリプトを生成します。
+> 加えて、[Visual Studio Code](https://code.visualstudio.com/)上でのバリデーションと入力補完を可能とする設定を出力します。
+> 
 - [**laplacian/generator.project-template**](<https://github.com/nabla-squared/laplacian.generator.project-template.git>)
 
-> このテンプレートモジュールは、Laplacianプロジェクトにおける標準的なディレクトリ構成と、
-> ビルドおよびローカルリポジトリへの公開を行う共通的なスクリプトを生成します。
-> 
-- [**laplacian/metamodel-plugin**](<>)
-
-> A model which expresses the logical structure of laplacian-based projects and modules.
+> このテンプレートモジュールは、Laplacianプロジェクトにおける標準的なディレクトリ構成と、ビルドおよびローカルリポジトリへの公開を行う共通的なスクリプトを生成します。
 > 
 - [**laplacian/metamodel**](<https://github.com/nabla-squared/laplacian.metamodel.git>)
 
-> A model that expresses the structure of relational model with aggregation support.
-> This model is used to define models from which templates generate resources such as source code or document.
+> このモデルはモデルを定義するためのモデル(=メタモデル)です。
+> このモデルでは、以下の構造を持つモデルを定義することができます。
 > 
-- [**laplacian/project-group.document-template**](<https://github.com/nabla-squared/laplacian.project-group.document-template.git>)
+> - 属性
+> - 関連
+> - 集約
+> - 継承
+> - Mixin
+> 
+- [**laplacian/project-group.project-template**](<https://github.com/nabla-squared/laplacian.project-group.project-template.git>)
 
-> プロジェクトグループに関するドキュメントを生成するテンプレートです。
+> プロジェクトグループ用の標準プロジェクト構成および、運用・開発用スクリプトを生成するテンプレートです。
 > 
 - [**laplacian/project.domain-model**](<https://github.com/nabla-squared/laplacian.project.domain-model.git>)
 
@@ -151,7 +116,7 @@ $ ./script/generate
 > 
 - [**laplacian/project.project-types**](<https://github.com/nabla-squared/laplacian.project.project-types.git>)
 
-> The basic project types used in the Laplacian project.
+> 各プロジェクトタイプの内容を定義するモデルデータです。
 > 
 ### スクリプト一覧
 
@@ -197,183 +162,7 @@ $ ./script/generate
   >
   >   途中のサブプロジェクトで与えられたコマンドが失敗しても、残りのサブプロジェクトに対してコマンドを実行します。
   >   
-- [./script/generate-laplacian-arch-architecture-document-template.sh](<./scripts/generate-laplacian-arch-architecture-document-template.sh>)
-
-  [laplacian-arch/architecture-document-template](<https://github.com/nabla-squared/laplacian-arch.architecture-document-template.git>)プロジェクトをサブプロジェクトとして下記のディレクトリに生成します。
-  ```
-  subprojects/laplacian-arch.architecture-document-template
-  ```
-  すでにそのサブプロジェクトが存在する場合はその内容を更新します。
-
-  > Usage: generate-laplacian-arch-architecture-document-template.sh [OPTION]...
-  >
-  > -h, --help
-  >
-  >   このコマンドの使用方法を表示します。
-  >   
-  > -v, --verbose
-  >
-  >   より詳細なコマンドの実行情報を表示します。
-  >   
-  > -c, --clean
-  >
-  >   サブプロジェクトのローカルにある資源を全て削除してから再生成します。
-  >   
-- [./script/generate-laplacian-arch-datasource-flyway-migration-template.sh](<./scripts/generate-laplacian-arch-datasource-flyway-migration-template.sh>)
-
-  [laplacian-arch/datasource.flyway-migration-template](<https://github.com/nabla-squared/laplacian-arch.datasource.flyway-migration-template.git>)プロジェクトをサブプロジェクトとして下記のディレクトリに生成します。
-  ```
-  subprojects/laplacian-arch.datasource.flyway-migration-template
-  ```
-  すでにそのサブプロジェクトが存在する場合はその内容を更新します。
-
-  > Usage: generate-laplacian-arch-datasource-flyway-migration-template.sh [OPTION]...
-  >
-  > -h, --help
-  >
-  >   このコマンドの使用方法を表示します。
-  >   
-  > -v, --verbose
-  >
-  >   より詳細なコマンドの実行情報を表示します。
-  >   
-  > -c, --clean
-  >
-  >   サブプロジェクトのローカルにある資源を全て削除してから再生成します。
-  >   
-- [./script/generate-laplacian-arch-datasource-schema-model.sh](<./scripts/generate-laplacian-arch-datasource-schema-model.sh>)
-
-  [laplacian-arch/datasource.schema-model](<https://github.com/nabla-squared/laplacian-arch.model.datasource.git>)プロジェクトをサブプロジェクトとして下記のディレクトリに生成します。
-  ```
-  subprojects/laplacian-arch.datasource.schema-model
-  ```
-  すでにそのサブプロジェクトが存在する場合はその内容を更新します。
-
-  > Usage: generate-laplacian-arch-datasource-schema-model.sh [OPTION]...
-  >
-  > -h, --help
-  >
-  >   このコマンドの使用方法を表示します。
-  >   
-  > -v, --verbose
-  >
-  >   より詳細なコマンドの実行情報を表示します。
-  >   
-  > -c, --clean
-  >
-  >   サブプロジェクトのローカルにある資源を全て削除してから再生成します。
-  >   
-- [./script/generate-laplacian-arch-datasource-schema-plugin.sh](<./scripts/generate-laplacian-arch-datasource-schema-plugin.sh>)
-
-  [laplacian-arch/datasource.schema-plugin](<null>)プロジェクトをサブプロジェクトとして下記のディレクトリに生成します。
-  ```
-  subprojects/laplacian-arch.datasource.schema-plugin
-  ```
-  すでにそのサブプロジェクトが存在する場合はその内容を更新します。
-
-  > Usage: generate-laplacian-arch-datasource-schema-plugin.sh [OPTION]...
-  >
-  > -h, --help
-  >
-  >   このコマンドの使用方法を表示します。
-  >   
-  > -v, --verbose
-  >
-  >   より詳細なコマンドの実行情報を表示します。
-  >   
-  > -c, --clean
-  >
-  >   サブプロジェクトのローカルにある資源を全て削除してから再生成します。
-  >   
-- [./script/generate-laplacian-arch-service-api-schema-model.sh](<./scripts/generate-laplacian-arch-service-api-schema-model.sh>)
-
-  [laplacian-arch/service-api.schema-model](<https://github.com/nabla-squared/laplacian-arch.service-api-schema-model.git>)プロジェクトをサブプロジェクトとして下記のディレクトリに生成します。
-  ```
-  subprojects/laplacian-arch.service-api.schema-model
-  ```
-  すでにそのサブプロジェクトが存在する場合はその内容を更新します。
-
-  > Usage: generate-laplacian-arch-service-api-schema-model.sh [OPTION]...
-  >
-  > -h, --help
-  >
-  >   このコマンドの使用方法を表示します。
-  >   
-  > -v, --verbose
-  >
-  >   より詳細なコマンドの実行情報を表示します。
-  >   
-  > -c, --clean
-  >
-  >   サブプロジェクトのローカルにある資源を全て削除してから再生成します。
-  >   
-- [./script/generate-laplacian-arch-service-api-schema-plugin.sh](<./scripts/generate-laplacian-arch-service-api-schema-plugin.sh>)
-
-  [laplacian-arch/service-api.schema-plugin](<null>)プロジェクトをサブプロジェクトとして下記のディレクトリに生成します。
-  ```
-  subprojects/laplacian-arch.service-api.schema-plugin
-  ```
-  すでにそのサブプロジェクトが存在する場合はその内容を更新します。
-
-  > Usage: generate-laplacian-arch-service-api-schema-plugin.sh [OPTION]...
-  >
-  > -h, --help
-  >
-  >   このコマンドの使用方法を表示します。
-  >   
-  > -v, --verbose
-  >
-  >   より詳細なコマンドの実行情報を表示します。
-  >   
-  > -c, --clean
-  >
-  >   サブプロジェクトのローカルにある資源を全て削除してから再生成します。
-  >   
-- [./script/generate-laplacian-arch-service-api-springboot2-template.sh](<./scripts/generate-laplacian-arch-service-api-springboot2-template.sh>)
-
-  [laplacian-arch/service-api.springboot2-template](<https://github.com/nabla-squared/laplacian-arch.service-api.springboot2-template.git>)プロジェクトをサブプロジェクトとして下記のディレクトリに生成します。
-  ```
-  subprojects/laplacian-arch.service-api.springboot2-template
-  ```
-  すでにそのサブプロジェクトが存在する場合はその内容を更新します。
-
-  > Usage: generate-laplacian-arch-service-api-springboot2-template.sh [OPTION]...
-  >
-  > -h, --help
-  >
-  >   このコマンドの使用方法を表示します。
-  >   
-  > -v, --verbose
-  >
-  >   より詳細なコマンドの実行情報を表示します。
-  >   
-  > -c, --clean
-  >
-  >   サブプロジェクトのローカルにある資源を全て削除してから再生成します。
-  >   
-- [./script/generate-laplacian-common-model-plugin.sh](<./scripts/generate-laplacian-common-model-plugin.sh>)
-
-  [laplacian/common-model-plugin](<null>)プロジェクトをサブプロジェクトとして下記のディレクトリに生成します。
-  ```
-  subprojects/laplacian.common-model-plugin
-  ```
-  すでにそのサブプロジェクトが存在する場合はその内容を更新します。
-
-  > Usage: generate-laplacian-common-model-plugin.sh [OPTION]...
-  >
-  > -h, --help
-  >
-  >   このコマンドの使用方法を表示します。
-  >   
-  > -v, --verbose
-  >
-  >   より詳細なコマンドの実行情報を表示します。
-  >   
-  > -c, --clean
-  >
-  >   サブプロジェクトのローカルにある資源を全て削除してから再生成します。
-  >   
-- [./script/generate-laplacian-common-model.sh](<./scripts/generate-laplacian-common-model.sh>)
+- [./script/generate-common-model.sh](<./scripts/generate-common-model.sh>)
 
   [laplacian/common-model](<https://github.com/nabla-squared/laplacian.common-model.git>)プロジェクトをサブプロジェクトとして下記のディレクトリに生成します。
   ```
@@ -381,7 +170,7 @@ $ ./script/generate
   ```
   すでにそのサブプロジェクトが存在する場合はその内容を更新します。
 
-  > Usage: generate-laplacian-common-model.sh [OPTION]...
+  > Usage: generate-common-model.sh [OPTION]...
   >
   > -h, --help
   >
@@ -395,7 +184,7 @@ $ ./script/generate
   >
   >   サブプロジェクトのローカルにある資源を全て削除してから再生成します。
   >   
-- [./script/generate-laplacian-domain-model-plugin-project-template.sh](<./scripts/generate-laplacian-domain-model-plugin-project-template.sh>)
+- [./script/generate-domain-model-plugin-project-template.sh](<./scripts/generate-domain-model-plugin-project-template.sh>)
 
   [laplacian/domain-model-plugin.project-template](<https://github.com/nabla-squared/laplacian.domain-model-plugin.project-template.git>)プロジェクトをサブプロジェクトとして下記のディレクトリに生成します。
   ```
@@ -403,7 +192,7 @@ $ ./script/generate
   ```
   すでにそのサブプロジェクトが存在する場合はその内容を更新します。
 
-  > Usage: generate-laplacian-domain-model-plugin-project-template.sh [OPTION]...
+  > Usage: generate-domain-model-plugin-project-template.sh [OPTION]...
   >
   > -h, --help
   >
@@ -417,7 +206,7 @@ $ ./script/generate
   >
   >   サブプロジェクトのローカルにある資源を全て削除してから再生成します。
   >   
-- [./script/generate-laplacian-domain-model-project-template.sh](<./scripts/generate-laplacian-domain-model-project-template.sh>)
+- [./script/generate-domain-model-project-template.sh](<./scripts/generate-domain-model-project-template.sh>)
 
   [laplacian/domain-model.project-template](<https://github.com/nabla-squared/laplacian.domain-model.project-template.git>)プロジェクトをサブプロジェクトとして下記のディレクトリに生成します。
   ```
@@ -425,7 +214,7 @@ $ ./script/generate
   ```
   すでにそのサブプロジェクトが存在する場合はその内容を更新します。
 
-  > Usage: generate-laplacian-domain-model-project-template.sh [OPTION]...
+  > Usage: generate-domain-model-project-template.sh [OPTION]...
   >
   > -h, --help
   >
@@ -439,7 +228,29 @@ $ ./script/generate
   >
   >   サブプロジェクトのローカルにある資源を全て削除してから再生成します。
   >   
-- [./script/generate-laplacian-generator-project-template.sh](<./scripts/generate-laplacian-generator-project-template.sh>)
+- [./script/generate-generator-model-validator-template.sh](<./scripts/generate-generator-model-validator-template.sh>)
+
+  [laplacian/generator.model-validator-template](<https://github.com/nabla-squared/laplacian.generator.model-validator-template.git>)プロジェクトをサブプロジェクトとして下記のディレクトリに生成します。
+  ```
+  subprojects/laplacian.generator.model-validator-template
+  ```
+  すでにそのサブプロジェクトが存在する場合はその内容を更新します。
+
+  > Usage: generate-generator-model-validator-template.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   このコマンドの使用方法を表示します。
+  >   
+  > -v, --verbose
+  >
+  >   より詳細なコマンドの実行情報を表示します。
+  >   
+  > -c, --clean
+  >
+  >   サブプロジェクトのローカルにある資源を全て削除してから再生成します。
+  >   
+- [./script/generate-generator-project-template.sh](<./scripts/generate-generator-project-template.sh>)
 
   [laplacian/generator.project-template](<https://github.com/nabla-squared/laplacian.generator.project-template.git>)プロジェクトをサブプロジェクトとして下記のディレクトリに生成します。
   ```
@@ -447,7 +258,7 @@ $ ./script/generate
   ```
   すでにそのサブプロジェクトが存在する場合はその内容を更新します。
 
-  > Usage: generate-laplacian-generator-project-template.sh [OPTION]...
+  > Usage: generate-generator-project-template.sh [OPTION]...
   >
   > -h, --help
   >
@@ -461,29 +272,7 @@ $ ./script/generate
   >
   >   サブプロジェクトのローカルにある資源を全て削除してから再生成します。
   >   
-- [./script/generate-laplacian-metamodel-plugin.sh](<./scripts/generate-laplacian-metamodel-plugin.sh>)
-
-  [laplacian/metamodel-plugin](<null>)プロジェクトをサブプロジェクトとして下記のディレクトリに生成します。
-  ```
-  subprojects/laplacian.metamodel-plugin
-  ```
-  すでにそのサブプロジェクトが存在する場合はその内容を更新します。
-
-  > Usage: generate-laplacian-metamodel-plugin.sh [OPTION]...
-  >
-  > -h, --help
-  >
-  >   このコマンドの使用方法を表示します。
-  >   
-  > -v, --verbose
-  >
-  >   より詳細なコマンドの実行情報を表示します。
-  >   
-  > -c, --clean
-  >
-  >   サブプロジェクトのローカルにある資源を全て削除してから再生成します。
-  >   
-- [./script/generate-laplacian-metamodel.sh](<./scripts/generate-laplacian-metamodel.sh>)
+- [./script/generate-metamodel.sh](<./scripts/generate-metamodel.sh>)
 
   [laplacian/metamodel](<https://github.com/nabla-squared/laplacian.metamodel.git>)プロジェクトをサブプロジェクトとして下記のディレクトリに生成します。
   ```
@@ -491,7 +280,7 @@ $ ./script/generate
   ```
   すでにそのサブプロジェクトが存在する場合はその内容を更新します。
 
-  > Usage: generate-laplacian-metamodel.sh [OPTION]...
+  > Usage: generate-metamodel.sh [OPTION]...
   >
   > -h, --help
   >
@@ -505,7 +294,7 @@ $ ./script/generate
   >
   >   サブプロジェクトのローカルにある資源を全て削除してから再生成します。
   >   
-- [./script/generate-laplacian-project-domain-model.sh](<./scripts/generate-laplacian-project-domain-model.sh>)
+- [./script/generate-project-domain-model.sh](<./scripts/generate-project-domain-model.sh>)
 
   [laplacian/project.domain-model](<https://github.com/nabla-squared/laplacian.project.domain-model.git>)プロジェクトをサブプロジェクトとして下記のディレクトリに生成します。
   ```
@@ -513,7 +302,7 @@ $ ./script/generate
   ```
   すでにそのサブプロジェクトが存在する場合はその内容を更新します。
 
-  > Usage: generate-laplacian-project-domain-model.sh [OPTION]...
+  > Usage: generate-project-domain-model.sh [OPTION]...
   >
   > -h, --help
   >
@@ -527,15 +316,15 @@ $ ./script/generate
   >
   >   サブプロジェクトのローカルにある資源を全て削除してから再生成します。
   >   
-- [./script/generate-laplacian-project-group-document-template.sh](<./scripts/generate-laplacian-project-group-document-template.sh>)
+- [./script/generate-project-group-project-template.sh](<./scripts/generate-project-group-project-template.sh>)
 
-  [laplacian/project-group.document-template](<https://github.com/nabla-squared/laplacian.project-group.document-template.git>)プロジェクトをサブプロジェクトとして下記のディレクトリに生成します。
+  [laplacian/project-group.project-template](<https://github.com/nabla-squared/laplacian.project-group.project-template.git>)プロジェクトをサブプロジェクトとして下記のディレクトリに生成します。
   ```
-  subprojects/laplacian.project-group.document-template
+  subprojects/laplacian.project-group.project-template
   ```
   すでにそのサブプロジェクトが存在する場合はその内容を更新します。
 
-  > Usage: generate-laplacian-project-group-document-template.sh [OPTION]...
+  > Usage: generate-project-group-project-template.sh [OPTION]...
   >
   > -h, --help
   >
@@ -549,7 +338,7 @@ $ ./script/generate
   >
   >   サブプロジェクトのローカルにある資源を全て削除してから再生成します。
   >   
-- [./script/generate-laplacian-project-project-types.sh](<./scripts/generate-laplacian-project-project-types.sh>)
+- [./script/generate-project-project-types.sh](<./scripts/generate-project-project-types.sh>)
 
   [laplacian/project.project-types](<https://github.com/nabla-squared/laplacian.project.project-types.git>)プロジェクトをサブプロジェクトとして下記のディレクトリに生成します。
   ```
@@ -557,7 +346,7 @@ $ ./script/generate
   ```
   すでにそのサブプロジェクトが存在する場合はその内容を更新します。
 
-  > Usage: generate-laplacian-project-project-types.sh [OPTION]...
+  > Usage: generate-project-project-types.sh [OPTION]...
   >
   > -h, --help
   >
@@ -676,123 +465,11 @@ $ ./script/generate
   >
   >   自動生成処理を行わずに、ビルドおよびローカルリポジトリへの登録を行います。
   >   
-- [./script/publish-local-laplacian-arch-architecture-document-template.sh](<./scripts/publish-local-laplacian-arch-architecture-document-template.sh>)
-
-  [laplacian-arch/architecture-document-template](<https://github.com/nabla-squared/laplacian-arch.architecture-document-template.git>)サブプロジェクトの資源を自動生成します。
-
-  > Usage: publish-local-laplacian-arch-architecture-document-template.sh [OPTION]...
-  >
-  > -h, --help
-  >
-  >   このコマンドの使用方法を表示します。
-  >   
-  > -v, --verbose
-  >
-  >   より詳細なコマンドの実行情報を表示します。
-  >   
-- [./script/publish-local-laplacian-arch-datasource-flyway-migration-template.sh](<./scripts/publish-local-laplacian-arch-datasource-flyway-migration-template.sh>)
-
-  [laplacian-arch/datasource.flyway-migration-template](<https://github.com/nabla-squared/laplacian-arch.datasource.flyway-migration-template.git>)サブプロジェクトの資源を自動生成します。
-
-  > Usage: publish-local-laplacian-arch-datasource-flyway-migration-template.sh [OPTION]...
-  >
-  > -h, --help
-  >
-  >   このコマンドの使用方法を表示します。
-  >   
-  > -v, --verbose
-  >
-  >   より詳細なコマンドの実行情報を表示します。
-  >   
-- [./script/publish-local-laplacian-arch-datasource-schema-model.sh](<./scripts/publish-local-laplacian-arch-datasource-schema-model.sh>)
-
-  [laplacian-arch/datasource.schema-model](<https://github.com/nabla-squared/laplacian-arch.model.datasource.git>)サブプロジェクトの資源を自動生成します。
-
-  > Usage: publish-local-laplacian-arch-datasource-schema-model.sh [OPTION]...
-  >
-  > -h, --help
-  >
-  >   このコマンドの使用方法を表示します。
-  >   
-  > -v, --verbose
-  >
-  >   より詳細なコマンドの実行情報を表示します。
-  >   
-- [./script/publish-local-laplacian-arch-datasource-schema-plugin.sh](<./scripts/publish-local-laplacian-arch-datasource-schema-plugin.sh>)
-
-  [laplacian-arch/datasource.schema-plugin](<null>)サブプロジェクトの資源を自動生成します。
-
-  > Usage: publish-local-laplacian-arch-datasource-schema-plugin.sh [OPTION]...
-  >
-  > -h, --help
-  >
-  >   このコマンドの使用方法を表示します。
-  >   
-  > -v, --verbose
-  >
-  >   より詳細なコマンドの実行情報を表示します。
-  >   
-- [./script/publish-local-laplacian-arch-service-api-schema-model.sh](<./scripts/publish-local-laplacian-arch-service-api-schema-model.sh>)
-
-  [laplacian-arch/service-api.schema-model](<https://github.com/nabla-squared/laplacian-arch.service-api-schema-model.git>)サブプロジェクトの資源を自動生成します。
-
-  > Usage: publish-local-laplacian-arch-service-api-schema-model.sh [OPTION]...
-  >
-  > -h, --help
-  >
-  >   このコマンドの使用方法を表示します。
-  >   
-  > -v, --verbose
-  >
-  >   より詳細なコマンドの実行情報を表示します。
-  >   
-- [./script/publish-local-laplacian-arch-service-api-schema-plugin.sh](<./scripts/publish-local-laplacian-arch-service-api-schema-plugin.sh>)
-
-  [laplacian-arch/service-api.schema-plugin](<null>)サブプロジェクトの資源を自動生成します。
-
-  > Usage: publish-local-laplacian-arch-service-api-schema-plugin.sh [OPTION]...
-  >
-  > -h, --help
-  >
-  >   このコマンドの使用方法を表示します。
-  >   
-  > -v, --verbose
-  >
-  >   より詳細なコマンドの実行情報を表示します。
-  >   
-- [./script/publish-local-laplacian-arch-service-api-springboot2-template.sh](<./scripts/publish-local-laplacian-arch-service-api-springboot2-template.sh>)
-
-  [laplacian-arch/service-api.springboot2-template](<https://github.com/nabla-squared/laplacian-arch.service-api.springboot2-template.git>)サブプロジェクトの資源を自動生成します。
-
-  > Usage: publish-local-laplacian-arch-service-api-springboot2-template.sh [OPTION]...
-  >
-  > -h, --help
-  >
-  >   このコマンドの使用方法を表示します。
-  >   
-  > -v, --verbose
-  >
-  >   より詳細なコマンドの実行情報を表示します。
-  >   
-- [./script/publish-local-laplacian-common-model-plugin.sh](<./scripts/publish-local-laplacian-common-model-plugin.sh>)
-
-  [laplacian/common-model-plugin](<null>)サブプロジェクトの資源を自動生成します。
-
-  > Usage: publish-local-laplacian-common-model-plugin.sh [OPTION]...
-  >
-  > -h, --help
-  >
-  >   このコマンドの使用方法を表示します。
-  >   
-  > -v, --verbose
-  >
-  >   より詳細なコマンドの実行情報を表示します。
-  >   
-- [./script/publish-local-laplacian-common-model.sh](<./scripts/publish-local-laplacian-common-model.sh>)
+- [./script/publish-local-common-model.sh](<./scripts/publish-local-common-model.sh>)
 
   [laplacian/common-model](<https://github.com/nabla-squared/laplacian.common-model.git>)サブプロジェクトの資源を自動生成します。
 
-  > Usage: publish-local-laplacian-common-model.sh [OPTION]...
+  > Usage: publish-local-common-model.sh [OPTION]...
   >
   > -h, --help
   >
@@ -802,11 +479,11 @@ $ ./script/generate
   >
   >   より詳細なコマンドの実行情報を表示します。
   >   
-- [./script/publish-local-laplacian-domain-model-plugin-project-template.sh](<./scripts/publish-local-laplacian-domain-model-plugin-project-template.sh>)
+- [./script/publish-local-domain-model-plugin-project-template.sh](<./scripts/publish-local-domain-model-plugin-project-template.sh>)
 
   [laplacian/domain-model-plugin.project-template](<https://github.com/nabla-squared/laplacian.domain-model-plugin.project-template.git>)サブプロジェクトの資源を自動生成します。
 
-  > Usage: publish-local-laplacian-domain-model-plugin-project-template.sh [OPTION]...
+  > Usage: publish-local-domain-model-plugin-project-template.sh [OPTION]...
   >
   > -h, --help
   >
@@ -816,11 +493,11 @@ $ ./script/generate
   >
   >   より詳細なコマンドの実行情報を表示します。
   >   
-- [./script/publish-local-laplacian-domain-model-project-template.sh](<./scripts/publish-local-laplacian-domain-model-project-template.sh>)
+- [./script/publish-local-domain-model-project-template.sh](<./scripts/publish-local-domain-model-project-template.sh>)
 
   [laplacian/domain-model.project-template](<https://github.com/nabla-squared/laplacian.domain-model.project-template.git>)サブプロジェクトの資源を自動生成します。
 
-  > Usage: publish-local-laplacian-domain-model-project-template.sh [OPTION]...
+  > Usage: publish-local-domain-model-project-template.sh [OPTION]...
   >
   > -h, --help
   >
@@ -830,11 +507,25 @@ $ ./script/generate
   >
   >   より詳細なコマンドの実行情報を表示します。
   >   
-- [./script/publish-local-laplacian-generator-project-template.sh](<./scripts/publish-local-laplacian-generator-project-template.sh>)
+- [./script/publish-local-generator-model-validator-template.sh](<./scripts/publish-local-generator-model-validator-template.sh>)
+
+  [laplacian/generator.model-validator-template](<https://github.com/nabla-squared/laplacian.generator.model-validator-template.git>)サブプロジェクトの資源を自動生成します。
+
+  > Usage: publish-local-generator-model-validator-template.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   このコマンドの使用方法を表示します。
+  >   
+  > -v, --verbose
+  >
+  >   より詳細なコマンドの実行情報を表示します。
+  >   
+- [./script/publish-local-generator-project-template.sh](<./scripts/publish-local-generator-project-template.sh>)
 
   [laplacian/generator.project-template](<https://github.com/nabla-squared/laplacian.generator.project-template.git>)サブプロジェクトの資源を自動生成します。
 
-  > Usage: publish-local-laplacian-generator-project-template.sh [OPTION]...
+  > Usage: publish-local-generator-project-template.sh [OPTION]...
   >
   > -h, --help
   >
@@ -844,25 +535,11 @@ $ ./script/generate
   >
   >   より詳細なコマンドの実行情報を表示します。
   >   
-- [./script/publish-local-laplacian-metamodel-plugin.sh](<./scripts/publish-local-laplacian-metamodel-plugin.sh>)
-
-  [laplacian/metamodel-plugin](<null>)サブプロジェクトの資源を自動生成します。
-
-  > Usage: publish-local-laplacian-metamodel-plugin.sh [OPTION]...
-  >
-  > -h, --help
-  >
-  >   このコマンドの使用方法を表示します。
-  >   
-  > -v, --verbose
-  >
-  >   より詳細なコマンドの実行情報を表示します。
-  >   
-- [./script/publish-local-laplacian-metamodel.sh](<./scripts/publish-local-laplacian-metamodel.sh>)
+- [./script/publish-local-metamodel.sh](<./scripts/publish-local-metamodel.sh>)
 
   [laplacian/metamodel](<https://github.com/nabla-squared/laplacian.metamodel.git>)サブプロジェクトの資源を自動生成します。
 
-  > Usage: publish-local-laplacian-metamodel.sh [OPTION]...
+  > Usage: publish-local-metamodel.sh [OPTION]...
   >
   > -h, --help
   >
@@ -872,11 +549,11 @@ $ ./script/generate
   >
   >   より詳細なコマンドの実行情報を表示します。
   >   
-- [./script/publish-local-laplacian-project-domain-model.sh](<./scripts/publish-local-laplacian-project-domain-model.sh>)
+- [./script/publish-local-project-domain-model.sh](<./scripts/publish-local-project-domain-model.sh>)
 
   [laplacian/project.domain-model](<https://github.com/nabla-squared/laplacian.project.domain-model.git>)サブプロジェクトの資源を自動生成します。
 
-  > Usage: publish-local-laplacian-project-domain-model.sh [OPTION]...
+  > Usage: publish-local-project-domain-model.sh [OPTION]...
   >
   > -h, --help
   >
@@ -886,11 +563,11 @@ $ ./script/generate
   >
   >   より詳細なコマンドの実行情報を表示します。
   >   
-- [./script/publish-local-laplacian-project-group-document-template.sh](<./scripts/publish-local-laplacian-project-group-document-template.sh>)
+- [./script/publish-local-project-group-project-template.sh](<./scripts/publish-local-project-group-project-template.sh>)
 
-  [laplacian/project-group.document-template](<https://github.com/nabla-squared/laplacian.project-group.document-template.git>)サブプロジェクトの資源を自動生成します。
+  [laplacian/project-group.project-template](<https://github.com/nabla-squared/laplacian.project-group.project-template.git>)サブプロジェクトの資源を自動生成します。
 
-  > Usage: publish-local-laplacian-project-group-document-template.sh [OPTION]...
+  > Usage: publish-local-project-group-project-template.sh [OPTION]...
   >
   > -h, --help
   >
@@ -900,11 +577,11 @@ $ ./script/generate
   >
   >   より詳細なコマンドの実行情報を表示します。
   >   
-- [./script/publish-local-laplacian-project-project-types.sh](<./scripts/publish-local-laplacian-project-project-types.sh>)
+- [./script/publish-local-project-project-types.sh](<./scripts/publish-local-project-project-types.sh>)
 
   [laplacian/project.project-types](<https://github.com/nabla-squared/laplacian.project.project-types.git>)サブプロジェクトの資源を自動生成します。
 
-  > Usage: publish-local-laplacian-project-project-types.sh [OPTION]...
+  > Usage: publish-local-project-project-types.sh [OPTION]...
   >
   > -h, --help
   >
@@ -918,22 +595,14 @@ $ ./script/generate
 
 
 - [model/project.yaml](<./model/project.yaml>)
-- [src/project/subprojects/laplacian-arch/laplacian-arch.architecture-document-template.yaml](<./src/project/subprojects/laplacian-arch/laplacian-arch.architecture-document-template.yaml>)
-- [src/project/subprojects/laplacian-arch/laplacian-arch.datasource.flyway-migration-template.yaml](<./src/project/subprojects/laplacian-arch/laplacian-arch.datasource.flyway-migration-template.yaml>)
-- [src/project/subprojects/laplacian-arch/laplacian-arch.datasource.schema-model.yaml](<./src/project/subprojects/laplacian-arch/laplacian-arch.datasource.schema-model.yaml>)
-- [src/project/subprojects/laplacian-arch/laplacian-arch.datasource.schema-plugin.yaml](<./src/project/subprojects/laplacian-arch/laplacian-arch.datasource.schema-plugin.yaml>)
-- [src/project/subprojects/laplacian-arch/laplacian-arch.service-api.schema-model.yaml](<./src/project/subprojects/laplacian-arch/laplacian-arch.service-api.schema-model.yaml>)
-- [src/project/subprojects/laplacian-arch/laplacian-arch.service-api.schema-plugin.yaml](<./src/project/subprojects/laplacian-arch/laplacian-arch.service-api.schema-plugin.yaml>)
-- [src/project/subprojects/laplacian-arch/laplacian-arch.service-api.springboot2-template.yaml](<./src/project/subprojects/laplacian-arch/laplacian-arch.service-api.springboot2-template.yaml>)
-- [src/project/subprojects/laplacian/laplacian.common-model-plugin.yaml](<./src/project/subprojects/laplacian/laplacian.common-model-plugin.yaml>)
 - [src/project/subprojects/laplacian/laplacian.common-model.yaml](<./src/project/subprojects/laplacian/laplacian.common-model.yaml>)
 - [src/project/subprojects/laplacian/laplacian.domain-model-plugin.project-template.yaml](<./src/project/subprojects/laplacian/laplacian.domain-model-plugin.project-template.yaml>)
 - [src/project/subprojects/laplacian/laplacian.domain-model.project-template.yaml](<./src/project/subprojects/laplacian/laplacian.domain-model.project-template.yaml>)
+- [src/project/subprojects/laplacian/laplacian.generator.model-validator-template.yaml](<./src/project/subprojects/laplacian/laplacian.generator.model-validator-template.yaml>)
 - [src/project/subprojects/laplacian/laplacian.generator.project-template.yaml](<./src/project/subprojects/laplacian/laplacian.generator.project-template.yaml>)
-- [src/project/subprojects/laplacian/laplacian.metamodel-plugin.yaml](<./src/project/subprojects/laplacian/laplacian.metamodel-plugin.yaml>)
 - [src/project/subprojects/laplacian/laplacian.metamodel.yaml](<./src/project/subprojects/laplacian/laplacian.metamodel.yaml>)
 - [src/project/subprojects/laplacian/laplacian.project.domain-model.yaml](<./src/project/subprojects/laplacian/laplacian.project.domain-model.yaml>)
-- [src/project/subprojects/laplacian/laplacian.project-group.document-template.yaml](<./src/project/subprojects/laplacian/laplacian.project-group.document-template.yaml>)
+- [src/project/subprojects/laplacian/laplacian.project-group.project-template.yaml](<./src/project/subprojects/laplacian/laplacian.project-group.project-template.yaml>)
 - [src/project/subprojects/laplacian/laplacian.project.project-types.yaml](<./src/project/subprojects/laplacian/laplacian.project.project-types.yaml>)
 
 

@@ -1,12 +1,17 @@
+_description: &description
+  en: |
+    The model data that defines the content of each project type.
+  ja: |
+    各プロジェクトタイプの内容を定義するモデルデータです。
+  zh: |
+    定义了每个项目类型的内容的模型数据。
 project:
   subprojects:
   - group: laplacian
     type: model
     name: project.project-types
     namespace: laplacian
-    description:
-      en: |
-        The basic project types used in the Laplacian project.
+    description: *description
     version: '1.0.0'
     source_repository:
       url: https://github.com/nabla-squared/laplacian.project.project-types.git

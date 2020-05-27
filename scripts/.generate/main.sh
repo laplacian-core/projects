@@ -38,8 +38,8 @@ create_next_content_dir() {
   (cd $PROJECT_BASE_DIR
     dirs=$(for each in $CONTENT_DIRS; do [ -d $each ] && echo $each || true; done)
     files=$(for each in $CONTENT_FILES; do [ -f $each ] && echo $each || true; done)
-    cp -rf $dirs $NEXT_CONTENT_DIR
-    cp -f $files $NEXT_CONTENT_DIR
+    [ -z "$dirs" ] || cp -rf $dirs $NEXT_CONTENT_DIR
+    [ -z "$files" ] || cp -f $files $NEXT_CONTENT_DIR
   )
 
   local src_dir="$NEXT_CONTENT_DIR/$SRC_DIR_NAME"
@@ -97,7 +97,7 @@ generate() {
     --plugin 'laplacian:laplacian.project.domain-model-plugin:1.0.0' \
     --plugin 'laplacian:laplacian.common-model-plugin:1.0.0' \
     --template 'laplacian:laplacian.generator.project-template:1.0.0' \
-    --template 'laplacian:laplacian.project-group.document-template:1.0.0' \
+    --template 'laplacian:laplacian.project-group.project-template:1.0.0' \
     --model 'laplacian:laplacian.project.project-types:1.0.0' \
     --model-files $(normalize_path 'model/') \
     --model-files $(normalize_path 'dest/') \
