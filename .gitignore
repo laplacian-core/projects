@@ -13,8 +13,8 @@ Thumbs.db
 .DS_Store
 
 # VSCode
-vscode/
-.vscode/
+/vscode/
+/.vscode/
 *.code-workspace
 
 # Java development
@@ -37,7 +37,6 @@ subprojects/mvn-repo
 subprojects/laplacian.common-model/
 subprojects/laplacian.domain-model-plugin.project-template/
 subprojects/laplacian.domain-model.project-template/
-subprojects/laplacian.generator.model-validator-template/
 subprojects/laplacian.generator.project-template/
 subprojects/laplacian.metamodel/
 subprojects/laplacian.project-group.project-template/

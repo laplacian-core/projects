@@ -84,11 +84,6 @@ $ ./script/generate
 
 > This is a template module that generates directory structure, development scripts, and relating documents for a domain model project.
 > 
-- [**laplacian/generator.model-validator-template**](<https://github.com/nabla-squared/laplacian.generator.model-validator-template.git>)
-
-> Generates a script that performs model validation using the domain model definition.
-> In addition, outputs settings that enable validation and code completion on [Visual Studio Code](https://code.visualstudio.com/).
-> 
 - [**laplacian/generator.project-template**](<https://github.com/nabla-squared/laplacian.generator.project-template.git>)
 
 > This template module generates the standard directory structure and common scripts for building and publishing to local repositories in a Laplacian project.
@@ -213,28 +208,6 @@ $ ./script/generate
   If the subproject already exists, the content of the subproject is updated.
 
   > Usage: generate-domain-model-project-template.sh [OPTION]...
-  >
-  > -h, --help
-  >
-  >   Displays how to use this command.
-  >   
-  > -v, --verbose
-  >
-  >   Displays more detailed command execution information.
-  >   
-  > -c, --clean
-  >
-  >   Delete all local resources of the subproject and regenerate them.
-  >   
-- [./script/generate-generator-model-validator-template.sh](<./scripts/generate-generator-model-validator-template.sh>)
-
-  Generates the [laplacian/generator.model-validator-template](<https://github.com/nabla-squared/laplacian.generator.model-validator-template.git>) project as a subproject in the following directory.
-  ```
-  subprojects/laplacian.generator.model-validator-template
-  ```
-  If the subproject already exists, the content of the subproject is updated.
-
-  > Usage: generate-generator-model-validator-template.sh [OPTION]...
   >
   > -h, --help
   >
@@ -512,20 +485,6 @@ $ ./script/generate
   >
   >   Displays more detailed command execution information.
   >   
-- [./script/publish-local-generator-model-validator-template.sh](<./scripts/publish-local-generator-model-validator-template.sh>)
-
-  Generates resources for the [laplacian/generator.model-validator-template](<https://github.com/nabla-squared/laplacian.generator.model-validator-template.git>) subproject.
-
-  > Usage: publish-local-generator-model-validator-template.sh [OPTION]...
-  >
-  > -h, --help
-  >
-  >   Displays how to use this command.
-  >   
-  > -v, --verbose
-  >
-  >   Displays more detailed command execution information.
-  >   
 - [./script/publish-local-generator-project-template.sh](<./scripts/publish-local-generator-project-template.sh>)
 
   Generates resources for the [laplacian/generator.project-template](<https://github.com/nabla-squared/laplacian.generator.project-template.git>) subproject.
@@ -603,7 +562,6 @@ $ ./script/generate
 - [src/project/subprojects/laplacian/laplacian.common-model.yaml](<./src/project/subprojects/laplacian/laplacian.common-model.yaml>)
 - [src/project/subprojects/laplacian/laplacian.domain-model-plugin.project-template.yaml](<./src/project/subprojects/laplacian/laplacian.domain-model-plugin.project-template.yaml>)
 - [src/project/subprojects/laplacian/laplacian.domain-model.project-template.yaml](<./src/project/subprojects/laplacian/laplacian.domain-model.project-template.yaml>)
-- [src/project/subprojects/laplacian/laplacian.generator.model-validator-template.yaml](<./src/project/subprojects/laplacian/laplacian.generator.model-validator-template.yaml>)
 - [src/project/subprojects/laplacian/laplacian.generator.project-template.yaml](<./src/project/subprojects/laplacian/laplacian.generator.project-template.yaml>)
 - [src/project/subprojects/laplacian/laplacian.metamodel.yaml](<./src/project/subprojects/laplacian/laplacian.metamodel.yaml>)
 - [src/project/subprojects/laplacian/laplacian.project.domain-model.yaml](<./src/project/subprojects/laplacian/laplacian.project.domain-model.yaml>)

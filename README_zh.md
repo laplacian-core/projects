@@ -87,11 +87,6 @@ $ ./script/generate
 
 > 这是一个模板模块、用于生成域模型项目的目录结构、开发脚本和相关文档。
 > 
-- [**laplacian/generator.model-validator-template**](<https://github.com/nabla-squared/laplacian.generator.model-validator-template.git>)
-
-> 生成一个使用域模型定义执行模型验证的脚本。
-> 此外，在[Visual Studio Code](https://code.visualstudio.com/)上输出能够进行验证和代码完成的设置。
-> 
 - [**laplacian/generator.project-template**](<https://github.com/nabla-squared/laplacian.generator.project-template.git>)
 
 > 这个模板模块生成标准目录结构和常用脚本，用于在Laplacian项目中构建和发布到本地资源库。
@@ -216,28 +211,6 @@ $ ./script/generate
   如果子项目已经存在，则更新子项目的内容。
 
   > Usage: generate-domain-model-project-template.sh [OPTION]...
-  >
-  > -h, --help
-  >
-  >   显示如何使用此命令。
-  >   
-  > -v, --verbose
-  >
-  >   显示更详细的命令执行信息。
-  >   
-  > -c, --clean
-  >
-  >   删除子项目的所有本地资源，并对其进行再生。
-  >   
-- [./script/generate-generator-model-validator-template.sh](<./scripts/generate-generator-model-validator-template.sh>)
-
-  在下面的目录中生成[laplacian/generator.model-validator-template](<https://github.com/nabla-squared/laplacian.generator.model-validator-template.git>)项目，作为子项目。
-  ```
-  subprojects/laplacian.generator.model-validator-template
-  ```
-  如果子项目已经存在，则更新子项目的内容。
-
-  > Usage: generate-generator-model-validator-template.sh [OPTION]...
   >
   > -h, --help
   >
@@ -507,20 +480,6 @@ $ ./script/generate
   >
   >   显示更详细的命令执行信息。
   >   
-- [./script/publish-local-generator-model-validator-template.sh](<./scripts/publish-local-generator-model-validator-template.sh>)
-
-  为[laplacian/generator.model-validator-template](<https://github.com/nabla-squared/laplacian.generator.model-validator-template.git>)子项目生成资源。
-
-  > Usage: publish-local-generator-model-validator-template.sh [OPTION]...
-  >
-  > -h, --help
-  >
-  >   显示如何使用此命令。
-  >   
-  > -v, --verbose
-  >
-  >   显示更详细的命令执行信息。
-  >   
 - [./script/publish-local-generator-project-template.sh](<./scripts/publish-local-generator-project-template.sh>)
 
   为[laplacian/generator.project-template](<https://github.com/nabla-squared/laplacian.generator.project-template.git>)子项目生成资源。
@@ -598,7 +557,6 @@ $ ./script/generate
 - [src/project/subprojects/laplacian/laplacian.common-model.yaml](<./src/project/subprojects/laplacian/laplacian.common-model.yaml>)
 - [src/project/subprojects/laplacian/laplacian.domain-model-plugin.project-template.yaml](<./src/project/subprojects/laplacian/laplacian.domain-model-plugin.project-template.yaml>)
 - [src/project/subprojects/laplacian/laplacian.domain-model.project-template.yaml](<./src/project/subprojects/laplacian/laplacian.domain-model.project-template.yaml>)
-- [src/project/subprojects/laplacian/laplacian.generator.model-validator-template.yaml](<./src/project/subprojects/laplacian/laplacian.generator.model-validator-template.yaml>)
 - [src/project/subprojects/laplacian/laplacian.generator.project-template.yaml](<./src/project/subprojects/laplacian/laplacian.generator.project-template.yaml>)
 - [src/project/subprojects/laplacian/laplacian.metamodel.yaml](<./src/project/subprojects/laplacian/laplacian.metamodel.yaml>)
 - [src/project/subprojects/laplacian/laplacian.project.domain-model.yaml](<./src/project/subprojects/laplacian/laplacian.project.domain-model.yaml>)

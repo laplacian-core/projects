@@ -3,7 +3,6 @@
 SUBPROJECTS='subprojects/laplacian.common-model
 subprojects/laplacian.domain-model-plugin.project-template
 subprojects/laplacian.domain-model.project-template
-subprojects/laplacian.generator.model-validator-template
 subprojects/laplacian.generator.project-template
 subprojects/laplacian.metamodel
 subprojects/laplacian.project-group.project-template

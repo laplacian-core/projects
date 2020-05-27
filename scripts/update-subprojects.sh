@@ -7,7 +7,6 @@ LOG_FILE="./update-subprojects-$(date +%Y-%m-%dT%H%M%S).log"
 SUBPROJECTS='laplacian-common-model
 laplacian-domain-model-plugin-project-template
 laplacian-domain-model-project-template
-laplacian-generator-model-validator-template
 laplacian-generator-project-template
 laplacian-metamodel
 laplacian-project-group-project-template

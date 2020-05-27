@@ -3,7 +3,6 @@
 SCRIPTS='generate-laplacian-common-model
 generate-laplacian-domain-model-plugin-project-template
 generate-laplacian-domain-model-project-template
-generate-laplacian-generator-model-validator-template
 generate-laplacian-generator-project-template
 generate-laplacian-metamodel
 generate-laplacian-project-group-project-template
