@@ -19,7 +19,7 @@ _description: &description
     - inheritance
     - mixin
 
-  zn: |
+  zh: |
     这个模型是一个定义模型的模型。(= metamodel)
     在这个模型中，你可以定义一个模型，其结构如下
 

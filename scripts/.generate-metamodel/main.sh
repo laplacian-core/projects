@@ -64,8 +64,8 @@ project:
       - 継承
       - Mixin
     zh: |
-      This model is a model for defining a model, i.e. a metamodel.
-      In this model, you can define a model with the following structure
+      这个模型是一个定义模型的模型。(= metamodel)
+      在这个模型中，你可以定义一个模型，其结构如下
 
       - attribute
       - relationship
@@ -77,7 +77,7 @@ project:
     branch: master
   module_repositories:
     local:
-      path: ../../../mvn-repo
+      ../../../mvn-repo
     remote:
     - https://github.com/nabla-squared/mvn-repo
   model_files:

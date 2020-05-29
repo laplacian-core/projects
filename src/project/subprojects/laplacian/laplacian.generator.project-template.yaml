@@ -16,5 +16,5 @@ project:
     version: '1.0.0'
     source_repository:
       url: https://github.com/nabla-squared/laplacian.generator.project-template.git
-    template-files:
+    template_files:
     - dest/

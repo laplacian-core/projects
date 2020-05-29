@@ -8,9 +8,7 @@ project:
       The core modules for the Laplacian generator.
   module_repositories:
     local:
-      path: ../mvn-repo
-      url: https://github.com/nabla-squared/mvn-repo
-      branch: master
+      ../mvn-repo
     remote:
     - https://github.com/nabla-squared/mvn-repo
   model_files:

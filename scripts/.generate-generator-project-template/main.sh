@@ -56,9 +56,11 @@ project:
     branch: master
   module_repositories:
     local:
-      path: ../../../mvn-repo
+      ../../../mvn-repo
     remote:
     - https://github.com/nabla-squared/mvn-repo
+  template_files:
+  - 'dest/'
 END_FILE
 }
 
