@@ -48,7 +48,7 @@ parse_args() {
 
 show_usage () {
 cat << 'END'
-Usage: $(basename "$0") [OPTION]...
+Usage: ./scripts/generate-project-group-project-template.sh [OPTION]...
   -h, --help
     Displays how to use this command.
   -v, --verbose

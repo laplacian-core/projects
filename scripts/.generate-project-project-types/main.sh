@@ -59,12 +59,8 @@ project:
       ../../../mvn-repo
     remote:
     - https://github.com/nabla-squared/mvn-repo
-  plugins:
-  - group: laplacian
-    name: project.schema-plugin
-    version: '1.0.0'
   model_files:
-  - 'src/'
+  - 'dest/'
 END_FILE
 }
 

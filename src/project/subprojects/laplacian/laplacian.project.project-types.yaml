@@ -15,9 +15,5 @@ project:
     version: '1.0.0'
     source_repository:
       url: https://github.com/nabla-squared/laplacian.project.project-types.git
-    plugins:
-    - group: laplacian
-      name: project.schema-plugin
-      version: '1.0.0'
     model_files:
-    - src/
+    - dest/
