@@ -8,7 +8,7 @@ _description: &description
 project:
   subprojects:
   - group: laplacian
-    type: model
+    type: project-types
     name: project.project-types
     namespace: laplacian
     description: *description

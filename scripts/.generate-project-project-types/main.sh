@@ -41,7 +41,7 @@ create_project_model_file() {
 project:
   group: laplacian
   name: project.project-types
-  type: model
+  type: project-types
   namespace: laplacian
   version: '1.0.0'
   description:
