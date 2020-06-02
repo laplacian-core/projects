@@ -116,6 +116,214 @@ $ ./script/generate
 ### スクリプト一覧
 
 
+- [./script/create-new-project-domain-model-plugin.sh](<./scripts/create-new-project-domain-model-plugin.sh>)
+
+  新規のdomain-model-pluginプロジェクトをこのプロジェクトグループに追加します。
+
+  > Usage: create-new-project-domain-model-plugin.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   このコマンドの使用方法を表示します。
+  >   
+  > -v, --verbose
+  >
+  >   より詳細なコマンドの実行情報を表示します。
+  >   
+  > , --project-name [VALUE]
+  >
+  >   新規プロジェクト名
+  >   
+  > , --project-version [VALUE]
+  >
+  >   初期バージョン番号
+  >    (Default: 0.0.1)
+  > , --namespace [VALUE]
+  >
+  >   名前空間
+  >    (Default: laplacian)
+- [./script/create-new-project-domain-model.sh](<./scripts/create-new-project-domain-model.sh>)
+
+  新規のdomain-modelプロジェクトをこのプロジェクトグループに追加します。
+
+  > Usage: create-new-project-domain-model.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   このコマンドの使用方法を表示します。
+  >   
+  > -v, --verbose
+  >
+  >   より詳細なコマンドの実行情報を表示します。
+  >   
+  > , --project-name [VALUE]
+  >
+  >   新規プロジェクト名
+  >   
+  > , --project-version [VALUE]
+  >
+  >   初期バージョン番号
+  >    (Default: 0.0.1)
+  > , --namespace [VALUE]
+  >
+  >   名前空間
+  >    (Default: laplacian)
+- [./script/create-new-project-generator.sh](<./scripts/create-new-project-generator.sh>)
+
+  新規のgeneratorプロジェクトをこのプロジェクトグループに追加します。
+
+  > Usage: create-new-project-generator.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   このコマンドの使用方法を表示します。
+  >   
+  > -v, --verbose
+  >
+  >   より詳細なコマンドの実行情報を表示します。
+  >   
+  > , --project-name [VALUE]
+  >
+  >   新規プロジェクト名
+  >   
+  > , --project-version [VALUE]
+  >
+  >   初期バージョン番号
+  >    (Default: 0.0.1)
+  > , --namespace [VALUE]
+  >
+  >   名前空間
+  >    (Default: laplacian)
+- [./script/create-new-project-model.sh](<./scripts/create-new-project-model.sh>)
+
+  新規のmodelプロジェクトをこのプロジェクトグループに追加します。
+
+  > Usage: create-new-project-model.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   このコマンドの使用方法を表示します。
+  >   
+  > -v, --verbose
+  >
+  >   より詳細なコマンドの実行情報を表示します。
+  >   
+  > , --project-name [VALUE]
+  >
+  >   新規プロジェクト名
+  >   
+  > , --project-version [VALUE]
+  >
+  >   初期バージョン番号
+  >    (Default: 0.0.1)
+  > , --namespace [VALUE]
+  >
+  >   名前空間
+  >    (Default: laplacian)
+- [./script/create-new-project-plugin.sh](<./scripts/create-new-project-plugin.sh>)
+
+  新規のpluginプロジェクトをこのプロジェクトグループに追加します。
+
+  > Usage: create-new-project-plugin.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   このコマンドの使用方法を表示します。
+  >   
+  > -v, --verbose
+  >
+  >   より詳細なコマンドの実行情報を表示します。
+  >   
+  > , --project-name [VALUE]
+  >
+  >   新規プロジェクト名
+  >   
+  > , --project-version [VALUE]
+  >
+  >   初期バージョン番号
+  >    (Default: 0.0.1)
+  > , --namespace [VALUE]
+  >
+  >   名前空間
+  >    (Default: laplacian)
+- [./script/create-new-project-project-group.sh](<./scripts/create-new-project-project-group.sh>)
+
+  新規のproject-groupプロジェクトをこのプロジェクトグループに追加します。
+
+  > Usage: create-new-project-project-group.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   このコマンドの使用方法を表示します。
+  >   
+  > -v, --verbose
+  >
+  >   より詳細なコマンドの実行情報を表示します。
+  >   
+  > , --project-name [VALUE]
+  >
+  >   新規プロジェクト名
+  >   
+  > , --project-version [VALUE]
+  >
+  >   初期バージョン番号
+  >    (Default: 0.0.1)
+  > , --namespace [VALUE]
+  >
+  >   名前空間
+  >    (Default: laplacian)
+- [./script/create-new-project-project-types.sh](<./scripts/create-new-project-project-types.sh>)
+
+  新規のproject-typesプロジェクトをこのプロジェクトグループに追加します。
+
+  > Usage: create-new-project-project-types.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   このコマンドの使用方法を表示します。
+  >   
+  > -v, --verbose
+  >
+  >   より詳細なコマンドの実行情報を表示します。
+  >   
+  > , --project-name [VALUE]
+  >
+  >   新規プロジェクト名
+  >   
+  > , --project-version [VALUE]
+  >
+  >   初期バージョン番号
+  >    (Default: 0.0.1)
+  > , --namespace [VALUE]
+  >
+  >   名前空間
+  >    (Default: laplacian)
+- [./script/create-new-project-template.sh](<./scripts/create-new-project-template.sh>)
+
+  新規のtemplateプロジェクトをこのプロジェクトグループに追加します。
+
+  > Usage: create-new-project-template.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   このコマンドの使用方法を表示します。
+  >   
+  > -v, --verbose
+  >
+  >   より詳細なコマンドの実行情報を表示します。
+  >   
+  > , --project-name [VALUE]
+  >
+  >   新規プロジェクト名
+  >   
+  > , --project-version [VALUE]
+  >
+  >   初期バージョン番号
+  >    (Default: 0.0.1)
+  > , --namespace [VALUE]
+  >
+  >   名前空間
+  >    (Default: laplacian)
 - [./script/do-each-subproject.sh](<./scripts/do-each-subproject.sh>)
 
   各サブプロジェクトに対して、引数で指定されたコマンドを一括で実行します。

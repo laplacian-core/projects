@@ -117,6 +117,214 @@ $ ./script/generate
 ### 命令列表
 
 
+- [./script/create-new-project-domain-model-plugin.sh](<./scripts/create-new-project-domain-model-plugin.sh>)
+
+  将一个新的domain-model-plugin项目添加到这个项目组中。
+
+  > Usage: create-new-project-domain-model-plugin.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   显示如何使用此命令。
+  >   
+  > -v, --verbose
+  >
+  >   显示更详细的命令执行信息。
+  >   
+  > , --project-name [VALUE]
+  >
+  >   新项目的名称
+  >   
+  > , --project-version [VALUE]
+  >
+  >   最初的版本号
+  >    (Default: 0.0.1)
+  > , --namespace [VALUE]
+  >
+  >   名称空间
+  >    (Default: laplacian)
+- [./script/create-new-project-domain-model.sh](<./scripts/create-new-project-domain-model.sh>)
+
+  将一个新的domain-model项目添加到这个项目组中。
+
+  > Usage: create-new-project-domain-model.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   显示如何使用此命令。
+  >   
+  > -v, --verbose
+  >
+  >   显示更详细的命令执行信息。
+  >   
+  > , --project-name [VALUE]
+  >
+  >   新项目的名称
+  >   
+  > , --project-version [VALUE]
+  >
+  >   最初的版本号
+  >    (Default: 0.0.1)
+  > , --namespace [VALUE]
+  >
+  >   名称空间
+  >    (Default: laplacian)
+- [./script/create-new-project-generator.sh](<./scripts/create-new-project-generator.sh>)
+
+  将一个新的generator项目添加到这个项目组中。
+
+  > Usage: create-new-project-generator.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   显示如何使用此命令。
+  >   
+  > -v, --verbose
+  >
+  >   显示更详细的命令执行信息。
+  >   
+  > , --project-name [VALUE]
+  >
+  >   新项目的名称
+  >   
+  > , --project-version [VALUE]
+  >
+  >   最初的版本号
+  >    (Default: 0.0.1)
+  > , --namespace [VALUE]
+  >
+  >   名称空间
+  >    (Default: laplacian)
+- [./script/create-new-project-model.sh](<./scripts/create-new-project-model.sh>)
+
+  将一个新的model项目添加到这个项目组中。
+
+  > Usage: create-new-project-model.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   显示如何使用此命令。
+  >   
+  > -v, --verbose
+  >
+  >   显示更详细的命令执行信息。
+  >   
+  > , --project-name [VALUE]
+  >
+  >   新项目的名称
+  >   
+  > , --project-version [VALUE]
+  >
+  >   最初的版本号
+  >    (Default: 0.0.1)
+  > , --namespace [VALUE]
+  >
+  >   名称空间
+  >    (Default: laplacian)
+- [./script/create-new-project-plugin.sh](<./scripts/create-new-project-plugin.sh>)
+
+  将一个新的plugin项目添加到这个项目组中。
+
+  > Usage: create-new-project-plugin.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   显示如何使用此命令。
+  >   
+  > -v, --verbose
+  >
+  >   显示更详细的命令执行信息。
+  >   
+  > , --project-name [VALUE]
+  >
+  >   新项目的名称
+  >   
+  > , --project-version [VALUE]
+  >
+  >   最初的版本号
+  >    (Default: 0.0.1)
+  > , --namespace [VALUE]
+  >
+  >   名称空间
+  >    (Default: laplacian)
+- [./script/create-new-project-project-group.sh](<./scripts/create-new-project-project-group.sh>)
+
+  将一个新的project-group项目添加到这个项目组中。
+
+  > Usage: create-new-project-project-group.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   显示如何使用此命令。
+  >   
+  > -v, --verbose
+  >
+  >   显示更详细的命令执行信息。
+  >   
+  > , --project-name [VALUE]
+  >
+  >   新项目的名称
+  >   
+  > , --project-version [VALUE]
+  >
+  >   最初的版本号
+  >    (Default: 0.0.1)
+  > , --namespace [VALUE]
+  >
+  >   名称空间
+  >    (Default: laplacian)
+- [./script/create-new-project-project-types.sh](<./scripts/create-new-project-project-types.sh>)
+
+  将一个新的project-types项目添加到这个项目组中。
+
+  > Usage: create-new-project-project-types.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   显示如何使用此命令。
+  >   
+  > -v, --verbose
+  >
+  >   显示更详细的命令执行信息。
+  >   
+  > , --project-name [VALUE]
+  >
+  >   新项目的名称
+  >   
+  > , --project-version [VALUE]
+  >
+  >   最初的版本号
+  >    (Default: 0.0.1)
+  > , --namespace [VALUE]
+  >
+  >   名称空间
+  >    (Default: laplacian)
+- [./script/create-new-project-template.sh](<./scripts/create-new-project-template.sh>)
+
+  将一个新的template项目添加到这个项目组中。
+
+  > Usage: create-new-project-template.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   显示如何使用此命令。
+  >   
+  > -v, --verbose
+  >
+  >   显示更详细的命令执行信息。
+  >   
+  > , --project-name [VALUE]
+  >
+  >   新项目的名称
+  >   
+  > , --project-version [VALUE]
+  >
+  >   最初的版本号
+  >    (Default: 0.0.1)
+  > , --namespace [VALUE]
+  >
+  >   名称空间
+  >    (Default: laplacian)
 - [./script/do-each-subproject.sh](<./scripts/do-each-subproject.sh>)
 
   为每个子项目执行参数指定的命令。

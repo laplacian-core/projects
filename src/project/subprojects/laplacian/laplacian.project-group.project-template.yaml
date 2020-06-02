@@ -9,7 +9,7 @@ _description: &description
 project:
   subprojects:
   - group: laplacian
-    type: project-group
+    type: template
     name: project-group.project-template
     namespace: laplacian
     description: *description

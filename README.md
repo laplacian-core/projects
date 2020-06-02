@@ -114,6 +114,214 @@ $ ./script/generate
 ### Script List
 
 
+- [./script/create-new-project-domain-model-plugin.sh](<./scripts/create-new-project-domain-model-plugin.sh>)
+
+  Adds a new domain-model-plugin project to this project group.
+
+  > Usage: create-new-project-domain-model-plugin.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   Displays how to use this command.
+  >   
+  > -v, --verbose
+  >
+  >   Displays more detailed command execution information.
+  >   
+  > , --project-name [VALUE]
+  >
+  >   New project's name
+  >   
+  > , --project-version [VALUE]
+  >
+  >   The initial version number
+  >    (Default: 0.0.1)
+  > , --namespace [VALUE]
+  >
+  >   Namespace
+  >    (Default: laplacian)
+- [./script/create-new-project-domain-model.sh](<./scripts/create-new-project-domain-model.sh>)
+
+  Adds a new domain-model project to this project group.
+
+  > Usage: create-new-project-domain-model.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   Displays how to use this command.
+  >   
+  > -v, --verbose
+  >
+  >   Displays more detailed command execution information.
+  >   
+  > , --project-name [VALUE]
+  >
+  >   New project's name
+  >   
+  > , --project-version [VALUE]
+  >
+  >   The initial version number
+  >    (Default: 0.0.1)
+  > , --namespace [VALUE]
+  >
+  >   Namespace
+  >    (Default: laplacian)
+- [./script/create-new-project-generator.sh](<./scripts/create-new-project-generator.sh>)
+
+  Adds a new generator project to this project group.
+
+  > Usage: create-new-project-generator.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   Displays how to use this command.
+  >   
+  > -v, --verbose
+  >
+  >   Displays more detailed command execution information.
+  >   
+  > , --project-name [VALUE]
+  >
+  >   New project's name
+  >   
+  > , --project-version [VALUE]
+  >
+  >   The initial version number
+  >    (Default: 0.0.1)
+  > , --namespace [VALUE]
+  >
+  >   Namespace
+  >    (Default: laplacian)
+- [./script/create-new-project-model.sh](<./scripts/create-new-project-model.sh>)
+
+  Adds a new model project to this project group.
+
+  > Usage: create-new-project-model.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   Displays how to use this command.
+  >   
+  > -v, --verbose
+  >
+  >   Displays more detailed command execution information.
+  >   
+  > , --project-name [VALUE]
+  >
+  >   New project's name
+  >   
+  > , --project-version [VALUE]
+  >
+  >   The initial version number
+  >    (Default: 0.0.1)
+  > , --namespace [VALUE]
+  >
+  >   Namespace
+  >    (Default: laplacian)
+- [./script/create-new-project-plugin.sh](<./scripts/create-new-project-plugin.sh>)
+
+  Adds a new plugin project to this project group.
+
+  > Usage: create-new-project-plugin.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   Displays how to use this command.
+  >   
+  > -v, --verbose
+  >
+  >   Displays more detailed command execution information.
+  >   
+  > , --project-name [VALUE]
+  >
+  >   New project's name
+  >   
+  > , --project-version [VALUE]
+  >
+  >   The initial version number
+  >    (Default: 0.0.1)
+  > , --namespace [VALUE]
+  >
+  >   Namespace
+  >    (Default: laplacian)
+- [./script/create-new-project-project-group.sh](<./scripts/create-new-project-project-group.sh>)
+
+  Adds a new project-group project to this project group.
+
+  > Usage: create-new-project-project-group.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   Displays how to use this command.
+  >   
+  > -v, --verbose
+  >
+  >   Displays more detailed command execution information.
+  >   
+  > , --project-name [VALUE]
+  >
+  >   New project's name
+  >   
+  > , --project-version [VALUE]
+  >
+  >   The initial version number
+  >    (Default: 0.0.1)
+  > , --namespace [VALUE]
+  >
+  >   Namespace
+  >    (Default: laplacian)
+- [./script/create-new-project-project-types.sh](<./scripts/create-new-project-project-types.sh>)
+
+  Adds a new project-types project to this project group.
+
+  > Usage: create-new-project-project-types.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   Displays how to use this command.
+  >   
+  > -v, --verbose
+  >
+  >   Displays more detailed command execution information.
+  >   
+  > , --project-name [VALUE]
+  >
+  >   New project's name
+  >   
+  > , --project-version [VALUE]
+  >
+  >   The initial version number
+  >    (Default: 0.0.1)
+  > , --namespace [VALUE]
+  >
+  >   Namespace
+  >    (Default: laplacian)
+- [./script/create-new-project-template.sh](<./scripts/create-new-project-template.sh>)
+
+  Adds a new template project to this project group.
+
+  > Usage: create-new-project-template.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   Displays how to use this command.
+  >   
+  > -v, --verbose
+  >
+  >   Displays more detailed command execution information.
+  >   
+  > , --project-name [VALUE]
+  >
+  >   New project's name
+  >   
+  > , --project-version [VALUE]
+  >
+  >   The initial version number
+  >    (Default: 0.0.1)
+  > , --namespace [VALUE]
+  >
+  >   Namespace
+  >    (Default: laplacian)
 - [./script/do-each-subproject.sh](<./scripts/do-each-subproject.sh>)
 
   Executes the command specified by the argument for each subproject.

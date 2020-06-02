@@ -33,7 +33,7 @@ project:
   group: ${PROJECT_GROUP_NAME}
   name: projects
   type: project-group
-  version: "1.0.0"
+  version: '1.0.0'
   description:
     en: |
       ${PROJCT_GROUP_NAME} projects.
@@ -42,6 +42,10 @@ project:
       ../mvn-repo
     remote:
     - https://github.com/nabla-squared/mvn-repo
+  models:
+  - group: 'laplacian'
+    name: 'project.project-types'
+    version: '1.0.0'
   model_files:
   - dest/
 EOF
@@ -73,7 +77,6 @@ install_file() {
 show_end_message() {
   echo  ".. Finished."
   echo  "After editing ./$PROJECT_MODEL_FILE, run ./$PROJECT_GENERATOR to generate this project."
-  ./$PROJECT_GENERATOR --help
 }
 
 main "$@"
