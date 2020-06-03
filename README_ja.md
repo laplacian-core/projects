@@ -116,11 +116,11 @@ $ ./script/generate
 ### スクリプト一覧
 
 
-- [./script/create-new-project-domain-model-plugin.sh](<./scripts/create-new-project-domain-model-plugin.sh>)
+- [./script/create-new-domain-model-plugin-project.sh](<./scripts/create-new-domain-model-plugin-project.sh>)
 
   新規のdomain-model-pluginプロジェクトをこのプロジェクトグループに追加します。
 
-  > Usage: create-new-project-domain-model-plugin.sh [OPTION]...
+  > Usage: create-new-domain-model-plugin-project.sh [OPTION]...
   >
   > -h, --help
   >
@@ -142,11 +142,11 @@ $ ./script/generate
   >
   >   名前空間
   >    (Default: laplacian)
-- [./script/create-new-project-domain-model.sh](<./scripts/create-new-project-domain-model.sh>)
+- [./script/create-new-domain-model-project.sh](<./scripts/create-new-domain-model-project.sh>)
 
   新規のdomain-modelプロジェクトをこのプロジェクトグループに追加します。
 
-  > Usage: create-new-project-domain-model.sh [OPTION]...
+  > Usage: create-new-domain-model-project.sh [OPTION]...
   >
   > -h, --help
   >
@@ -168,11 +168,11 @@ $ ./script/generate
   >
   >   名前空間
   >    (Default: laplacian)
-- [./script/create-new-project-generator.sh](<./scripts/create-new-project-generator.sh>)
+- [./script/create-new-generator-project.sh](<./scripts/create-new-generator-project.sh>)
 
   新規のgeneratorプロジェクトをこのプロジェクトグループに追加します。
 
-  > Usage: create-new-project-generator.sh [OPTION]...
+  > Usage: create-new-generator-project.sh [OPTION]...
   >
   > -h, --help
   >
@@ -194,11 +194,11 @@ $ ./script/generate
   >
   >   名前空間
   >    (Default: laplacian)
-- [./script/create-new-project-model.sh](<./scripts/create-new-project-model.sh>)
+- [./script/create-new-model-project.sh](<./scripts/create-new-model-project.sh>)
 
   新規のmodelプロジェクトをこのプロジェクトグループに追加します。
 
-  > Usage: create-new-project-model.sh [OPTION]...
+  > Usage: create-new-model-project.sh [OPTION]...
   >
   > -h, --help
   >
@@ -220,11 +220,11 @@ $ ./script/generate
   >
   >   名前空間
   >    (Default: laplacian)
-- [./script/create-new-project-plugin.sh](<./scripts/create-new-project-plugin.sh>)
+- [./script/create-new-plugin-project.sh](<./scripts/create-new-plugin-project.sh>)
 
   新規のpluginプロジェクトをこのプロジェクトグループに追加します。
 
-  > Usage: create-new-project-plugin.sh [OPTION]...
+  > Usage: create-new-plugin-project.sh [OPTION]...
   >
   > -h, --help
   >
@@ -246,11 +246,11 @@ $ ./script/generate
   >
   >   名前空間
   >    (Default: laplacian)
-- [./script/create-new-project-project-group.sh](<./scripts/create-new-project-project-group.sh>)
+- [./script/create-new-project-group-project.sh](<./scripts/create-new-project-group-project.sh>)
 
   新規のproject-groupプロジェクトをこのプロジェクトグループに追加します。
 
-  > Usage: create-new-project-project-group.sh [OPTION]...
+  > Usage: create-new-project-group-project.sh [OPTION]...
   >
   > -h, --help
   >
@@ -272,11 +272,11 @@ $ ./script/generate
   >
   >   名前空間
   >    (Default: laplacian)
-- [./script/create-new-project-project-types.sh](<./scripts/create-new-project-project-types.sh>)
+- [./script/create-new-project-types-project.sh](<./scripts/create-new-project-types-project.sh>)
 
   新規のproject-typesプロジェクトをこのプロジェクトグループに追加します。
 
-  > Usage: create-new-project-project-types.sh [OPTION]...
+  > Usage: create-new-project-types-project.sh [OPTION]...
   >
   > -h, --help
   >
@@ -298,11 +298,11 @@ $ ./script/generate
   >
   >   名前空間
   >    (Default: laplacian)
-- [./script/create-new-project-template.sh](<./scripts/create-new-project-template.sh>)
+- [./script/create-new-template-project.sh](<./scripts/create-new-template-project.sh>)
 
   新規のtemplateプロジェクトをこのプロジェクトグループに追加します。
 
-  > Usage: create-new-project-template.sh [OPTION]...
+  > Usage: create-new-template-project.sh [OPTION]...
   >
   > -h, --help
   >

@@ -114,11 +114,11 @@ $ ./script/generate
 ### Script List
 
 
-- [./script/create-new-project-domain-model-plugin.sh](<./scripts/create-new-project-domain-model-plugin.sh>)
+- [./script/create-new-domain-model-plugin-project.sh](<./scripts/create-new-domain-model-plugin-project.sh>)
 
   Adds a new domain-model-plugin project to this project group.
 
-  > Usage: create-new-project-domain-model-plugin.sh [OPTION]...
+  > Usage: create-new-domain-model-plugin-project.sh [OPTION]...
   >
   > -h, --help
   >
@@ -140,11 +140,11 @@ $ ./script/generate
   >
   >   Namespace
   >    (Default: laplacian)
-- [./script/create-new-project-domain-model.sh](<./scripts/create-new-project-domain-model.sh>)
+- [./script/create-new-domain-model-project.sh](<./scripts/create-new-domain-model-project.sh>)
 
   Adds a new domain-model project to this project group.
 
-  > Usage: create-new-project-domain-model.sh [OPTION]...
+  > Usage: create-new-domain-model-project.sh [OPTION]...
   >
   > -h, --help
   >
@@ -166,11 +166,11 @@ $ ./script/generate
   >
   >   Namespace
   >    (Default: laplacian)
-- [./script/create-new-project-generator.sh](<./scripts/create-new-project-generator.sh>)
+- [./script/create-new-generator-project.sh](<./scripts/create-new-generator-project.sh>)
 
   Adds a new generator project to this project group.
 
-  > Usage: create-new-project-generator.sh [OPTION]...
+  > Usage: create-new-generator-project.sh [OPTION]...
   >
   > -h, --help
   >
@@ -192,11 +192,11 @@ $ ./script/generate
   >
   >   Namespace
   >    (Default: laplacian)
-- [./script/create-new-project-model.sh](<./scripts/create-new-project-model.sh>)
+- [./script/create-new-model-project.sh](<./scripts/create-new-model-project.sh>)
 
   Adds a new model project to this project group.
 
-  > Usage: create-new-project-model.sh [OPTION]...
+  > Usage: create-new-model-project.sh [OPTION]...
   >
   > -h, --help
   >
@@ -218,11 +218,11 @@ $ ./script/generate
   >
   >   Namespace
   >    (Default: laplacian)
-- [./script/create-new-project-plugin.sh](<./scripts/create-new-project-plugin.sh>)
+- [./script/create-new-plugin-project.sh](<./scripts/create-new-plugin-project.sh>)
 
   Adds a new plugin project to this project group.
 
-  > Usage: create-new-project-plugin.sh [OPTION]...
+  > Usage: create-new-plugin-project.sh [OPTION]...
   >
   > -h, --help
   >
@@ -244,11 +244,11 @@ $ ./script/generate
   >
   >   Namespace
   >    (Default: laplacian)
-- [./script/create-new-project-project-group.sh](<./scripts/create-new-project-project-group.sh>)
+- [./script/create-new-project-group-project.sh](<./scripts/create-new-project-group-project.sh>)
 
   Adds a new project-group project to this project group.
 
-  > Usage: create-new-project-project-group.sh [OPTION]...
+  > Usage: create-new-project-group-project.sh [OPTION]...
   >
   > -h, --help
   >
@@ -270,11 +270,11 @@ $ ./script/generate
   >
   >   Namespace
   >    (Default: laplacian)
-- [./script/create-new-project-project-types.sh](<./scripts/create-new-project-project-types.sh>)
+- [./script/create-new-project-types-project.sh](<./scripts/create-new-project-types-project.sh>)
 
   Adds a new project-types project to this project group.
 
-  > Usage: create-new-project-project-types.sh [OPTION]...
+  > Usage: create-new-project-types-project.sh [OPTION]...
   >
   > -h, --help
   >
@@ -296,11 +296,11 @@ $ ./script/generate
   >
   >   Namespace
   >    (Default: laplacian)
-- [./script/create-new-project-template.sh](<./scripts/create-new-project-template.sh>)
+- [./script/create-new-template-project.sh](<./scripts/create-new-template-project.sh>)
 
   Adds a new template project to this project group.
 
-  > Usage: create-new-project-template.sh [OPTION]...
+  > Usage: create-new-template-project.sh [OPTION]...
   >
   > -h, --help
   >

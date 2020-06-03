@@ -16,7 +16,7 @@ PROJECT_VERSION=0.0.1
 NAMESPACE=laplacian
 
 
-run_create_new_project_domain_model_plugin() {
+run_create_new_project_types_project() {
   parse_args "$@"
   read_user_input
   ! [ -z $VERBOSE ] && set -x
@@ -64,7 +64,7 @@ read_user_input() {
 
 show_usage () {
 cat << 'END'
-Usage: ./scripts/create-new-project-domain-model-plugin.sh [OPTION]...
+Usage: ./scripts/create-new-project-types-project.sh [OPTION]...
   -h, --help
     Displays how to use this command.
   -v, --verbose
@@ -78,5 +78,5 @@ Usage: ./scripts/create-new-project-domain-model-plugin.sh [OPTION]...
 END
 }
 
-source $SCRIPT_BASE_DIR/.create-new-project-domain-model-plugin/main.sh
-run_create_new_project_domain_model_plugin "$@"
+source $SCRIPT_BASE_DIR/.create-new-project-types-project/main.sh
+run_create_new_project_types_project "$@"

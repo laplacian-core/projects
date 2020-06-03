@@ -117,11 +117,11 @@ $ ./script/generate
 ### 命令列表
 
 
-- [./script/create-new-project-domain-model-plugin.sh](<./scripts/create-new-project-domain-model-plugin.sh>)
+- [./script/create-new-domain-model-plugin-project.sh](<./scripts/create-new-domain-model-plugin-project.sh>)
 
   将一个新的domain-model-plugin项目添加到这个项目组中。
 
-  > Usage: create-new-project-domain-model-plugin.sh [OPTION]...
+  > Usage: create-new-domain-model-plugin-project.sh [OPTION]...
   >
   > -h, --help
   >
@@ -143,11 +143,11 @@ $ ./script/generate
   >
   >   名称空间
   >    (Default: laplacian)
-- [./script/create-new-project-domain-model.sh](<./scripts/create-new-project-domain-model.sh>)
+- [./script/create-new-domain-model-project.sh](<./scripts/create-new-domain-model-project.sh>)
 
   将一个新的domain-model项目添加到这个项目组中。
 
-  > Usage: create-new-project-domain-model.sh [OPTION]...
+  > Usage: create-new-domain-model-project.sh [OPTION]...
   >
   > -h, --help
   >
@@ -169,11 +169,11 @@ $ ./script/generate
   >
   >   名称空间
   >    (Default: laplacian)
-- [./script/create-new-project-generator.sh](<./scripts/create-new-project-generator.sh>)
+- [./script/create-new-generator-project.sh](<./scripts/create-new-generator-project.sh>)
 
   将一个新的generator项目添加到这个项目组中。
 
-  > Usage: create-new-project-generator.sh [OPTION]...
+  > Usage: create-new-generator-project.sh [OPTION]...
   >
   > -h, --help
   >
@@ -195,11 +195,11 @@ $ ./script/generate
   >
   >   名称空间
   >    (Default: laplacian)
-- [./script/create-new-project-model.sh](<./scripts/create-new-project-model.sh>)
+- [./script/create-new-model-project.sh](<./scripts/create-new-model-project.sh>)
 
   将一个新的model项目添加到这个项目组中。
 
-  > Usage: create-new-project-model.sh [OPTION]...
+  > Usage: create-new-model-project.sh [OPTION]...
   >
   > -h, --help
   >
@@ -221,11 +221,11 @@ $ ./script/generate
   >
   >   名称空间
   >    (Default: laplacian)
-- [./script/create-new-project-plugin.sh](<./scripts/create-new-project-plugin.sh>)
+- [./script/create-new-plugin-project.sh](<./scripts/create-new-plugin-project.sh>)
 
   将一个新的plugin项目添加到这个项目组中。
 
-  > Usage: create-new-project-plugin.sh [OPTION]...
+  > Usage: create-new-plugin-project.sh [OPTION]...
   >
   > -h, --help
   >
@@ -247,11 +247,11 @@ $ ./script/generate
   >
   >   名称空间
   >    (Default: laplacian)
-- [./script/create-new-project-project-group.sh](<./scripts/create-new-project-project-group.sh>)
+- [./script/create-new-project-group-project.sh](<./scripts/create-new-project-group-project.sh>)
 
   将一个新的project-group项目添加到这个项目组中。
 
-  > Usage: create-new-project-project-group.sh [OPTION]...
+  > Usage: create-new-project-group-project.sh [OPTION]...
   >
   > -h, --help
   >
@@ -273,11 +273,11 @@ $ ./script/generate
   >
   >   名称空间
   >    (Default: laplacian)
-- [./script/create-new-project-project-types.sh](<./scripts/create-new-project-project-types.sh>)
+- [./script/create-new-project-types-project.sh](<./scripts/create-new-project-types-project.sh>)
 
   将一个新的project-types项目添加到这个项目组中。
 
-  > Usage: create-new-project-project-types.sh [OPTION]...
+  > Usage: create-new-project-types-project.sh [OPTION]...
   >
   > -h, --help
   >
@@ -299,11 +299,11 @@ $ ./script/generate
   >
   >   名称空间
   >    (Default: laplacian)
-- [./script/create-new-project-template.sh](<./scripts/create-new-project-template.sh>)
+- [./script/create-new-template-project.sh](<./scripts/create-new-template-project.sh>)
 
   将一个新的template项目添加到这个项目组中。
 
-  > Usage: create-new-project-template.sh [OPTION]...
+  > Usage: create-new-template-project.sh [OPTION]...
   >
   > -h, --help
   >
