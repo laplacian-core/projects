@@ -600,6 +600,11 @@ $ ./script/generate
   >   自動生成処理中に`model/` `template/`ディレクトリの内容が更新された場合に、
   >   再帰的に自動生成処理を実行する回数の上限。
   >    (Default: 10)
+  > , --local-module-repository [VALUE]
+  >
+  >   ローカルでビルドされたモジュールを格納するリポジトリのパス。
+  >   ここに存在するモジュールが最優先で参照される。
+  >   
 - [./script/git-each-subproject.sh](<./scripts/git-each-subproject.sh>)
 
   各サブプロジェクトに対して、引数で指定されたGitサブコマンドを一括実行します。
@@ -645,6 +650,11 @@ $ ./script/generate
   > , --skip-generation
   >
   >   自動生成処理を行わずに、ビルドおよびローカルリポジトリへの登録を行います。
+  >   
+  > , --local-module-repository [VALUE]
+  >
+  >   ビルドしたモジュールを格納するローカルリポジトリのパス。
+  >   指定したパスにリポジトリが存在しない場合は、自動的に作成されます。
   >   
 - [./script/publish-local-common-model.sh](<./scripts/publish-local-common-model.sh>)
 

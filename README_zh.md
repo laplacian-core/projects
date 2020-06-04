@@ -601,6 +601,11 @@ $ ./script/generate
   >
   >   当`model/` `template/`目录的内容在生成过程中被更新时，递归执行的次数上限。
   >    (Default: 10)
+  > , --local-module-repository [VALUE]
+  >
+  >   存储本地构建的模块的存储库路径。
+  >   这个存储库中的模块具有最高优先级。
+  >   
 - [./script/git-each-subproject.sh](<./scripts/git-each-subproject.sh>)
 
   执行参数为每个子项目指定的git子命令。
@@ -645,6 +650,11 @@ $ ./script/generate
   > , --skip-generation
   >
   >   这个选项与[generate.sh](<./scripts/generate.sh>)中的同名选项相同。
+  >   
+  > , --local-module-repository [VALUE]
+  >
+  >   到本地存储库的路径。
+  >   如果在指定的路径中不存在存储库，将自动创建。
   >   
 - [./script/publish-local-common-model.sh](<./scripts/publish-local-common-model.sh>)
 
