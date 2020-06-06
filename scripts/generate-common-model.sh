@@ -17,6 +17,8 @@ run_generate_common_model() {
   parse_args "$@"
   ! [ -z $VERBOSE ] && set -x
   ! [ -z $HELP ] && show_usage && exit 0
+
+  source $SCRIPT_BASE_DIR/.generate-common-model/main.sh
   main
 }
 
@@ -57,5 +59,4 @@ Usage: ./scripts/generate-common-model.sh [OPTION]...
 END
 }
 
-source $SCRIPT_BASE_DIR/.generate-common-model/main.sh
 run_generate_common_model "$@"

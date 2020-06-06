@@ -606,6 +606,11 @@ $ ./script/generate
   >   存储本地构建的模块的存储库路径。
   >   这个存储库中的模块具有最高优先级。
   >   
+  > , --updates-scripts-only
+  >
+  >   仅更新脚本文件。
+  >   这个选项在项目初始生成时用于生成生成器脚本本身。
+  >   
 - [./script/git-each-subproject.sh](<./scripts/git-each-subproject.sh>)
 
   执行参数为每个子项目指定的git子命令。

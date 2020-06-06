@@ -20,6 +20,8 @@ run_create_new_generator_project() {
   read_user_input
   ! [ -z $VERBOSE ] && set -x
   ! [ -z $HELP ] && show_usage && exit 0
+
+  source $SCRIPT_BASE_DIR/.create-new-generator-project/main.sh
   main
 }
 
@@ -77,5 +79,4 @@ Usage: ./scripts/create-new-generator-project.sh [OPTION]...
 END
 }
 
-source $SCRIPT_BASE_DIR/.create-new-generator-project/main.sh
 run_create_new_generator_project "$@"

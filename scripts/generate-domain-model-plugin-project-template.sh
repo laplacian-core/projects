@@ -17,6 +17,8 @@ run_generate_domain_model_plugin_project_template() {
   parse_args "$@"
   ! [ -z $VERBOSE ] && set -x
   ! [ -z $HELP ] && show_usage && exit 0
+
+  source $SCRIPT_BASE_DIR/.generate-domain-model-plugin-project-template/main.sh
   main
 }
 
@@ -57,5 +59,4 @@ Usage: ./scripts/generate-domain-model-plugin-project-template.sh [OPTION]...
 END
 }
 
-source $SCRIPT_BASE_DIR/.generate-domain-model-plugin-project-template/main.sh
 run_generate_domain_model_plugin_project_template "$@"

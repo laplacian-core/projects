@@ -20,6 +20,8 @@ run_create_new_model_project() {
   read_user_input
   ! [ -z $VERBOSE ] && set -x
   ! [ -z $HELP ] && show_usage && exit 0
+
+  source $SCRIPT_BASE_DIR/.create-new-model-project/main.sh
   main
 }
 
@@ -77,5 +79,4 @@ Usage: ./scripts/create-new-model-project.sh [OPTION]...
 END
 }
 
-source $SCRIPT_BASE_DIR/.create-new-model-project/main.sh
 run_create_new_model_project "$@"

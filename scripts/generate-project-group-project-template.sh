@@ -17,6 +17,8 @@ run_generate_project_group_project_template() {
   parse_args "$@"
   ! [ -z $VERBOSE ] && set -x
   ! [ -z $HELP ] && show_usage && exit 0
+
+  source $SCRIPT_BASE_DIR/.generate-project-group-project-template/main.sh
   main
 }
 
@@ -57,5 +59,4 @@ Usage: ./scripts/generate-project-group-project-template.sh [OPTION]...
 END
 }
 
-source $SCRIPT_BASE_DIR/.generate-project-group-project-template/main.sh
 run_generate_project_group_project_template "$@"

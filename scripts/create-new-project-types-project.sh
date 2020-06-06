@@ -20,6 +20,8 @@ run_create_new_project_types_project() {
   read_user_input
   ! [ -z $VERBOSE ] && set -x
   ! [ -z $HELP ] && show_usage && exit 0
+
+  source $SCRIPT_BASE_DIR/.create-new-project-types-project/main.sh
   main
 }
 
@@ -77,5 +79,4 @@ Usage: ./scripts/create-new-project-types-project.sh [OPTION]...
 END
 }
 
-source $SCRIPT_BASE_DIR/.create-new-project-types-project/main.sh
 run_create_new_project_types_project "$@"

@@ -16,6 +16,8 @@ run_publish_local_generator_project_template() {
   parse_args "$@"
   ! [ -z $VERBOSE ] && set -x
   ! [ -z $HELP ] && show_usage && exit 0
+
+  source $SCRIPT_BASE_DIR/.publish-local-generator-project-template/main.sh
   main
 }
 
@@ -51,5 +53,4 @@ Usage: ./scripts/publish-local-generator-project-template.sh [OPTION]...
 END
 }
 
-source $SCRIPT_BASE_DIR/.publish-local-generator-project-template/main.sh
 run_publish_local_generator_project_template "$@"

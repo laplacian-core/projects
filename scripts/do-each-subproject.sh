@@ -17,6 +17,8 @@ run_do_each_subproject() {
   parse_args "$@"
   ! [ -z $VERBOSE ] && set -x
   ! [ -z $HELP ] && show_usage && exit 0
+
+  source $SCRIPT_BASE_DIR/.do-each-subproject/main.sh
   main
 }
 
@@ -57,5 +59,4 @@ Usage: ./scripts/do-each-subproject.sh [OPTION]...
 END
 }
 
-source $SCRIPT_BASE_DIR/.do-each-subproject/main.sh
 run_do_each_subproject "$@"
