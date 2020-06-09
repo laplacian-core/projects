@@ -2,7 +2,7 @@
 
 SCRIPTS_DIR='scripts'
 PUBLISH_SCRIPT='publish-local.sh'
-TARGET_PROJECT_DIR="${PROJECT_BASE_DIR}/subprojects/laplacian.domain-model.project-template"
+TARGET_PROJECT_DIR="${PROJECT_BASE_DIR}/subprojects/domain-model-project-template"
 TARGET_PUBLISH_SCRIPT="$TARGET_PROJECT_DIR/$SCRIPTS_DIR/$PUBLISH_SCRIPT"
 
 main() {
@@ -14,5 +14,5 @@ main() {
 }
 
 run_generate() {
-  $PROJECT_BASE_DIR/$SCRIPTS_DIR/generate-laplacian-domain-model-project-template.sh
+  $PROJECT_BASE_DIR/$SCRIPTS_DIR/generate-domain-model-project-template.sh
 }

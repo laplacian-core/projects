@@ -10,7 +10,7 @@ OPT_NAMES='hv-:'
 ARGS=
 HELP=
 VERBOSE=
-PROJECT_NAME=
+PROJECT_NAME=project-types
 PROJECT_VERSION=0.0.1
 NAMESPACE=laplacian
 
@@ -71,7 +71,7 @@ Usage: ./scripts/create-new-project-types-project.sh [OPTION]...
   -v, --verbose
     Displays more detailed command execution information.
   --project-name [VALUE]
-    New project's name
+    New project's name (Default: project-types)
   --project-version [VALUE]
     The initial version number (Default: 0.0.1)
   --namespace [VALUE]

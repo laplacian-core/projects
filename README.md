@@ -131,7 +131,7 @@ $ ./script/generate
   > , --project-name [VALUE]
   >
   >   New project's name
-  >   
+  >    (Default: domain-model-plugin)
   > , --project-version [VALUE]
   >
   >   The initial version number
@@ -157,7 +157,7 @@ $ ./script/generate
   > , --project-name [VALUE]
   >
   >   New project's name
-  >   
+  >    (Default: domain-model)
   > , --project-version [VALUE]
   >
   >   The initial version number
@@ -183,7 +183,7 @@ $ ./script/generate
   > , --project-name [VALUE]
   >
   >   New project's name
-  >   
+  >    (Default: generator)
   > , --project-version [VALUE]
   >
   >   The initial version number
@@ -209,7 +209,7 @@ $ ./script/generate
   > , --project-name [VALUE]
   >
   >   New project's name
-  >   
+  >    (Default: model)
   > , --project-version [VALUE]
   >
   >   The initial version number
@@ -235,7 +235,7 @@ $ ./script/generate
   > , --project-name [VALUE]
   >
   >   New project's name
-  >   
+  >    (Default: plugin)
   > , --project-version [VALUE]
   >
   >   The initial version number
@@ -261,7 +261,7 @@ $ ./script/generate
   > , --project-name [VALUE]
   >
   >   New project's name
-  >   
+  >    (Default: project-group)
   > , --project-version [VALUE]
   >
   >   The initial version number
@@ -287,7 +287,7 @@ $ ./script/generate
   > , --project-name [VALUE]
   >
   >   New project's name
-  >   
+  >    (Default: project-types)
   > , --project-version [VALUE]
   >
   >   The initial version number
@@ -313,7 +313,7 @@ $ ./script/generate
   > , --project-name [VALUE]
   >
   >   New project's name
-  >   
+  >    (Default: template)
   > , --project-version [VALUE]
   >
   >   The initial version number
@@ -367,7 +367,7 @@ $ ./script/generate
 
   Generates the [laplacian/common-model](<https://github.com/nabla-squared/laplacian.common-model.git>) project as a subproject in the following directory.
   ```
-  subprojects/laplacian.common-model
+  subprojects/common-model
   ```
   If the subproject already exists, the content of the subproject is updated.
 
@@ -389,7 +389,7 @@ $ ./script/generate
 
   Generates the [laplacian/domain-model-plugin.project-template](<https://github.com/nabla-squared/laplacian.domain-model-plugin.project-template.git>) project as a subproject in the following directory.
   ```
-  subprojects/laplacian.domain-model-plugin.project-template
+  subprojects/domain-model-plugin-project-template
   ```
   If the subproject already exists, the content of the subproject is updated.
 
@@ -411,7 +411,7 @@ $ ./script/generate
 
   Generates the [laplacian/domain-model.project-template](<https://github.com/nabla-squared/laplacian.domain-model.project-template.git>) project as a subproject in the following directory.
   ```
-  subprojects/laplacian.domain-model.project-template
+  subprojects/domain-model-project-template
   ```
   If the subproject already exists, the content of the subproject is updated.
 
@@ -433,7 +433,7 @@ $ ./script/generate
 
   Generates the [laplacian/generator.project-template](<https://github.com/nabla-squared/laplacian.generator.project-template.git>) project as a subproject in the following directory.
   ```
-  subprojects/laplacian.generator.project-template
+  subprojects/generator-project-template
   ```
   If the subproject already exists, the content of the subproject is updated.
 
@@ -455,7 +455,7 @@ $ ./script/generate
 
   Generates the [laplacian/metamodel](<https://github.com/nabla-squared/laplacian.metamodel.git>) project as a subproject in the following directory.
   ```
-  subprojects/laplacian.metamodel
+  subprojects/metamodel
   ```
   If the subproject already exists, the content of the subproject is updated.
 
@@ -477,7 +477,7 @@ $ ./script/generate
 
   Generates the [laplacian/project.domain-model](<https://github.com/nabla-squared/laplacian.project.domain-model.git>) project as a subproject in the following directory.
   ```
-  subprojects/laplacian.project.domain-model
+  subprojects/project-domain-model
   ```
   If the subproject already exists, the content of the subproject is updated.
 
@@ -499,7 +499,7 @@ $ ./script/generate
 
   Generates the [laplacian/project-group.project-template](<https://github.com/nabla-squared/laplacian.project-group.project-template.git>) project as a subproject in the following directory.
   ```
-  subprojects/laplacian.project-group.project-template
+  subprojects/project-group-project-template
   ```
   If the subproject already exists, the content of the subproject is updated.
 
@@ -521,7 +521,7 @@ $ ./script/generate
 
   Generates the [laplacian/project.project-types](<https://github.com/nabla-squared/laplacian.project.project-types.git>) project as a subproject in the following directory.
   ```
-  subprojects/laplacian.project.project-types
+  subprojects/project-project-types
   ```
   If the subproject already exists, the content of the subproject is updated.
 

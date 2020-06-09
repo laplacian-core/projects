@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 
-SUBPROJECTS='subprojects/laplacian.common-model
-subprojects/laplacian.domain-model-plugin.project-template
-subprojects/laplacian.domain-model.project-template
-subprojects/laplacian.generator.project-template
-subprojects/laplacian.metamodel
-subprojects/laplacian.project-group.project-template
-subprojects/laplacian.project.domain-model
-subprojects/laplacian.project.project-types
+SUBPROJECTS='subprojects/common-model
+subprojects/domain-model-plugin-project-template
+subprojects/domain-model-project-template
+subprojects/generator-project-template
+subprojects/metamodel
+subprojects/project-group-project-template
+subprojects/project-domain-model
+subprojects/project-project-types
 '
 
 main() {

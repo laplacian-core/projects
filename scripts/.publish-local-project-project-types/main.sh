@@ -2,7 +2,7 @@
 
 SCRIPTS_DIR='scripts'
 PUBLISH_SCRIPT='publish-local.sh'
-TARGET_PROJECT_DIR="${PROJECT_BASE_DIR}/subprojects/laplacian.project.project-types"
+TARGET_PROJECT_DIR="${PROJECT_BASE_DIR}/subprojects/project-project-types"
 TARGET_PUBLISH_SCRIPT="$TARGET_PROJECT_DIR/$SCRIPTS_DIR/$PUBLISH_SCRIPT"
 
 main() {
@@ -14,5 +14,5 @@ main() {
 }
 
 run_generate() {
-  $PROJECT_BASE_DIR/$SCRIPTS_DIR/generate-laplacian-project-project-types.sh
+  $PROJECT_BASE_DIR/$SCRIPTS_DIR/generate-project-project-types.sh
 }

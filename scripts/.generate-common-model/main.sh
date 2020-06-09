@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-RAW_HOST='https://raw.githubusercontent.com/nabla-squared/laplacian.projects/master'
-
 MODEL_DIR='model'
 PROJECT_MODEL_FILE="$MODEL_DIR/project.yaml"
 MODEL_SCHEMA_PARTIAL='model-schema-partial.json'
@@ -13,7 +11,7 @@ PROJECT_GENERATOR_MAIN="$SCRIPTS_DIR/.generate/main.sh"
 LAPLACIAN_GENERATOR="$SCRIPTS_DIR/laplacian-generate.sh"
 VSCODE_SETTING=".vscode/settings.json"
 
-TARGET_PROJECT_DIR="$PROJECT_BASE_DIR/subprojects/laplacian.common-model"
+TARGET_PROJECT_DIR="$PROJECT_BASE_DIR/subprojects/common-model"
 TARGET_MODEL_DIR="$TARGET_PROJECT_DIR/$MODEL_DIR"
 TARGET_SCRIPT_DIR="$TARGET_PROJECT_DIR/$SCRIPTS_DIR"
 TARGET_PROJECT_MODEL_FILE="$TARGET_MODEL_DIR/project.yaml"
@@ -87,11 +85,7 @@ install_file() {
   then
     mkdir -p $dir_path
   fi
-  curl -Ls -o "$rel_path" "$RAW_HOST/$rel_path"
-  if [[ $rel_path == *.sh ]]
-  then
-    chmod 755 "$rel_path"
-  fi
+  cp "$PROJECT_BASE_DIR/$rel_path" $rel_path
 }
 
 run_generator() {

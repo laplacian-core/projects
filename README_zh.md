@@ -134,7 +134,7 @@ $ ./script/generate
   > , --project-name [VALUE]
   >
   >   新项目的名称
-  >   
+  >    (Default: domain-model-plugin)
   > , --project-version [VALUE]
   >
   >   最初的版本号
@@ -160,7 +160,7 @@ $ ./script/generate
   > , --project-name [VALUE]
   >
   >   新项目的名称
-  >   
+  >    (Default: domain-model)
   > , --project-version [VALUE]
   >
   >   最初的版本号
@@ -186,7 +186,7 @@ $ ./script/generate
   > , --project-name [VALUE]
   >
   >   新项目的名称
-  >   
+  >    (Default: generator)
   > , --project-version [VALUE]
   >
   >   最初的版本号
@@ -212,7 +212,7 @@ $ ./script/generate
   > , --project-name [VALUE]
   >
   >   新项目的名称
-  >   
+  >    (Default: model)
   > , --project-version [VALUE]
   >
   >   最初的版本号
@@ -238,7 +238,7 @@ $ ./script/generate
   > , --project-name [VALUE]
   >
   >   新项目的名称
-  >   
+  >    (Default: plugin)
   > , --project-version [VALUE]
   >
   >   最初的版本号
@@ -264,7 +264,7 @@ $ ./script/generate
   > , --project-name [VALUE]
   >
   >   新项目的名称
-  >   
+  >    (Default: project-group)
   > , --project-version [VALUE]
   >
   >   最初的版本号
@@ -290,7 +290,7 @@ $ ./script/generate
   > , --project-name [VALUE]
   >
   >   新项目的名称
-  >   
+  >    (Default: project-types)
   > , --project-version [VALUE]
   >
   >   最初的版本号
@@ -316,7 +316,7 @@ $ ./script/generate
   > , --project-name [VALUE]
   >
   >   新项目的名称
-  >   
+  >    (Default: template)
   > , --project-version [VALUE]
   >
   >   最初的版本号
@@ -370,7 +370,7 @@ $ ./script/generate
 
   在下面的目录中生成[laplacian/common-model](<https://github.com/nabla-squared/laplacian.common-model.git>)项目，作为子项目。
   ```
-  subprojects/laplacian.common-model
+  subprojects/common-model
   ```
   如果子项目已经存在，则更新子项目的内容。
 
@@ -392,7 +392,7 @@ $ ./script/generate
 
   在下面的目录中生成[laplacian/domain-model-plugin.project-template](<https://github.com/nabla-squared/laplacian.domain-model-plugin.project-template.git>)项目，作为子项目。
   ```
-  subprojects/laplacian.domain-model-plugin.project-template
+  subprojects/domain-model-plugin-project-template
   ```
   如果子项目已经存在，则更新子项目的内容。
 
@@ -414,7 +414,7 @@ $ ./script/generate
 
   在下面的目录中生成[laplacian/domain-model.project-template](<https://github.com/nabla-squared/laplacian.domain-model.project-template.git>)项目，作为子项目。
   ```
-  subprojects/laplacian.domain-model.project-template
+  subprojects/domain-model-project-template
   ```
   如果子项目已经存在，则更新子项目的内容。
 
@@ -436,7 +436,7 @@ $ ./script/generate
 
   在下面的目录中生成[laplacian/generator.project-template](<https://github.com/nabla-squared/laplacian.generator.project-template.git>)项目，作为子项目。
   ```
-  subprojects/laplacian.generator.project-template
+  subprojects/generator-project-template
   ```
   如果子项目已经存在，则更新子项目的内容。
 
@@ -458,7 +458,7 @@ $ ./script/generate
 
   在下面的目录中生成[laplacian/metamodel](<https://github.com/nabla-squared/laplacian.metamodel.git>)项目，作为子项目。
   ```
-  subprojects/laplacian.metamodel
+  subprojects/metamodel
   ```
   如果子项目已经存在，则更新子项目的内容。
 
@@ -480,7 +480,7 @@ $ ./script/generate
 
   在下面的目录中生成[laplacian/project.domain-model](<https://github.com/nabla-squared/laplacian.project.domain-model.git>)项目，作为子项目。
   ```
-  subprojects/laplacian.project.domain-model
+  subprojects/project-domain-model
   ```
   如果子项目已经存在，则更新子项目的内容。
 
@@ -502,7 +502,7 @@ $ ./script/generate
 
   在下面的目录中生成[laplacian/project-group.project-template](<https://github.com/nabla-squared/laplacian.project-group.project-template.git>)项目，作为子项目。
   ```
-  subprojects/laplacian.project-group.project-template
+  subprojects/project-group-project-template
   ```
   如果子项目已经存在，则更新子项目的内容。
 
@@ -524,7 +524,7 @@ $ ./script/generate
 
   在下面的目录中生成[laplacian/project.project-types](<https://github.com/nabla-squared/laplacian.project.project-types.git>)项目，作为子项目。
   ```
-  subprojects/laplacian.project.project-types
+  subprojects/project-project-types
   ```
   如果子项目已经存在，则更新子项目的内容。
 

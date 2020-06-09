@@ -133,7 +133,7 @@ $ ./script/generate
   > , --project-name [VALUE]
   >
   >   新規プロジェクト名
-  >   
+  >    (Default: domain-model-plugin)
   > , --project-version [VALUE]
   >
   >   初期バージョン番号
@@ -159,7 +159,7 @@ $ ./script/generate
   > , --project-name [VALUE]
   >
   >   新規プロジェクト名
-  >   
+  >    (Default: domain-model)
   > , --project-version [VALUE]
   >
   >   初期バージョン番号
@@ -185,7 +185,7 @@ $ ./script/generate
   > , --project-name [VALUE]
   >
   >   新規プロジェクト名
-  >   
+  >    (Default: generator)
   > , --project-version [VALUE]
   >
   >   初期バージョン番号
@@ -211,7 +211,7 @@ $ ./script/generate
   > , --project-name [VALUE]
   >
   >   新規プロジェクト名
-  >   
+  >    (Default: model)
   > , --project-version [VALUE]
   >
   >   初期バージョン番号
@@ -237,7 +237,7 @@ $ ./script/generate
   > , --project-name [VALUE]
   >
   >   新規プロジェクト名
-  >   
+  >    (Default: plugin)
   > , --project-version [VALUE]
   >
   >   初期バージョン番号
@@ -263,7 +263,7 @@ $ ./script/generate
   > , --project-name [VALUE]
   >
   >   新規プロジェクト名
-  >   
+  >    (Default: project-group)
   > , --project-version [VALUE]
   >
   >   初期バージョン番号
@@ -289,7 +289,7 @@ $ ./script/generate
   > , --project-name [VALUE]
   >
   >   新規プロジェクト名
-  >   
+  >    (Default: project-types)
   > , --project-version [VALUE]
   >
   >   初期バージョン番号
@@ -315,7 +315,7 @@ $ ./script/generate
   > , --project-name [VALUE]
   >
   >   新規プロジェクト名
-  >   
+  >    (Default: template)
   > , --project-version [VALUE]
   >
   >   初期バージョン番号
@@ -369,7 +369,7 @@ $ ./script/generate
 
   [laplacian/common-model](<https://github.com/nabla-squared/laplacian.common-model.git>)プロジェクトをサブプロジェクトとして下記のディレクトリに生成します。
   ```
-  subprojects/laplacian.common-model
+  subprojects/common-model
   ```
   すでにそのサブプロジェクトが存在する場合はその内容を更新します。
 
@@ -391,7 +391,7 @@ $ ./script/generate
 
   [laplacian/domain-model-plugin.project-template](<https://github.com/nabla-squared/laplacian.domain-model-plugin.project-template.git>)プロジェクトをサブプロジェクトとして下記のディレクトリに生成します。
   ```
-  subprojects/laplacian.domain-model-plugin.project-template
+  subprojects/domain-model-plugin-project-template
   ```
   すでにそのサブプロジェクトが存在する場合はその内容を更新します。
 
@@ -413,7 +413,7 @@ $ ./script/generate
 
   [laplacian/domain-model.project-template](<https://github.com/nabla-squared/laplacian.domain-model.project-template.git>)プロジェクトをサブプロジェクトとして下記のディレクトリに生成します。
   ```
-  subprojects/laplacian.domain-model.project-template
+  subprojects/domain-model-project-template
   ```
   すでにそのサブプロジェクトが存在する場合はその内容を更新します。
 
@@ -435,7 +435,7 @@ $ ./script/generate
 
   [laplacian/generator.project-template](<https://github.com/nabla-squared/laplacian.generator.project-template.git>)プロジェクトをサブプロジェクトとして下記のディレクトリに生成します。
   ```
-  subprojects/laplacian.generator.project-template
+  subprojects/generator-project-template
   ```
   すでにそのサブプロジェクトが存在する場合はその内容を更新します。
 
@@ -457,7 +457,7 @@ $ ./script/generate
 
   [laplacian/metamodel](<https://github.com/nabla-squared/laplacian.metamodel.git>)プロジェクトをサブプロジェクトとして下記のディレクトリに生成します。
   ```
-  subprojects/laplacian.metamodel
+  subprojects/metamodel
   ```
   すでにそのサブプロジェクトが存在する場合はその内容を更新します。
 
@@ -479,7 +479,7 @@ $ ./script/generate
 
   [laplacian/project.domain-model](<https://github.com/nabla-squared/laplacian.project.domain-model.git>)プロジェクトをサブプロジェクトとして下記のディレクトリに生成します。
   ```
-  subprojects/laplacian.project.domain-model
+  subprojects/project-domain-model
   ```
   すでにそのサブプロジェクトが存在する場合はその内容を更新します。
 
@@ -501,7 +501,7 @@ $ ./script/generate
 
   [laplacian/project-group.project-template](<https://github.com/nabla-squared/laplacian.project-group.project-template.git>)プロジェクトをサブプロジェクトとして下記のディレクトリに生成します。
   ```
-  subprojects/laplacian.project-group.project-template
+  subprojects/project-group-project-template
   ```
   すでにそのサブプロジェクトが存在する場合はその内容を更新します。
 
@@ -523,7 +523,7 @@ $ ./script/generate
 
   [laplacian/project.project-types](<https://github.com/nabla-squared/laplacian.project.project-types.git>)プロジェクトをサブプロジェクトとして下記のディレクトリに生成します。
   ```
-  subprojects/laplacian.project.project-types
+  subprojects/project-project-types
   ```
   すでにそのサブプロジェクトが存在する場合はその内容を更新します。
 
