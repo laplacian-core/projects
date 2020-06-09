@@ -30,7 +30,7 @@ sync_source_with_repository() {
     mkdir -p $TARGET_PROJECT_DIR
     rm -rf $TARGET_PROJECT_DIR
     git clone -b master \
-        https://github.com/nabla-squared/laplacian.project-group.project-template.git \
+        https://github.com/laplacian-core/project-group.project-template.git \
         $TARGET_PROJECT_DIR
   else
     (cd $TARGET_PROJECT_DIR && git pull)
@@ -55,7 +55,7 @@ project:
     zh: |
       这个模板是项目组用来生成标准的项目文件夹结构和操作和开发脚本的模板。
   source_repository:
-    url: https://github.com/nabla-squared/laplacian.project-group.project-template.git
+    url: https://github.com/laplacian-core/project-group.project-template.git
     branch: master
   module_repositories:
     local:

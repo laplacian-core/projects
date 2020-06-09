@@ -72,23 +72,23 @@ $ ./script/generate
 ### Project list
 
 
-- [**laplacian/common-model**](<https://github.com/nabla-squared/laplacian.common-model.git>)
+- [**laplacian/common-model**](<https://github.com/laplacian-core/common-model.git>)
 
 > Defines the generally applicable models that is not specific to a certain domain.
 > 
-- [**laplacian/domain-model-plugin.project-template**](<https://github.com/nabla-squared/laplacian.domain-model-plugin.project-template.git>)
+- [**laplacian/domain-model-plugin.project-template**](<https://github.com/laplacian-core/domain-model-plugin.project-template.git>)
 
 > A template for a domain model plugin project.
 > 
-- [**laplacian/domain-model.project-template**](<https://github.com/nabla-squared/laplacian.domain-model.project-template.git>)
+- [**laplacian/domain-model.project-template**](<https://github.com/laplacian-core/domain-model.project-template.git>)
 
 > This is a template module that generates directory structure, development scripts, and relating documents for a domain model project.
 > 
-- [**laplacian/generator.project-template**](<https://github.com/nabla-squared/laplacian.generator.project-template.git>)
+- [**laplacian/generator.project-template**](<https://github.com/laplacian-core/generator.project-template.git>)
 
 > This template module generates the standard directory structure and common scripts for building and publishing to local repositories in a Laplacian project.
 > 
-- [**laplacian/metamodel**](<https://github.com/nabla-squared/laplacian.metamodel.git>)
+- [**laplacian/metamodel**](<https://github.com/laplacian-core/metamodel.git>)
 
 > This model is a model for defining a model, i.e. a metamodel.
 > In this model, you can define a model with the following structure
@@ -99,15 +99,15 @@ $ ./script/generate
 > - inheritance
 > - mixin
 > 
-- [**laplacian/project-group.project-template**](<https://github.com/nabla-squared/laplacian.project-group.project-template.git>)
+- [**laplacian/project-group.project-template**](<https://github.com/laplacian-core/project-group.project-template.git>)
 
 > This is a template used by project groups to generate standard project folder structure and scripts for operations and development.
 > 
-- [**laplacian/project.domain-model**](<https://github.com/nabla-squared/laplacian.project.domain-model.git>)
+- [**laplacian/project.domain-model**](<https://github.com/laplacian-core/project.domain-model.git>)
 
 > This model represents the logical structure of a *Laplacian*-based project.
 > 
-- [**laplacian/project.project-types**](<https://github.com/nabla-squared/laplacian.project.project-types.git>)
+- [**laplacian/project.project-types**](<https://github.com/laplacian-core/project.project-types.git>)
 
 > The model data that defines the content of each project type.
 > 
@@ -365,7 +365,7 @@ $ ./script/generate
   >   
 - [./script/generate-common-model.sh](<./scripts/generate-common-model.sh>)
 
-  Generates the [laplacian/common-model](<https://github.com/nabla-squared/laplacian.common-model.git>) project as a subproject in the following directory.
+  Generates the [laplacian/common-model](<https://github.com/laplacian-core/common-model.git>) project as a subproject in the following directory.
   ```
   subprojects/common-model
   ```
@@ -387,7 +387,7 @@ $ ./script/generate
   >   
 - [./script/generate-domain-model-plugin-project-template.sh](<./scripts/generate-domain-model-plugin-project-template.sh>)
 
-  Generates the [laplacian/domain-model-plugin.project-template](<https://github.com/nabla-squared/laplacian.domain-model-plugin.project-template.git>) project as a subproject in the following directory.
+  Generates the [laplacian/domain-model-plugin.project-template](<https://github.com/laplacian-core/domain-model-plugin.project-template.git>) project as a subproject in the following directory.
   ```
   subprojects/domain-model-plugin-project-template
   ```
@@ -409,7 +409,7 @@ $ ./script/generate
   >   
 - [./script/generate-domain-model-project-template.sh](<./scripts/generate-domain-model-project-template.sh>)
 
-  Generates the [laplacian/domain-model.project-template](<https://github.com/nabla-squared/laplacian.domain-model.project-template.git>) project as a subproject in the following directory.
+  Generates the [laplacian/domain-model.project-template](<https://github.com/laplacian-core/domain-model.project-template.git>) project as a subproject in the following directory.
   ```
   subprojects/domain-model-project-template
   ```
@@ -431,7 +431,7 @@ $ ./script/generate
   >   
 - [./script/generate-generator-project-template.sh](<./scripts/generate-generator-project-template.sh>)
 
-  Generates the [laplacian/generator.project-template](<https://github.com/nabla-squared/laplacian.generator.project-template.git>) project as a subproject in the following directory.
+  Generates the [laplacian/generator.project-template](<https://github.com/laplacian-core/generator.project-template.git>) project as a subproject in the following directory.
   ```
   subprojects/generator-project-template
   ```
@@ -453,7 +453,7 @@ $ ./script/generate
   >   
 - [./script/generate-metamodel.sh](<./scripts/generate-metamodel.sh>)
 
-  Generates the [laplacian/metamodel](<https://github.com/nabla-squared/laplacian.metamodel.git>) project as a subproject in the following directory.
+  Generates the [laplacian/metamodel](<https://github.com/laplacian-core/metamodel.git>) project as a subproject in the following directory.
   ```
   subprojects/metamodel
   ```
@@ -475,7 +475,7 @@ $ ./script/generate
   >   
 - [./script/generate-project-domain-model.sh](<./scripts/generate-project-domain-model.sh>)
 
-  Generates the [laplacian/project.domain-model](<https://github.com/nabla-squared/laplacian.project.domain-model.git>) project as a subproject in the following directory.
+  Generates the [laplacian/project.domain-model](<https://github.com/laplacian-core/project.domain-model.git>) project as a subproject in the following directory.
   ```
   subprojects/project-domain-model
   ```
@@ -497,7 +497,7 @@ $ ./script/generate
   >   
 - [./script/generate-project-group-project-template.sh](<./scripts/generate-project-group-project-template.sh>)
 
-  Generates the [laplacian/project-group.project-template](<https://github.com/nabla-squared/laplacian.project-group.project-template.git>) project as a subproject in the following directory.
+  Generates the [laplacian/project-group.project-template](<https://github.com/laplacian-core/project-group.project-template.git>) project as a subproject in the following directory.
   ```
   subprojects/project-group-project-template
   ```
@@ -519,7 +519,7 @@ $ ./script/generate
   >   
 - [./script/generate-project-project-types.sh](<./scripts/generate-project-project-types.sh>)
 
-  Generates the [laplacian/project.project-types](<https://github.com/nabla-squared/laplacian.project.project-types.git>) project as a subproject in the following directory.
+  Generates the [laplacian/project.project-types](<https://github.com/laplacian-core/project.project-types.git>) project as a subproject in the following directory.
   ```
   subprojects/project-project-types
   ```
@@ -669,7 +669,7 @@ $ ./script/generate
   >   
 - [./script/publish-local-common-model.sh](<./scripts/publish-local-common-model.sh>)
 
-  Generates resources for the [laplacian/common-model](<https://github.com/nabla-squared/laplacian.common-model.git>) subproject.
+  Generates resources for the [laplacian/common-model](<https://github.com/laplacian-core/common-model.git>) subproject.
 
   > Usage: publish-local-common-model.sh [OPTION]...
   >
@@ -683,7 +683,7 @@ $ ./script/generate
   >   
 - [./script/publish-local-domain-model-plugin-project-template.sh](<./scripts/publish-local-domain-model-plugin-project-template.sh>)
 
-  Generates resources for the [laplacian/domain-model-plugin.project-template](<https://github.com/nabla-squared/laplacian.domain-model-plugin.project-template.git>) subproject.
+  Generates resources for the [laplacian/domain-model-plugin.project-template](<https://github.com/laplacian-core/domain-model-plugin.project-template.git>) subproject.
 
   > Usage: publish-local-domain-model-plugin-project-template.sh [OPTION]...
   >
@@ -697,7 +697,7 @@ $ ./script/generate
   >   
 - [./script/publish-local-domain-model-project-template.sh](<./scripts/publish-local-domain-model-project-template.sh>)
 
-  Generates resources for the [laplacian/domain-model.project-template](<https://github.com/nabla-squared/laplacian.domain-model.project-template.git>) subproject.
+  Generates resources for the [laplacian/domain-model.project-template](<https://github.com/laplacian-core/domain-model.project-template.git>) subproject.
 
   > Usage: publish-local-domain-model-project-template.sh [OPTION]...
   >
@@ -711,7 +711,7 @@ $ ./script/generate
   >   
 - [./script/publish-local-generator-project-template.sh](<./scripts/publish-local-generator-project-template.sh>)
 
-  Generates resources for the [laplacian/generator.project-template](<https://github.com/nabla-squared/laplacian.generator.project-template.git>) subproject.
+  Generates resources for the [laplacian/generator.project-template](<https://github.com/laplacian-core/generator.project-template.git>) subproject.
 
   > Usage: publish-local-generator-project-template.sh [OPTION]...
   >
@@ -725,7 +725,7 @@ $ ./script/generate
   >   
 - [./script/publish-local-metamodel.sh](<./scripts/publish-local-metamodel.sh>)
 
-  Generates resources for the [laplacian/metamodel](<https://github.com/nabla-squared/laplacian.metamodel.git>) subproject.
+  Generates resources for the [laplacian/metamodel](<https://github.com/laplacian-core/metamodel.git>) subproject.
 
   > Usage: publish-local-metamodel.sh [OPTION]...
   >
@@ -739,7 +739,7 @@ $ ./script/generate
   >   
 - [./script/publish-local-project-domain-model.sh](<./scripts/publish-local-project-domain-model.sh>)
 
-  Generates resources for the [laplacian/project.domain-model](<https://github.com/nabla-squared/laplacian.project.domain-model.git>) subproject.
+  Generates resources for the [laplacian/project.domain-model](<https://github.com/laplacian-core/project.domain-model.git>) subproject.
 
   > Usage: publish-local-project-domain-model.sh [OPTION]...
   >
@@ -753,7 +753,7 @@ $ ./script/generate
   >   
 - [./script/publish-local-project-group-project-template.sh](<./scripts/publish-local-project-group-project-template.sh>)
 
-  Generates resources for the [laplacian/project-group.project-template](<https://github.com/nabla-squared/laplacian.project-group.project-template.git>) subproject.
+  Generates resources for the [laplacian/project-group.project-template](<https://github.com/laplacian-core/project-group.project-template.git>) subproject.
 
   > Usage: publish-local-project-group-project-template.sh [OPTION]...
   >
@@ -767,7 +767,7 @@ $ ./script/generate
   >   
 - [./script/publish-local-project-project-types.sh](<./scripts/publish-local-project-project-types.sh>)
 
-  Generates resources for the [laplacian/project.project-types](<https://github.com/nabla-squared/laplacian.project.project-types.git>) subproject.
+  Generates resources for the [laplacian/project.project-types](<https://github.com/laplacian-core/project.project-types.git>) subproject.
 
   > Usage: publish-local-project-project-types.sh [OPTION]...
   >
@@ -783,14 +783,14 @@ $ ./script/generate
 
 
 - [model/project.yaml](<./model/project.yaml>)
-- [src/project/subprojects/laplacian/laplacian.common-model.yaml](<./src/project/subprojects/laplacian/laplacian.common-model.yaml>)
-- [src/project/subprojects/laplacian/laplacian.domain-model-plugin.project-template.yaml](<./src/project/subprojects/laplacian/laplacian.domain-model-plugin.project-template.yaml>)
-- [src/project/subprojects/laplacian/laplacian.domain-model.project-template.yaml](<./src/project/subprojects/laplacian/laplacian.domain-model.project-template.yaml>)
-- [src/project/subprojects/laplacian/laplacian.generator.project-template.yaml](<./src/project/subprojects/laplacian/laplacian.generator.project-template.yaml>)
-- [src/project/subprojects/laplacian/laplacian.metamodel.yaml](<./src/project/subprojects/laplacian/laplacian.metamodel.yaml>)
-- [src/project/subprojects/laplacian/laplacian.project.domain-model.yaml](<./src/project/subprojects/laplacian/laplacian.project.domain-model.yaml>)
-- [src/project/subprojects/laplacian/laplacian.project-group.project-template.yaml](<./src/project/subprojects/laplacian/laplacian.project-group.project-template.yaml>)
-- [src/project/subprojects/laplacian/laplacian.project.project-types.yaml](<./src/project/subprojects/laplacian/laplacian.project.project-types.yaml>)
+- [src/project/subprojects/laplacian/common-model.yaml](<./src/project/subprojects/laplacian/common-model.yaml>)
+- [src/project/subprojects/laplacian/domain-model-plugin.project-template.yaml](<./src/project/subprojects/laplacian/domain-model-plugin.project-template.yaml>)
+- [src/project/subprojects/laplacian/domain-model.project-template.yaml](<./src/project/subprojects/laplacian/domain-model.project-template.yaml>)
+- [src/project/subprojects/laplacian/generator.project-template.yaml](<./src/project/subprojects/laplacian/generator.project-template.yaml>)
+- [src/project/subprojects/laplacian/metamodel.yaml](<./src/project/subprojects/laplacian/metamodel.yaml>)
+- [src/project/subprojects/laplacian/project.domain-model.yaml](<./src/project/subprojects/laplacian/project.domain-model.yaml>)
+- [src/project/subprojects/laplacian/project-group.project-template.yaml](<./src/project/subprojects/laplacian/project-group.project-template.yaml>)
+- [src/project/subprojects/laplacian/project.project-types.yaml](<./src/project/subprojects/laplacian/project.project-types.yaml>)
 
 
 <!-- @main-content@ -->

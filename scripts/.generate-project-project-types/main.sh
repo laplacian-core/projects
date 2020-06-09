@@ -30,7 +30,7 @@ sync_source_with_repository() {
     mkdir -p $TARGET_PROJECT_DIR
     rm -rf $TARGET_PROJECT_DIR
     git clone -b master \
-        https://github.com/nabla-squared/laplacian.project.project-types.git \
+        https://github.com/laplacian-core/project.project-types.git \
         $TARGET_PROJECT_DIR
   else
     (cd $TARGET_PROJECT_DIR && git pull)
@@ -55,7 +55,7 @@ project:
     zh: |
       定义了每个项目类型的内容的模型数据。
   source_repository:
-    url: https://github.com/nabla-squared/laplacian.project.project-types.git
+    url: https://github.com/laplacian-core/project.project-types.git
     branch: master
   module_repositories:
     local:

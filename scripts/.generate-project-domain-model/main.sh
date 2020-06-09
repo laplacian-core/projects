@@ -30,7 +30,7 @@ sync_source_with_repository() {
     mkdir -p $TARGET_PROJECT_DIR
     rm -rf $TARGET_PROJECT_DIR
     git clone -b master \
-        https://github.com/nabla-squared/laplacian.project.domain-model.git \
+        https://github.com/laplacian-core/project.domain-model.git \
         $TARGET_PROJECT_DIR
   else
     (cd $TARGET_PROJECT_DIR && git pull)
@@ -55,7 +55,7 @@ project:
     zh: |
       该模型代表了*Laplacian*项目的逻辑结构。
   source_repository:
-    url: https://github.com/nabla-squared/laplacian.project.domain-model.git
+    url: https://github.com/laplacian-core/project.domain-model.git
     branch: master
   module_repositories:
     local:

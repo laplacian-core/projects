@@ -30,7 +30,7 @@ sync_source_with_repository() {
     mkdir -p $TARGET_PROJECT_DIR
     rm -rf $TARGET_PROJECT_DIR
     git clone -b master \
-        https://github.com/nabla-squared/laplacian.metamodel.git \
+        https://github.com/laplacian-core/metamodel.git \
         $TARGET_PROJECT_DIR
   else
     (cd $TARGET_PROJECT_DIR && git pull)
@@ -76,7 +76,7 @@ project:
       - inheritance
       - mixin
   source_repository:
-    url: https://github.com/nabla-squared/laplacian.metamodel.git
+    url: https://github.com/laplacian-core/metamodel.git
     branch: master
   module_repositories:
     local:

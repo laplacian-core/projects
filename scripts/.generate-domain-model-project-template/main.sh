@@ -30,7 +30,7 @@ sync_source_with_repository() {
     mkdir -p $TARGET_PROJECT_DIR
     rm -rf $TARGET_PROJECT_DIR
     git clone -b master \
-        https://github.com/nabla-squared/laplacian.domain-model.project-template.git \
+        https://github.com/laplacian-core/domain-model.project-template.git \
         $TARGET_PROJECT_DIR
   else
     (cd $TARGET_PROJECT_DIR && git pull)
@@ -55,7 +55,7 @@ project:
     zh: |
       这是一个模板模块、用于生成域模型项目的目录结构、开发脚本和相关文档。
   source_repository:
-    url: https://github.com/nabla-squared/laplacian.domain-model.project-template.git
+    url: https://github.com/laplacian-core/domain-model.project-template.git
     branch: master
   module_repositories:
     local:
