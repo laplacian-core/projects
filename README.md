@@ -13,8 +13,6 @@ The core modules for the Laplacian generator.
 
   * [Project dependencies](#project-dependencies)
 
-- [Usage](#usage)
-
 - [Index](#index)
 
   * [Project list](#project-list)
@@ -37,35 +35,6 @@ The core modules for the Laplacian generator.
 The following graph shows the dependencies between each project.
 ![](./doc/image/project-dependency-graph.svg)
 
-## Usage
-
-To apply this Model module, add the following entry to your project definition.
-```yaml
-project:
-  models:
-  - group: laplacian
-    name: projects
-    version: 1.0.0
-```
-
-You can run the following command to see a list of resources affected by the application of this module and their contents.
-```console
-$ ./script/generate --dry-run
-
-diff --color -r PROJECT_HOME/.NEXT/somewhere/something.md PROJECT_HOME/somewhere/something.md
-1,26c1,10
-< content: OLD CONTENT
----
-> content: NEW CONTENT
-```
-
-If there is no problem, execute the following command to reflect the change.
-```console
-$ ./script/generate
-
-```
-
-
 ## Index
 
 
@@ -75,10 +44,6 @@ $ ./script/generate
 - [**laplacian/common-model**](<https://github.com/laplacian-core/common-model.git>)
 
 > Defines the generally applicable models that is not specific to a certain domain.
-> 
-- [**laplacian/domain-model-plugin.project-template**](<https://github.com/laplacian-core/domain-model-plugin.project-template.git>)
-
-> A template for a domain model plugin project.
 > 
 - [**laplacian/domain-model.project-template**](<https://github.com/laplacian-core/domain-model.project-template.git>)
 
@@ -99,6 +64,10 @@ $ ./script/generate
 > - inheritance
 > - mixin
 > 
+- [**laplacian/model.project-template**](<https://github.com/laplacian-core/model.project-template.git>)
+
+> The model.project-template project.
+> 
 - [**laplacian/project-group.project-template**](<https://github.com/laplacian-core/project-group.project-template.git>)
 
 > This is a template used by project groups to generate standard project folder structure and scripts for operations and development.
@@ -110,6 +79,10 @@ $ ./script/generate
 - [**laplacian/project.project-types**](<https://github.com/laplacian-core/project.project-types.git>)
 
 > The model data that defines the content of each project type.
+> 
+- [**laplacian/template.project-template**](<https://github.com/laplacian-core/template.project-template.git>)
+
+> The template.project-template project.
 > 
 ### Script List
 
@@ -385,28 +358,6 @@ $ ./script/generate
   >
   >   Delete all local resources of the subproject and regenerate them.
   >   
-- [./script/generate-domain-model-plugin-project-template.sh](<./scripts/generate-domain-model-plugin-project-template.sh>)
-
-  Generates the [laplacian/domain-model-plugin.project-template](<https://github.com/laplacian-core/domain-model-plugin.project-template.git>) project as a subproject in the following directory.
-  ```
-  subprojects/domain-model-plugin-project-template
-  ```
-  If the subproject already exists, the content of the subproject is updated.
-
-  > Usage: generate-domain-model-plugin-project-template.sh [OPTION]...
-  >
-  > -h, --help
-  >
-  >   Displays how to use this command.
-  >   
-  > -v, --verbose
-  >
-  >   Displays more detailed command execution information.
-  >   
-  > -c, --clean
-  >
-  >   Delete all local resources of the subproject and regenerate them.
-  >   
 - [./script/generate-domain-model-project-template.sh](<./scripts/generate-domain-model-project-template.sh>)
 
   Generates the [laplacian/domain-model.project-template](<https://github.com/laplacian-core/domain-model.project-template.git>) project as a subproject in the following directory.
@@ -473,6 +424,28 @@ $ ./script/generate
   >
   >   Delete all local resources of the subproject and regenerate them.
   >   
+- [./script/generate-model-project-template.sh](<./scripts/generate-model-project-template.sh>)
+
+  Generates the [laplacian/model.project-template](<https://github.com/laplacian-core/model.project-template.git>) project as a subproject in the following directory.
+  ```
+  subprojects/model-project-template
+  ```
+  If the subproject already exists, the content of the subproject is updated.
+
+  > Usage: generate-model-project-template.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   Displays how to use this command.
+  >   
+  > -v, --verbose
+  >
+  >   Displays more detailed command execution information.
+  >   
+  > -c, --clean
+  >
+  >   Delete all local resources of the subproject and regenerate them.
+  >   
 - [./script/generate-project-domain-model.sh](<./scripts/generate-project-domain-model.sh>)
 
   Generates the [laplacian/project.domain-model](<https://github.com/laplacian-core/project.domain-model.git>) project as a subproject in the following directory.
@@ -526,6 +499,28 @@ $ ./script/generate
   If the subproject already exists, the content of the subproject is updated.
 
   > Usage: generate-project-project-types.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   Displays how to use this command.
+  >   
+  > -v, --verbose
+  >
+  >   Displays more detailed command execution information.
+  >   
+  > -c, --clean
+  >
+  >   Delete all local resources of the subproject and regenerate them.
+  >   
+- [./script/generate-template-project-template.sh](<./scripts/generate-template-project-template.sh>)
+
+  Generates the [laplacian/template.project-template](<https://github.com/laplacian-core/template.project-template.git>) project as a subproject in the following directory.
+  ```
+  subprojects/template-project-template
+  ```
+  If the subproject already exists, the content of the subproject is updated.
+
+  > Usage: generate-template-project-template.sh [OPTION]...
   >
   > -h, --help
   >
@@ -641,7 +636,7 @@ $ ./script/generate
 - [./script/publish-local.sh](<./scripts/publish-local.sh>)
 
   After the resources in the project are generated,
-  the resources in the `./dest` directory are built as a model module
+  the resources in the `./dest` directory are built as a generator module
   and registered in the local repository.
 
   > Usage: publish-local.sh [OPTION]...
@@ -672,20 +667,6 @@ $ ./script/generate
   Generates resources for the [laplacian/common-model](<https://github.com/laplacian-core/common-model.git>) subproject.
 
   > Usage: publish-local-common-model.sh [OPTION]...
-  >
-  > -h, --help
-  >
-  >   Displays how to use this command.
-  >   
-  > -v, --verbose
-  >
-  >   Displays more detailed command execution information.
-  >   
-- [./script/publish-local-domain-model-plugin-project-template.sh](<./scripts/publish-local-domain-model-plugin-project-template.sh>)
-
-  Generates resources for the [laplacian/domain-model-plugin.project-template](<https://github.com/laplacian-core/domain-model-plugin.project-template.git>) subproject.
-
-  > Usage: publish-local-domain-model-plugin-project-template.sh [OPTION]...
   >
   > -h, --help
   >
@@ -737,6 +718,20 @@ $ ./script/generate
   >
   >   Displays more detailed command execution information.
   >   
+- [./script/publish-local-model-project-template.sh](<./scripts/publish-local-model-project-template.sh>)
+
+  Generates resources for the [laplacian/model.project-template](<https://github.com/laplacian-core/model.project-template.git>) subproject.
+
+  > Usage: publish-local-model-project-template.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   Displays how to use this command.
+  >   
+  > -v, --verbose
+  >
+  >   Displays more detailed command execution information.
+  >   
 - [./script/publish-local-project-domain-model.sh](<./scripts/publish-local-project-domain-model.sh>)
 
   Generates resources for the [laplacian/project.domain-model](<https://github.com/laplacian-core/project.domain-model.git>) subproject.
@@ -779,18 +774,33 @@ $ ./script/generate
   >
   >   Displays more detailed command execution information.
   >   
+- [./script/publish-local-template-project-template.sh](<./scripts/publish-local-template-project-template.sh>)
+
+  Generates resources for the [laplacian/template.project-template](<https://github.com/laplacian-core/template.project-template.git>) subproject.
+
+  > Usage: publish-local-template-project-template.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   Displays how to use this command.
+  >   
+  > -v, --verbose
+  >
+  >   Displays more detailed command execution information.
+  >   
 ### Source code list
 
 
+- [model/project/subprojects/laplacian/common-model.yaml](<./model/project/subprojects/laplacian/common-model.yaml>)
+- [model/project/subprojects/laplacian/domain-model.project-template.yaml](<./model/project/subprojects/laplacian/domain-model.project-template.yaml>)
+- [model/project/subprojects/laplacian/generator.project-template.yaml](<./model/project/subprojects/laplacian/generator.project-template.yaml>)
+- [model/project/subprojects/laplacian/metamodel.yaml](<./model/project/subprojects/laplacian/metamodel.yaml>)
+- [model/project/subprojects/laplacian/model.project-template.yaml](<./model/project/subprojects/laplacian/model.project-template.yaml>)
+- [model/project/subprojects/laplacian/project.domain-model.yaml](<./model/project/subprojects/laplacian/project.domain-model.yaml>)
+- [model/project/subprojects/laplacian/project-group.project-template.yaml](<./model/project/subprojects/laplacian/project-group.project-template.yaml>)
+- [model/project/subprojects/laplacian/project.project-types.yaml](<./model/project/subprojects/laplacian/project.project-types.yaml>)
+- [model/project/subprojects/laplacian/template.project-template.yaml](<./model/project/subprojects/laplacian/template.project-template.yaml>)
 - [model/project.yaml](<./model/project.yaml>)
-- [src/project/subprojects/laplacian/common-model.yaml](<./src/project/subprojects/laplacian/common-model.yaml>)
-- [src/project/subprojects/laplacian/domain-model-plugin.project-template.yaml](<./src/project/subprojects/laplacian/domain-model-plugin.project-template.yaml>)
-- [src/project/subprojects/laplacian/domain-model.project-template.yaml](<./src/project/subprojects/laplacian/domain-model.project-template.yaml>)
-- [src/project/subprojects/laplacian/generator.project-template.yaml](<./src/project/subprojects/laplacian/generator.project-template.yaml>)
-- [src/project/subprojects/laplacian/metamodel.yaml](<./src/project/subprojects/laplacian/metamodel.yaml>)
-- [src/project/subprojects/laplacian/project.domain-model.yaml](<./src/project/subprojects/laplacian/project.domain-model.yaml>)
-- [src/project/subprojects/laplacian/project-group.project-template.yaml](<./src/project/subprojects/laplacian/project-group.project-template.yaml>)
-- [src/project/subprojects/laplacian/project.project-types.yaml](<./src/project/subprojects/laplacian/project.project-types.yaml>)
 
 
 <!-- @main-content@ -->

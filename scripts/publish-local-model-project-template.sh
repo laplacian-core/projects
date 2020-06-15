@@ -14,7 +14,7 @@ VERBOSE=
 
 SCRIPTS_DIR='scripts'
 PUBLISH_SCRIPT='publish-local.sh'
-TARGET_PROJECT_DIR="${PROJECT_BASE_DIR}/subprojects/project-group-project-template"
+TARGET_PROJECT_DIR="${PROJECT_BASE_DIR}/subprojects/model-project-template"
 TARGET_PUBLISH_SCRIPT="$TARGET_PROJECT_DIR/$SCRIPTS_DIR/$PUBLISH_SCRIPT"
 
 main() {
@@ -26,7 +26,7 @@ main() {
 }
 
 run_generate() {
-  $PROJECT_BASE_DIR/$SCRIPTS_DIR/generate-project-group-project-template.sh
+  $PROJECT_BASE_DIR/$SCRIPTS_DIR/generate-model-project-template.sh
 }
 
 # @additional-declarations@
@@ -56,7 +56,7 @@ parse_args() {
 
 show_usage () {
 cat << 'END'
-Usage: ./scripts/publish-local-project-group-project-template.sh [OPTION]...
+Usage: ./scripts/publish-local-model-project-template.sh [OPTION]...
   -h, --help
     Displays how to use this command.
   -v, --verbose

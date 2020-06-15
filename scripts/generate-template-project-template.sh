@@ -23,7 +23,7 @@ PROJECT_GENERATOR="$SCRIPTS_DIR/generate.sh"
 LAPLACIAN_GENERATOR="$SCRIPTS_DIR/laplacian-generate.sh"
 VSCODE_SETTING=".vscode/settings.json"
 
-TARGET_PROJECT_DIR="$PROJECT_BASE_DIR/subprojects/project-domain-model"
+TARGET_PROJECT_DIR="$PROJECT_BASE_DIR/subprojects/template-project-template"
 TARGET_MODEL_DIR="$TARGET_PROJECT_DIR/$MODEL_DIR"
 TARGET_SCRIPT_DIR="$TARGET_PROJECT_DIR/$SCRIPTS_DIR"
 TARGET_PROJECT_MODEL_FILE="$TARGET_MODEL_DIR/project.yaml"
@@ -42,7 +42,7 @@ sync_source_with_repository() {
     mkdir -p $TARGET_PROJECT_DIR
     rm -rf $TARGET_PROJECT_DIR
     git clone -b master \
-        https://github.com/laplacian-core/project.domain-model.git \
+        https://github.com/laplacian-core/template.project-template.git \
         $TARGET_PROJECT_DIR
   else
     (cd $TARGET_PROJECT_DIR && git pull)
@@ -55,35 +55,27 @@ create_project_model_file() {
   cat <<END_FILE > $TARGET_PROJECT_MODEL_FILE
 project:
   group: laplacian
-  name: project.domain-model
-  type: domain-model
-  namespace: laplacian.project
+  name: template.project-template
+  type: template
+  namespace: laplacian
   version: '1.0.0'
   description:
     en: |
-      This model represents the logical structure of a *Laplacian*-based project.
+      The template.project-template project.
     ja: |
-      このモデルは*Laplacian*プロジェクトの論理構造を表します。
+      The template.project-template project.
     zh: |
-      该模型代表了*Laplacian*项目的逻辑结构。
+      The template.project-template project.
   source_repository:
-    url: https://github.com/laplacian-core/project.domain-model.git
+    url: https://github.com/laplacian-core/template.project-template.git
     branch: master
   module_repositories:
     local:
       ../../../mvn-repo
     remote:
     - https://github.com/nabla-squared/mvn-repo
-  plugins:
-  - group: laplacian
-    name: common-model-plugin
-    version: '1.0.0'
-  models:
-  - group: laplacian
-    name: common-model
-    version: '1.0.0'
-  model_files:
-  - 'dest/model'
+  template_files:
+  - 'dest/template'
 END_FILE
 }
 
@@ -147,7 +139,7 @@ parse_args() {
 
 show_usage () {
 cat << 'END'
-Usage: ./scripts/generate-project-domain-model.sh [OPTION]...
+Usage: ./scripts/generate-template-project-template.sh [OPTION]...
   -h, --help
     Displays how to use this command.
   -v, --verbose

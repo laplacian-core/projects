@@ -13,8 +13,6 @@ The core modules for the Laplacian generator.
 
   * [项目依赖性](#项目依赖性)
 
-- [如何使用](#如何使用)
-
 - [索引](#索引)
 
   * [项目清单](#项目清单)
@@ -37,38 +35,6 @@ The core modules for the Laplacian generator.
 下图是每个项目之间的依赖关系。
 ![](./doc/image/project-dependency-graph.svg)
 
-## 如何使用
-
-要应用此model模块，请在项目定义中加入以下条目
-
-```yaml
-project:
-  models:
-  - group: laplacian
-    name: projects
-    version: 1.0.0
-```
-
-您可以运行以下命令查看受本模块应用影响的资源列表及其内容
-
-```console
-$ ./script/generate --dry-run
-
-diff --color -r PROJECT_HOME/.NEXT/somewhere/something.md PROJECT_HOME/somewhere/something.md
-1,26c1,10
-< content: OLD CONTENT
----
-> content: NEW CONTENT
-```
-
-如果没有问题，请执行下面的命令来反映变化
-
-```console
-$ ./script/generate
-
-```
-
-
 ## 索引
 
 
@@ -78,10 +44,6 @@ $ ./script/generate
 - [**laplacian/common-model**](<https://github.com/laplacian-core/common-model.git>)
 
 > 定义了不特定于某一领域的普遍适用模型。
-> 
-- [**laplacian/domain-model-plugin.project-template**](<https://github.com/laplacian-core/domain-model-plugin.project-template.git>)
-
-> 领域模型插件项目的模板。
 > 
 - [**laplacian/domain-model.project-template**](<https://github.com/laplacian-core/domain-model.project-template.git>)
 
@@ -102,6 +64,10 @@ $ ./script/generate
 > - inheritance
 > - mixin
 > 
+- [**laplacian/model.project-template**](<https://github.com/laplacian-core/model.project-template.git>)
+
+> The model.project-template project.
+> 
 - [**laplacian/project-group.project-template**](<https://github.com/laplacian-core/project-group.project-template.git>)
 
 > 这个模板是项目组用来生成标准的项目文件夹结构和操作和开发脚本的模板。
@@ -113,6 +79,10 @@ $ ./script/generate
 - [**laplacian/project.project-types**](<https://github.com/laplacian-core/project.project-types.git>)
 
 > 定义了每个项目类型的内容的模型数据。
+> 
+- [**laplacian/template.project-template**](<https://github.com/laplacian-core/template.project-template.git>)
+
+> The template.project-template project.
 > 
 ### 命令列表
 
@@ -388,28 +358,6 @@ $ ./script/generate
   >
   >   删除子项目的所有本地资源，并对其进行再生。
   >   
-- [./script/generate-domain-model-plugin-project-template.sh](<./scripts/generate-domain-model-plugin-project-template.sh>)
-
-  在下面的目录中生成[laplacian/domain-model-plugin.project-template](<https://github.com/laplacian-core/domain-model-plugin.project-template.git>)项目，作为子项目。
-  ```
-  subprojects/domain-model-plugin-project-template
-  ```
-  如果子项目已经存在，则更新子项目的内容。
-
-  > Usage: generate-domain-model-plugin-project-template.sh [OPTION]...
-  >
-  > -h, --help
-  >
-  >   显示如何使用此命令。
-  >   
-  > -v, --verbose
-  >
-  >   显示更详细的命令执行信息。
-  >   
-  > -c, --clean
-  >
-  >   删除子项目的所有本地资源，并对其进行再生。
-  >   
 - [./script/generate-domain-model-project-template.sh](<./scripts/generate-domain-model-project-template.sh>)
 
   在下面的目录中生成[laplacian/domain-model.project-template](<https://github.com/laplacian-core/domain-model.project-template.git>)项目，作为子项目。
@@ -476,6 +424,28 @@ $ ./script/generate
   >
   >   删除子项目的所有本地资源，并对其进行再生。
   >   
+- [./script/generate-model-project-template.sh](<./scripts/generate-model-project-template.sh>)
+
+  在下面的目录中生成[laplacian/model.project-template](<https://github.com/laplacian-core/model.project-template.git>)项目，作为子项目。
+  ```
+  subprojects/model-project-template
+  ```
+  如果子项目已经存在，则更新子项目的内容。
+
+  > Usage: generate-model-project-template.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   显示如何使用此命令。
+  >   
+  > -v, --verbose
+  >
+  >   显示更详细的命令执行信息。
+  >   
+  > -c, --clean
+  >
+  >   删除子项目的所有本地资源，并对其进行再生。
+  >   
 - [./script/generate-project-domain-model.sh](<./scripts/generate-project-domain-model.sh>)
 
   在下面的目录中生成[laplacian/project.domain-model](<https://github.com/laplacian-core/project.domain-model.git>)项目，作为子项目。
@@ -529,6 +499,28 @@ $ ./script/generate
   如果子项目已经存在，则更新子项目的内容。
 
   > Usage: generate-project-project-types.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   显示如何使用此命令。
+  >   
+  > -v, --verbose
+  >
+  >   显示更详细的命令执行信息。
+  >   
+  > -c, --clean
+  >
+  >   删除子项目的所有本地资源，并对其进行再生。
+  >   
+- [./script/generate-template-project-template.sh](<./scripts/generate-template-project-template.sh>)
+
+  在下面的目录中生成[laplacian/template.project-template](<https://github.com/laplacian-core/template.project-template.git>)项目，作为子项目。
+  ```
+  subprojects/template-project-template
+  ```
+  如果子项目已经存在，则更新子项目的内容。
+
+  > Usage: generate-template-project-template.sh [OPTION]...
   >
   > -h, --help
   >
@@ -636,7 +628,7 @@ $ ./script/generate
   >   
 - [./script/publish-local.sh](<./scripts/publish-local.sh>)
 
-  项目中的资源生成后，在`./dest`目录下的资源作为模型模块建立，并在本地资源库中注册。
+  项目中的资源生成后，在`./dest`目录下的资源作为模块建立，并在本地资源库中注册。
 
   > Usage: publish-local.sh [OPTION]...
   >
@@ -666,20 +658,6 @@ $ ./script/generate
   为[laplacian/common-model](<https://github.com/laplacian-core/common-model.git>)子项目生成资源。
 
   > Usage: publish-local-common-model.sh [OPTION]...
-  >
-  > -h, --help
-  >
-  >   显示如何使用此命令。
-  >   
-  > -v, --verbose
-  >
-  >   显示更详细的命令执行信息。
-  >   
-- [./script/publish-local-domain-model-plugin-project-template.sh](<./scripts/publish-local-domain-model-plugin-project-template.sh>)
-
-  为[laplacian/domain-model-plugin.project-template](<https://github.com/laplacian-core/domain-model-plugin.project-template.git>)子项目生成资源。
-
-  > Usage: publish-local-domain-model-plugin-project-template.sh [OPTION]...
   >
   > -h, --help
   >
@@ -731,6 +709,20 @@ $ ./script/generate
   >
   >   显示更详细的命令执行信息。
   >   
+- [./script/publish-local-model-project-template.sh](<./scripts/publish-local-model-project-template.sh>)
+
+  为[laplacian/model.project-template](<https://github.com/laplacian-core/model.project-template.git>)子项目生成资源。
+
+  > Usage: publish-local-model-project-template.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   显示如何使用此命令。
+  >   
+  > -v, --verbose
+  >
+  >   显示更详细的命令执行信息。
+  >   
 - [./script/publish-local-project-domain-model.sh](<./scripts/publish-local-project-domain-model.sh>)
 
   为[laplacian/project.domain-model](<https://github.com/laplacian-core/project.domain-model.git>)子项目生成资源。
@@ -773,18 +765,33 @@ $ ./script/generate
   >
   >   显示更详细的命令执行信息。
   >   
+- [./script/publish-local-template-project-template.sh](<./scripts/publish-local-template-project-template.sh>)
+
+  为[laplacian/template.project-template](<https://github.com/laplacian-core/template.project-template.git>)子项目生成资源。
+
+  > Usage: publish-local-template-project-template.sh [OPTION]...
+  >
+  > -h, --help
+  >
+  >   显示如何使用此命令。
+  >   
+  > -v, --verbose
+  >
+  >   显示更详细的命令执行信息。
+  >   
 ### 源码列表
 
 
+- [model/project/subprojects/laplacian/common-model.yaml](<./model/project/subprojects/laplacian/common-model.yaml>)
+- [model/project/subprojects/laplacian/domain-model.project-template.yaml](<./model/project/subprojects/laplacian/domain-model.project-template.yaml>)
+- [model/project/subprojects/laplacian/generator.project-template.yaml](<./model/project/subprojects/laplacian/generator.project-template.yaml>)
+- [model/project/subprojects/laplacian/metamodel.yaml](<./model/project/subprojects/laplacian/metamodel.yaml>)
+- [model/project/subprojects/laplacian/model.project-template.yaml](<./model/project/subprojects/laplacian/model.project-template.yaml>)
+- [model/project/subprojects/laplacian/project.domain-model.yaml](<./model/project/subprojects/laplacian/project.domain-model.yaml>)
+- [model/project/subprojects/laplacian/project-group.project-template.yaml](<./model/project/subprojects/laplacian/project-group.project-template.yaml>)
+- [model/project/subprojects/laplacian/project.project-types.yaml](<./model/project/subprojects/laplacian/project.project-types.yaml>)
+- [model/project/subprojects/laplacian/template.project-template.yaml](<./model/project/subprojects/laplacian/template.project-template.yaml>)
 - [model/project.yaml](<./model/project.yaml>)
-- [src/project/subprojects/laplacian/common-model.yaml](<./src/project/subprojects/laplacian/common-model.yaml>)
-- [src/project/subprojects/laplacian/domain-model-plugin.project-template.yaml](<./src/project/subprojects/laplacian/domain-model-plugin.project-template.yaml>)
-- [src/project/subprojects/laplacian/domain-model.project-template.yaml](<./src/project/subprojects/laplacian/domain-model.project-template.yaml>)
-- [src/project/subprojects/laplacian/generator.project-template.yaml](<./src/project/subprojects/laplacian/generator.project-template.yaml>)
-- [src/project/subprojects/laplacian/metamodel.yaml](<./src/project/subprojects/laplacian/metamodel.yaml>)
-- [src/project/subprojects/laplacian/project.domain-model.yaml](<./src/project/subprojects/laplacian/project.domain-model.yaml>)
-- [src/project/subprojects/laplacian/project-group.project-template.yaml](<./src/project/subprojects/laplacian/project-group.project-template.yaml>)
-- [src/project/subprojects/laplacian/project.project-types.yaml](<./src/project/subprojects/laplacian/project.project-types.yaml>)
 
 
 <!-- @main-content@ -->

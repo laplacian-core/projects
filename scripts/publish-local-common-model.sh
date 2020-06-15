@@ -12,14 +12,25 @@ HELP=
 VERBOSE=
 
 
-run_publish_local_common_model() {
-  parse_args "$@"
-  ! [ -z $VERBOSE ] && set -x
-  ! [ -z $HELP ] && show_usage && exit 0
+SCRIPTS_DIR='scripts'
+PUBLISH_SCRIPT='publish-local.sh'
+TARGET_PROJECT_DIR="${PROJECT_BASE_DIR}/subprojects/common-model"
+TARGET_PUBLISH_SCRIPT="$TARGET_PROJECT_DIR/$SCRIPTS_DIR/$PUBLISH_SCRIPT"
 
-  source $SCRIPT_BASE_DIR/.publish-local-common-model/main.sh
-  main
+main() {
+  if ! [ -f $TARGET_PUBLISH_SCRIPT ]
+  then
+    run_generate
+  fi
+  $TARGET_PUBLISH_SCRIPT
 }
+
+run_generate() {
+  $PROJECT_BASE_DIR/$SCRIPTS_DIR/generate-common-model.sh
+}
+
+# @additional-declarations@
+# @additional-declarations@
 
 parse_args() {
   while getopts $OPT_NAMES OPTION;
@@ -53,4 +64,8 @@ Usage: ./scripts/publish-local-common-model.sh [OPTION]...
 END
 }
 
-run_publish_local_common_model "$@"
+parse_args "$@"
+
+! [ -z $VERBOSE ] && set -x
+! [ -z $HELP ] && show_usage && exit 0
+main

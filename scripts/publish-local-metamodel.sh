@@ -12,14 +12,25 @@ HELP=
 VERBOSE=
 
 
-run_publish_local_metamodel() {
-  parse_args "$@"
-  ! [ -z $VERBOSE ] && set -x
-  ! [ -z $HELP ] && show_usage && exit 0
+SCRIPTS_DIR='scripts'
+PUBLISH_SCRIPT='publish-local.sh'
+TARGET_PROJECT_DIR="${PROJECT_BASE_DIR}/subprojects/metamodel"
+TARGET_PUBLISH_SCRIPT="$TARGET_PROJECT_DIR/$SCRIPTS_DIR/$PUBLISH_SCRIPT"
 
-  source $SCRIPT_BASE_DIR/.publish-local-metamodel/main.sh
-  main
+main() {
+  if ! [ -f $TARGET_PUBLISH_SCRIPT ]
+  then
+    run_generate
+  fi
+  $TARGET_PUBLISH_SCRIPT
 }
+
+run_generate() {
+  $PROJECT_BASE_DIR/$SCRIPTS_DIR/generate-metamodel.sh
+}
+
+# @additional-declarations@
+# @additional-declarations@
 
 parse_args() {
   while getopts $OPT_NAMES OPTION;
@@ -53,4 +64,8 @@ Usage: ./scripts/publish-local-metamodel.sh [OPTION]...
 END
 }
 
-run_publish_local_metamodel "$@"
+parse_args "$@"
+
+! [ -z $VERBOSE ] && set -x
+! [ -z $HELP ] && show_usage && exit 0
+main

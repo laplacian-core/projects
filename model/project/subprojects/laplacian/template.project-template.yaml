@@ -1,0 +1,16 @@
+_description: &description
+  en: |
+    The template.project-template project.
+
+project:
+  subprojects:
+  - group: 'laplacian'
+    type: 'template'
+    name: 'template.project-template'
+    namespace: 'laplacian'
+    description: *description
+    version: '1.0.0'
+    source_repository:
+      url: https://github.com/laplacian-core/template.project-template.git
+    template_files:
+    - dest/template

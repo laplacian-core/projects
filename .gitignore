@@ -35,10 +35,11 @@ out/
 subprojects/mvn-repo/
 subprojects/mvn-repo
 subprojects/common-model/
-subprojects/domain-model-plugin-project-template/
 subprojects/domain-model-project-template/
 subprojects/generator-project-template/
 subprojects/metamodel/
+subprojects/model-project-template/
 subprojects/project-group-project-template/
 subprojects/project-domain-model/
 subprojects/project-project-types/
+subprojects/template-project-template/

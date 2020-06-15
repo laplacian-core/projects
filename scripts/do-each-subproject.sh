@@ -13,14 +13,32 @@ VERBOSE=
 CONTINUE_ON_ERROR=
 
 
-run_do_each_subproject() {
-  parse_args "$@"
-  ! [ -z $VERBOSE ] && set -x
-  ! [ -z $HELP ] && show_usage && exit 0
+SUBPROJECTS='subprojects/common-model
+subprojects/domain-model-project-template
+subprojects/generator-project-template
+subprojects/metamodel
+subprojects/model-project-template
+subprojects/project-group-project-template
+subprojects/project-domain-model
+subprojects/project-project-types
+subprojects/template-project-template
+'
 
-  source $SCRIPT_BASE_DIR/.do-each-subproject/main.sh
-  main
+main() {
+  for subproject in $SUBPROJECTS
+  do
+    local path="$PROJECT_BASE_DIR/$subproject"
+    echo "
+    === $subproject ===
+    "
+    (cd $path
+      $ARGS
+    )
+  done
 }
+
+# @additional-declarations@
+# @additional-declarations@
 
 parse_args() {
   while getopts $OPT_NAMES OPTION;
@@ -59,4 +77,8 @@ Usage: ./scripts/do-each-subproject.sh [OPTION]...
 END
 }
 
-run_do_each_subproject "$@"
+parse_args "$@"
+
+! [ -z $VERBOSE ] && set -x
+! [ -z $HELP ] && show_usage && exit 0
+main
