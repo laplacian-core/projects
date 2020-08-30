@@ -13,6 +13,7 @@ VERBOSE=
 CONTINUE_ON_ERROR=
 
 
+# @main@
 SCRIPTS='generate-laplacian-common-model
 generate-laplacian-domain-model-project-template
 generate-laplacian-generator-project-template
@@ -34,8 +35,9 @@ main() {
     $PROJECT_BASE_DIR/scripts/$script
   done
 }
+# @main@
 
-# @additional-declarations@
+# @+additional-declarations@
 # @additional-declarations@
 
 parse_args() {

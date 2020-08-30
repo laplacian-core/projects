@@ -13,6 +13,7 @@ VERBOSE=
 CONTINUE_ON_ERROR=
 
 
+# @main@
 SUBPROJECTS='subprojects/common-model
 subprojects/domain-model-project-template
 subprojects/generator-project-template
@@ -36,8 +37,9 @@ main() {
     )
   done
 }
+# @main@
 
-# @additional-declarations@
+# @+additional-declarations@
 # @additional-declarations@
 
 parse_args() {

@@ -62,7 +62,6 @@ The following graph shows the dependencies between each project.
 > - relationship
 > - aggregation
 > - inheritance
-> - mixin
 > 
 - [**laplacian/model.project-template**](<https://github.com/laplacian-core/model.project-template.git>)
 

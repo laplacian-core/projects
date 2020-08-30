@@ -7,7 +7,6 @@ _description: &description
     - 関連
     - 集約
     - 継承
-    - Mixin
 
   en: |
     This model is a model for defining a model, i.e. a metamodel.
@@ -17,7 +16,6 @@ _description: &description
     - relationship
     - aggregation
     - inheritance
-    - mixin
 
   zh: |
     这个模型是一个定义模型的模型。(= metamodel)
@@ -27,13 +25,12 @@ _description: &description
     - relationship
     - aggregation
     - inheritance
-    - mixin
 
 project:
   subprojects:
   - group: laplacian
     name: metamodel
-    type: domain-model
+    type: model
     namespace: laplacian.metamodel
     description: *description
     version: '1.0.0'
@@ -41,3 +38,7 @@ project:
       url: https://github.com/laplacian-core/metamodel.git
     model_files:
     - dest/model
+    templates:
+    - group: laplacian
+      name: domain-model.project-template
+      version: '1.0.0'

@@ -12,6 +12,7 @@ HELP=
 VERBOSE=
 
 
+# @main@
 SCRIPTS_DIR='scripts'
 PUBLISH_SCRIPT='publish-local.sh'
 TARGET_PROJECT_DIR="${PROJECT_BASE_DIR}/subprojects/common-model"
@@ -28,8 +29,9 @@ main() {
 run_generate() {
   $PROJECT_BASE_DIR/$SCRIPTS_DIR/generate-common-model.sh
 }
+# @main@
 
-# @additional-declarations@
+# @+additional-declarations@
 # @additional-declarations@
 
 parse_args() {

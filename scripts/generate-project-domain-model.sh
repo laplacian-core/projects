@@ -13,6 +13,7 @@ VERBOSE=
 CLEAN=
 
 
+# @main@
 MODEL_DIR='model'
 PROJECT_MODEL_FILE="$MODEL_DIR/project.yaml"
 MODEL_SCHEMA_PARTIAL='model-schema-partial.json'
@@ -116,8 +117,9 @@ run_generator() {
   $TARGET_PROJECT_DIR/$PROJECT_GENERATOR \
     --local-module-repository '../../../mvn-repo'
 }
+# @main@
 
-# @additional-declarations@
+# @+additional-declarations@
 # @additional-declarations@
 
 parse_args() {

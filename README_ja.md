@@ -62,7 +62,6 @@ The core modules for the Laplacian generator.
 > - 関連
 > - 集約
 > - 継承
-> - Mixin
 > 
 - [**laplacian/model.project-template**](<https://github.com/laplacian-core/model.project-template.git>)
 

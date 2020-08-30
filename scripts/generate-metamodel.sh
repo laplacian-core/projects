@@ -13,6 +13,7 @@ VERBOSE=
 CLEAN=
 
 
+# @main@
 MODEL_DIR='model'
 PROJECT_MODEL_FILE="$MODEL_DIR/project.yaml"
 MODEL_SCHEMA_PARTIAL='model-schema-partial.json'
@@ -56,7 +57,7 @@ create_project_model_file() {
 project:
   group: laplacian
   name: metamodel
-  type: domain-model
+  type: model
   namespace: laplacian.metamodel
   version: '1.0.0'
   description:
@@ -68,7 +69,6 @@ project:
       - relationship
       - aggregation
       - inheritance
-      - mixin
     ja: |
       このモデルはモデルを定義するためのモデル(=メタモデル)です。
       このモデルでは、以下の構造を持つモデルを定義することができます。
@@ -77,7 +77,6 @@ project:
       - 関連
       - 集約
       - 継承
-      - Mixin
     zh: |
       这个模型是一个定义模型的模型。(= metamodel)
       在这个模型中，你可以定义一个模型，其结构如下
@@ -86,7 +85,6 @@ project:
       - relationship
       - aggregation
       - inheritance
-      - mixin
   source_repository:
     url: https://github.com/laplacian-core/metamodel.git
     branch: master
@@ -95,6 +93,10 @@ project:
       ../../../mvn-repo
     remote:
     - https://github.com/nabla-squared/mvn-repo
+  templates:
+  - group: laplacian
+    name: domain-model.project-template
+    version: '1.0.0'
   model_files:
   - 'dest/model'
 END_FILE
@@ -129,8 +131,9 @@ run_generator() {
   $TARGET_PROJECT_DIR/$PROJECT_GENERATOR \
     --local-module-repository '../../../mvn-repo'
 }
+# @main@
 
-# @additional-declarations@
+# @+additional-declarations@
 # @additional-declarations@
 
 parse_args() {

@@ -15,10 +15,14 @@ PROJECT_VERSION=0.0.1
 NAMESPACE=laplacian
 
 
-SUBPROJECTS_DIR="model/project/subprojects/laplacian"
-NEW_PROJECTS_MODEL_FILE="$PROJECT_BASE_DIR/$SUBPROJECTS_DIR/$PROJECT_NAME.yaml"
+# @main@
+SUBPROJECTS_DIR=
+NEW_PROJECTS_MODEL_FILE=
 
 main() {
+  SUBPROJECTS_DIR="model/project/subprojects/laplacian"
+  NEW_PROJECTS_MODEL_FILE="$PROJECT_BASE_DIR/$SUBPROJECTS_DIR/$PROJECT_NAME.yaml"
+
   create_subproject_model_file
   update_project
   show_next_action_message
@@ -60,8 +64,9 @@ show_next_action_message() {
   echo "2. Run ./scripts/generate-$(hyphenize ${PROJECT_NAME}).sh to generate the project's content."
   echo ""
 }
+# @main@
 
-# @additional-declarations@
+# @+additional-declarations@
 # @additional-declarations@
 
 parse_args() {

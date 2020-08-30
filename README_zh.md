@@ -62,7 +62,6 @@ The core modules for the Laplacian generator.
 > - relationship
 > - aggregation
 > - inheritance
-> - mixin
 > 
 - [**laplacian/model.project-template**](<https://github.com/laplacian-core/model.project-template.git>)
 

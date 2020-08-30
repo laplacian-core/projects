@@ -2,6 +2,8 @@
 *.tmp
 *.log
 *.swp
+*.backup
+*.zip
 
 # General - Windows
 Thumbs.db
@@ -43,3 +45,12 @@ subprojects/project-group-project-template/
 subprojects/project-domain-model/
 subprojects/project-project-types/
 subprojects/template-project-template/
+
+
+
+# GCP
+.gcloud/
+
+# Terraform
+.terraform/
+*.tfstate
