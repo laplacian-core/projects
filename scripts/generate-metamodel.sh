@@ -57,7 +57,7 @@ create_project_model_file() {
 project:
   group: laplacian
   name: metamodel
-  type: model
+  type: domain-model
   namespace: laplacian.metamodel
   version: '1.0.0'
   description:

@@ -68,7 +68,7 @@ project:
     local:
       $LOCAL_MODULE_REPOSITORY
     remote:
-    - https://github.com/nabla-squared/mvn-repo
+    - https://raw.github.com/nabla-squared/mvn-repo/master
   models:
   - group: 'laplacian'
     name: 'project.project-types'

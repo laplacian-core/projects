@@ -30,7 +30,7 @@ project:
   subprojects:
   - group: laplacian
     name: metamodel
-    type: model
+    type: domain-model
     namespace: laplacian.metamodel
     description: *description
     version: '1.0.0'
