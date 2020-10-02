@@ -75,8 +75,6 @@ project:
       ../../../mvn-repo
     remote:
     - https://github.com/nabla-squared/mvn-repo
-  template_files:
-  - 'dest/template'
 END_FILE
 }
 
